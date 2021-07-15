@@ -1,2 +1,1 @@
-# pythonstdlib
-stdlib extras for Python
+# Alternative StdLib for Nim for Python targets
