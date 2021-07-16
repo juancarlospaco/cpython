@@ -3,3 +3,4 @@ nimblecache/
 htmldocs/
 temp.nim
 temp.py
+_private.nim
