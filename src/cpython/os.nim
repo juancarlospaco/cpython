@@ -1,20 +1,19 @@
 ## * https://docs.python.org/3.10/library/os.html
 import nimpy
 {.push used.}
+const module = "os"
 template X(simbol): auto =
-  when declared result: pyImport("os").simbol().to(type(result)) else: discard pyImport("os").simbol()
+  when declared result: pyImport(module).simbol().to(type(result)) else: discard pyImport(module).simbol()
 template X(simbol; a): auto =
-  when declared result: pyImport("os").simbol(a).to(type(result)) else: discard pyImport("os").simbol(a)
+  when declared result: pyImport(module).simbol(a).to(type(result)) else: discard pyImport(module).simbol(a)
 template X(simbol; a, b): auto =
-  when declared result: pyImport("os").simbol(a, b).to(type(result)) else: discard pyImport("os").simbol(a, b)
+  when declared result: pyImport(module).simbol(a, b).to(type(result)) else: discard pyImport(module).simbol(a, b)
 template X(simbol; a, b, c): auto =
-  when declared result: pyImport("os").simbol(a, b, c).to(type(result)) else: discard pyImport("os").simbol(a, b, c)
+  when declared result: pyImport(module).simbol(a, b, c).to(type(result)) else: discard pyImport(module).simbol(a, b, c)
 template X(simbol; a, b, c, d): auto =
-  when declared result: pyImport("os").simbol(a, b, c, d).to(type(result)) else: discard pyImport("os").simbol(a, b, c, d)
+  when declared result: pyImport(module).simbol(a, b, c, d).to(type(result)) else: discard pyImport(module).simbol(a, b, c, d)
 template X(simbol; a, b, c, d, e): auto =
-  when declared result: pyImport("os").simbol(a, b, c, d, e).to(type(result)) else: discard pyImport("os").simbol(a, b, c, d, e)
-template X(simbol; a, b, c, d, e, f): auto =
-  when declared result: pyImport("os").simbol(a, b, c, d, e, f).to(type(result)) else: discard pyImport("os").simbol(a, b, c, d, e, f)
+  when declared result: pyImport(module).simbol(a, b, c, d, e).to(type(result)) else: discard pyImport(module).simbol(a, b, c, d, e)
 {.pop.}
 proc getcwd*(): string = X getcwd
 proc getpgid*(pid: int): int = X getpgid, pid  ## https://docs.python.org/3.10/library/os.html#os.getpgid
