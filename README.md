@@ -19,3 +19,4 @@
 # See also
 
 - [For Python Programmers](https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers#table-of-contents)
+- [Nim integration for Python PIP](https://github.com/juancarlospaco/choosenim_install#nim-integration-for-python-pip)
