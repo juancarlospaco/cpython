@@ -3,6 +3,7 @@
 
 # Design
 
+- 1 Dependency only (Nimpy).
 - It does not use anything from Nim standard library, very future-proof.
 - We do not deprecate stuff, even if Python deprecate/remove it, it will keep working for Nim.
 - Stuff deprecated/removed before year 2020 will not be supported.
