@@ -7,13 +7,19 @@
 - It does not use anything from Nim standard library, very future-proof.
 - We do not deprecate stuff, even if Python deprecate/remove it, it will keep working for Nim.
 - Stuff deprecated/removed before year 2020 will not be supported.
-- Nim modules have the same filename as the Python modules.
+- Nim modules have the same filename as the Python modules filename.
+- Each file is completely self-contained standalone, you can copy just 1 file on your project and it will work.
 - Package version == Python version.
 
 
 # Requisites
 
 - Python >`3.0`.
+
+
+# Limitations
+
+- Functionality based on Classes are not wrapped for this release.
 
 
 # See also
