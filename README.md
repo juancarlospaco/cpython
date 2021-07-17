@@ -3,7 +3,7 @@
 
 # Design
 
-- 1 Dependency only (Nimpy).
+- 1 Dependency only.
 - It does not use anything from Nim standard library, very future-proof.
 - We do not deprecate stuff, even if Python deprecate/remove it, it will keep working for Nim.
 - Stuff deprecated/removed before year 2020 will not be supported.
@@ -18,5 +18,5 @@
 
 # See also
 
-- [For Python Programmers](https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers#table-of-contents)
+- [**For Python Programmers**](https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers#table-of-contents)
 - [Nim integration for Python PIP](https://github.com/juancarlospaco/choosenim_install#nim-integration-for-python-pip)
