@@ -6,5 +6,5 @@ template X(simbol; a): auto =
   when declared result: module.simbol(a).to(type(result)) else: discard module.simbol(a)
 template X(simbol; a, b): auto =
   when declared result: module.simbol(a, b).to(type(result)) else: discard module.simbol(a, b)
-proc compress*(data: string; compresslevel = 9) = X compress, data, compresslevel
-proc decompress*(data: string)                  = X decompress, data
+proc compress*(data: string; compresslevel = 9): string = X compress, data, compresslevel
+proc decompress*(data: string): string                  = X decompress, data
