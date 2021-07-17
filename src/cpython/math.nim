@@ -20,7 +20,6 @@ template X(simbol; a, b, c, d, e, f, g): auto =
   when declared result: module.simbol(a, b, c, d, e, f, g).to(type(result)) else: discard module.simbol(a, b, c, d, e, f, g)
 template X(simbol; a, b, c, d, e, f, g, h): auto =
   when declared result: module.simbol(a, b, c, d, e, f, g, h).to(type(result)) else: discard module.simbol(a, b, c, d, e, f, g, h)
-
 proc ceil*(x: int or float):                  float = X ceil, x
 proc comb*(n, k: int or float):               float = X comb, n, k
 proc fabs*(x: int or float):                  float = X fabs, x
