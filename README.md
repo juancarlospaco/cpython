@@ -20,4 +20,4 @@
 
 - [**For Python Programmers**](https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers#table-of-contents)
 - [Nim integration for Python PIP](https://github.com/juancarlospaco/choosenim_install#nim-integration-for-python-pip)
-- [Python modules Deprecated from Python StdLib](https://github.com/tiran/legacylib) [PEP594](https://www.python.org/dev/peps/pep-0594)
+- [Python modules Deprecated from Python StdLib](https://github.com/tiran/legacylib) ([PEP594](https://www.python.org/dev/peps/pep-0594))
