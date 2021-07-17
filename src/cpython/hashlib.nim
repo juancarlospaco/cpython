@@ -48,10 +48,10 @@ proc pbkdf2_hmac*(hash_name, password, salt: string; iterations, dklen: int): st
 proc pbkdf2_hmac*(hash_name, password, salt: string; iterations: int): string = X pbkdf2_hmac, hash_name, password, salt, iterations
 
 
-scrypt(password, *, salt, n, r, p, maxmem=0, dklen=64
+# scrypt(password, *, salt, n, r, p, maxmem=0, dklen=64
 
-blake2b(data=b'', *, digest_size=64, key=b'', salt=b'', person=b'', fanout=1, depth=1, leaf_size=0, node_offset=0, node_depth=0, inner_size=0, last_node=False, usedforsecurity=True)
-blake2s(data=b'', *, digest_size=32, key=b'', salt=b'', person=b'', fanout=1, depth=1, leaf_size=0, node_offset=0, node_depth=0, inner_size=0, last_node=False, usedforsecurity=True)¶
+# blake2b(data=b'', *, digest_size=64, key=b'', salt=b'', person=b'', fanout=1, depth=1, leaf_size=0, node_offset=0, node_depth=0, inner_size=0, last_node=False, usedforsecurity=True)
+# blake2s(data=b'', *, digest_size=32, key=b'', salt=b'', person=b'', fanout=1, depth=1, leaf_size=0, node_offset=0, node_depth=0, inner_size=0, last_node=False, usedforsecurity=True)¶
 
 
-TODO: finish
+# TODO: finish
