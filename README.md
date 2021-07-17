@@ -12,4 +12,9 @@
 
 # Requisites
 
-- Python 3.
+- Python >`3.0`.
+
+
+# See also
+
+- [For Python Programmers](https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers#table-of-contents)
