@@ -4,12 +4,13 @@
 # Design
 
 - 1 Dependency only.
-- Same API as Python StdLib, same function names, same argument names, so any Documentation works too.
+- Same API as Python StdLib, same function names, same argument names.
+- Same module filenames as Python StdLib, same imports as Python StdLib.
 - It does not use anything from Nim standard library, very future-proof.
 - We do not deprecate stuff, even if Python deprecate/remove it, it will keep working for Nim.
 - Stuff deprecated/removed before year 2020 will not be supported.
-- Nim modules have the same filename as the Python modules filename.
 - Each file is completely self-contained standalone, you can copy just 1 file on your project and it will work.
+- Real strong inferred static typing for Python.
 - Package version == Python version.
 
 
