@@ -1,9 +1,7 @@
 ## * https://docs.python.org/3.10/library/curses.ascii.html
-from std/os import splitFile
 import nimpy
-let module = nimpy.pyImport(static(currentSourcePath().splitFile.name))
-template X(simbol; a): auto =
-  when declared result: module.simbol(a).to(type(result)) else: discard module.simbol(a)
+let module = nimpy.pyImport("curses.ascii")
+template X(simbol; a): auto = module.simbol(a).to(type(result))
 proc isalnum*(c: string or char):  bool = X isalnum,  c
 proc isalpha*(c: string or char):  bool = X isalpha,  c
 proc isascii*(c: string or char):  bool = X isascii,  c
@@ -19,3 +17,7 @@ proc isupper*(c: string or char):  bool = X isupper,  c
 proc isxdigit*(c: string or char): bool = X isxdigit, c
 proc isctrl*(c: string or char):   bool = X isctrl,   c
 proc ismeta*(c: string or char):   bool = X ismeta,   c
+proc ascii*(c: char or int):     string = X ascii,    c
+proc ctrl*(c: char or int):      string = X ctrl,     c
+proc alt*(c: char or int):       string = X alt,      c
+proc unctrl*(c: char or int):    string = X unctrl,   c
