@@ -1,6 +1,8 @@
 ## * https://docs.python.org/3.10/library/colorsys.html
 import nimpy
+
 template X(simbol; a, b, c): auto = nimpy.pyImport("colorsys").simbol(a, b, c).to(type(result))
+
 proc rgb_to_yiq*(red, green, blue: float):           tuple[y, i, q: float]                    = X rgb_to_yiq, red, green, blue
 proc yiq_to_rgb*(y, i, q: float):                    tuple[red, green, blue: float]           = X yiq_to_rgb, y, i, q
 proc rgb_to_hls*(red, green, blue: float):           tuple[hue, lightness, saturation: float] = X rgb_to_hls, red, green, blue
