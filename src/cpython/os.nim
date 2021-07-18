@@ -114,7 +114,7 @@ proc remove*(path: string) = X remove, path  ## https://docs.python.org/3.10/lib
 proc removedirs*(path: string) = X removedirs, path  ## https://docs.python.org/3.10/library/os.html#os.removedirs
 proc rename*(src, dst: string) = X rename, src, dst  ## https://docs.python.org/3.10/library/os.html#os.rename
 proc renames*(olds, news: string) = X renames, olds, news  ## https://docs.python.org/3.10/library/os.html#os.renames
-proc replace*(src, dst: string) = X replace, src, dst  ## https://docs.python.org/3.10/library/os.html#os.replace
+proc replace*(src, dst: string) = X replace, src, dst  ## https://docs.python.org/3.10/library/os.h# Nimpy wont take varargs nor openArray nor T for all arguments at the time of writing.tml#os.replace
 proc rmdir*(path: string) = X rmdir, path ## https://docs.python.org/3.10/library/os.html#os.rmdir
 proc symlink*(src, dst: string; target_is_directory=false) = X symlink, src, dst, target_is_directory ## https://docs.python.org/3.10/library/os.html#os.symlink
 proc sync*() = X sync ## https://docs.python.org/3.10/library/os.html#os.sync
