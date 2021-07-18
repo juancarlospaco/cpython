@@ -1,10 +1,6 @@
 ## * https://docs.python.org/3.10/library/bz2.html
-from std/os import splitFile
 import nimpy
-let module = nimpy.pyImport(static(currentSourcePath().splitFile.name))
-template X(simbol; a): auto =
-  when declared result: module.simbol(a).to(type(result)) else: discard module.simbol(a)
-template X(simbol; a, b): auto =
-  when declared result: module.simbol(a, b).to(type(result)) else: discard module.simbol(a, b)
-proc compress*(data: string; compresslevel = 9) = X compress, data, compresslevel
-proc decompress*(data: string)                  = X decompress, data
+template X(simbol; a):    auto = nimpy.pyImport("bz2").simbol(a).to(type(result))
+template X(simbol; a, b): auto = nimpy.pyImport("bz2").simbol(a, b).to(type(result))
+proc compress*(data: string; compresslevel = 9): string = X compress, data, compresslevel
+proc decompress*(data: string): string                  = X decompress, data
