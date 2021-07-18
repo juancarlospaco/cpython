@@ -1,5 +1,6 @@
 ## * https://docs.python.org/3.10/library/turtle.html
 import nimpy
+
 template X(simbol): auto =
   when declared result: nimpy.pyImport("turtle").simbol().to(type(result)) else: discard nimpy.pyImport("turtle").simbol()
 template X(simbol; a): auto =
@@ -12,6 +13,7 @@ template X(simbol; a, b, c, d): auto =
   when declared result: nimpy.pyImport("turtle").simbol(a, b, c, d).to(type(result)) else: discard nimpy.pyImport("turtle").simbol(a, b, c, d)
 template X(simbol; a, b, c, d, e): auto =
   when declared result: nimpy.pyImport("turtle").simbol(a, b, c, d, e).to(type(result)) else: discard nimpy.pyImport("turtle").simbol(a, b, c, d, e)
+
 proc forward*(distance: int)    = X forward, distance
 proc forward*(distance: float)  = X forward, distance
 proc backward*(distance: int)   = X backward, distance
