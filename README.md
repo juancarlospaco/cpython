@@ -19,7 +19,7 @@
 
 # Requisites
 
-- Python >`3.0`.
+- Python >`3.0` minimal, >=`3.10` recommended.
 
 
 # See also
