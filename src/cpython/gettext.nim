@@ -1,6 +1,6 @@
 ## * https://docs.python.org/3.10/library/gettext.html
 import nimpy
-template X(simbol):          auto = discard nimpy.pyImport("gettext").simbol()
+template X(simbol)                = discard nimpy.pyImport("gettext").simbol()
 template X(simbol; a, b)          = discard nimpy.pyImport("gettext").simbol(a, b)
 template X(simbol; a, b, c): auto = nimpy.pyImport("gettext").simbol(a, b, c).to(type(result))
 template X(simbol; a): auto =
