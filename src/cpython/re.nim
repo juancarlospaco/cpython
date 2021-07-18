@@ -1,26 +1,15 @@
 ## * https://docs.python.org/3.10/library/curses.html
-from std/os import splitFile
 import nimpy
-let module = nimpy.pyImport(static(currentSourcePath().splitFile.name))
-template X(simbol): auto =
-  when declared result: module.simbol().to(type(result)) else: discard module.simbol()
-template X(simbol; a): auto =
-  when declared result: module.simbol(a).to(type(result)) else: discard module.simbol(a)
-template X(simbol; a, b): auto =
-  when declared result: module.simbol(a, b).to(type(result)) else: discard module.simbol(a, b)
-template X(simbol; a, b, c): auto =
-  when declared result: module.simbol(a, b, c).to(type(result)) else: discard module.simbol(a, b, c)
-template X(simbol; a, b, c, d): auto =
-  when declared result: module.simbol(a, b, c, d).to(type(result)) else: discard module.simbol(a, b, c, d)
-template X(simbol; a, b, c, d, e): auto =
-  when declared result: module.simbol(a, b, c, d, e).to(type(result)) else: discard module.simbol(a, b, c, d, e)
-template X(simbol; a, b, c, d, e, f): auto =
-  when declared result: module.simbol(a, b, c, d, e, f).to(type(result)) else: discard module.simbol(a, b, c, d, e, f)
-template X(simbol; a, b, c, d, e, f, g): auto =
-  when declared result: module.simbol(a, b, c, d, e, f, g).to(type(result)) else: discard module.simbol(a, b, c, d, e, f, g)
-template X(simbol; a, b, c, d, e, f, g, h): auto =
-  when declared result: module.simbol(a, b, c, d, e, f, g, h).to(type(result)) else: discard module.simbol(a, b, c, d, e, f, g, h)
 
-proc *() = X
+template X(simbol)                      = discard nimpy.pyImport("re").simbol()
+template X(simbol; a):             auto = nimpy.pyImport("re").simbol(a).to(type(result))
+template X(simbol; a, b, c):       auto = nimpy.pyImport("re").simbol(a, b, c).to(type(result))
+template X(simbol; a, b, c, d):    auto = nimpy.pyImport("re").simbol(a, b, c, d).to(type(result))
+template X(simbol; a, b, c, d, e): auto = nimpy.pyImport("re").simbol(a, b, c, d, e).to(type(result))
 
-
+proc split*(pattern, str: string; maxsplit = 0, flags = 0): seq[string] = X split, pattern, str, maxsplit, flags
+proc findall*(pattern, str: string; flags = 0): seq[string] = X findall, pattern, str, flags
+proc sub*(pattern, repl, str: string, count=0, flags=0): string = X sub, pattern, repl, str, count, flags
+proc subn*(pattern, replacement: string; count=0, flags=0): tuple[new_string: string, number_of_subs_made: int] = X subn, pattern, replacement, count, flags
+proc escape*(pattern: string): string = X escape, pattern
+proc purge*() = X purge
