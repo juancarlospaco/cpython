@@ -1,6 +1,8 @@
 ## * https://docs.python.org/3.10/library/curses.ascii.html
 import nimpy
+
 template X(simbol): auto = nimpy.pyImport("curses.ascii").simbol(c).to(type(result))
+
 proc isalnum*(c: string or char):  bool = X isalnum
 proc isalpha*(c: string or char):  bool = X isalpha
 proc isascii*(c: string or char):  bool = X isascii
