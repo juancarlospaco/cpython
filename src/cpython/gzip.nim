@@ -1,10 +1,6 @@
 ## * https://docs.python.org/3.10/library/gzip.html
-from std/os import splitFile
 import nimpy
-let module = nimpy.pyImport(static(currentSourcePath().splitFile.name))
-template X(simbol; a): auto =
-  when declared result: module.simbol(a).to(type(result)) else: discard module.simbol(a)
-template X(simbol; a, b): auto =
-  when declared result: module.simbol(a, b).to(type(result)) else: discard module.simbol(a, b)
+template X(simbol; a):    auto = nimpy.pyImport("gzip").simbol(a).to(type(result))
+template X(simbol; a, b): auto = nimpy.pyImport("gzip").simbol(a, b).to(type(result))
 proc compress*(data: string; compresslevel = 9): string = X compress, data, compresslevel
 proc decompress*(data: string): string                  = X decompress, data
