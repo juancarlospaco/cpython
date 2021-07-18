@@ -1,13 +1,8 @@
 ## * https://docs.python.org/3.10/library/zlib.html
-from std/os import splitFile
 import nimpy
-let module = nimpy.pyImport(static(currentSourcePath().splitFile.name))
-template X(simbol; a): auto =
-  when declared result: module.simbol(a).to(type(result)) else: discard module.simbol(a)
-template X(simbol; a, b): auto =
-  when declared result: module.simbol(a, b).to(type(result)) else: discard module.simbol(a, b)
-template X(simbol; a, b, c): auto =
-  when declared result: module.simbol(a, b, c).to(type(result)) else: discard module.simbol(a, b, c)
+template X(simbol; a):       auto = nimpy.pyImport("zlib").simbol(a).to(type(result))
+template X(simbol; a, b):    auto = nimpy.pyImport("zlib").simbol(a, b).to(type(result))
+template X(simbol; a, b, c): auto = nimpy.pyImport("zlib").simbol(a, b, c).to(type(result))
 proc adler32*(data: string; value: int):             string = X adler32, data, value
 proc adler32*(data: string):                         string = X adler32, data
 proc crc32*(data: string; value: int):               string = X crc32, data, value
