@@ -1,19 +1,17 @@
 ## * https://docs.python.org/3.10/library/turtle.html
-from std/os import splitFile
 import nimpy
-let module = nimpy.pyImport(static(currentSourcePath().splitFile.name))
 template X(simbol): auto =
-  when declared result: module.simbol().to(type(result)) else: discard module.simbol()
+  when declared result: nimpy.pyImport("turtle").simbol().to(type(result)) else: discard nimpy.pyImport("turtle").simbol()
 template X(simbol; a): auto =
-  when declared result: module.simbol(a).to(type(result)) else: discard module.simbol(a)
+  when declared result: nimpy.pyImport("turtle").simbol(a).to(type(result)) else: discard nimpy.pyImport("turtle").simbol(a)
 template X(simbol; a, b): auto =
-  when declared result: module.simbol(a, b).to(type(result)) else: discard module.simbol(a, b)
+  when declared result: nimpy.pyImport("turtle").simbol(a, b).to(type(result)) else: discard nimpy.pyImport("turtle").simbol(a, b)
 template X(simbol; a, b, c): auto =
-  when declared result: module.simbol(a, b, c).to(type(result)) else: discard module.simbol(a, b, c)
+  when declared result: nimpy.pyImport("turtle").simbol(a, b, c).to(type(result)) else: discard nimpy.pyImport("turtle").simbol(a, b, c)
 template X(simbol; a, b, c, d): auto =
-  when declared result: module.simbol(a, b, c, d).to(type(result)) else: discard module.simbol(a, b, c, d)
+  when declared result: nimpy.pyImport("turtle").simbol(a, b, c, d).to(type(result)) else: discard nimpy.pyImport("turtle").simbol(a, b, c, d)
 template X(simbol; a, b, c, d, e): auto =
-  when declared result: module.simbol(a, b, c, d, e).to(type(result)) else: discard module.simbol(a, b, c, d, e)
+  when declared result: nimpy.pyImport("turtle").simbol(a, b, c, d, e).to(type(result)) else: discard nimpy.pyImport("turtle").simbol(a, b, c, d, e)
 proc forward*(distance: int)    = X forward, distance
 proc forward*(distance: float)  = X forward, distance
 proc backward*(distance: int)   = X backward, distance
