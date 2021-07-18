@@ -20,7 +20,6 @@ template X(simbol; a, b, c, d, e, f, g): auto =
   when declared result: module.simbol(a, b, c, d, e, f, g).to(type(result)) else: discard module.simbol(a, b, c, d, e, f, g)
 template X(simbol; a, b, c, d, e, f, g, h): auto =
   when declared result: module.simbol(a, b, c, d, e, f, g, h).to(type(result)) else: discard module.simbol(a, b, c, d, e, f, g, h)
-
 proc enable*()                         = X enable
 proc disable*()                        = X disable
 proc freeze*()                         = X freeze
