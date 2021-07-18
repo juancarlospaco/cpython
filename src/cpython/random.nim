@@ -1,14 +1,11 @@
 ## * https://docs.python.org/3.10/library/random.html
 import nimpy
-const module = "random"
 template X(simbol): auto =
-  when declared result: pyImport(module).simbol().to(type(result)) else: discard pyImport(module).simbol()
-template X(simbol; a): auto =
-  when declared result: pyImport(module).simbol(a).to(type(result)) else: discard pyImport(module).simbol(a)
+  when declared result: nimpy.pyImport("random").simbol().to(type(result)) else: discard nimpy.pyImport("random").simbol()
 template X(simbol; a, b): auto =
-  when declared result: pyImport(module).simbol(a, b).to(type(result)) else: discard pyImport(module).simbol(a, b)
-template X(simbol; a, b, c): auto =
-  when declared result: pyImport(module).simbol(a, b, c).to(type(result)) else: discard pyImport(module).simbol(a, b, c)
+  when declared result: nimpy.pyImport("random").simbol(a, b).to(type(result)) else: discard nimpy.pyImport("random").simbol(a, b)
+template X(simbol; a): auto = nimpy.pyImport("random").simbol(a).to(type(result))
+template X(simbol; a, b, c): auto = nimpy.pyImport("random").simbol(a, b, c).to(type(result))
 proc seed*() = X seed
 proc seed*(a: int; version=2) = X seed, a, version
 proc randbytes*(n: int): string = X randbytes
@@ -17,7 +14,7 @@ proc randrange*(start, stop: int):       int = X randrange, start, stop
 proc randrange*(start, stop, step: int): int = X randrange, start, stop, step
 proc randint*(a, b: int):                int = X randint, a, b
 proc getrandbits*(k: int):               int = X getrandbits, k
-proc choice*(sequence: seq[int]):    int    = X choice, sequence  # Wont take auto nor T.
+proc choice*(sequence: seq[int]):    int    = X choice, sequence
 proc choice*(sequence: seq[char]):   char   = X choice, sequence
 proc choice*(sequence: seq[bool]):   bool   = X choice, sequence
 proc choice*(sequence: seq[float]):  float  = X choice, sequence
