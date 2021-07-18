@@ -8,7 +8,6 @@ template X(simbol): auto =
 template X(simbol; a): auto =
   when declared result: nimpy.pyImport("imp").simbol(a).to(type(result)) else: discard nimpy.pyImport("imp").simbol(a)
 
-
 proc get_magic*(): string = X get_magic
 proc get_suffixes*(): seq[tuple[suffix, mode, tipe: string]] = X get_suffixes
 proc find_module*(name, path: string): tuple[file, pathname, description: string] = X find_module, name, path
