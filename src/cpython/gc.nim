@@ -1,7 +1,7 @@
 ## * https://docs.python.org/3.10/library/gc.html
 import nimpy
 
-template X(simbol; a, b) = discard nimpy.pyImport("gc").simbol(a, b)
+template X(simbol; a, b)    = discard nimpy.pyImport("gc").simbol(a, b)
 template X(simbol; a, b, c) = discard nimpy.pyImport("gc").simbol(a, b, c)
 template X(simbol): auto =
   when declared result: nimpy.pyImport("gc").simbol().to(type(result)) else: discard nimpy.pyImport("gc").simbol()
