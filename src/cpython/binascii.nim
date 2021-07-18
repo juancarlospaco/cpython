@@ -1,9 +1,11 @@
 ## * https://docs.python.org/3.10/library/binascii.html
 import nimpy
+
 template X(simbol; a):          auto = nimpy.pyImport("binascii").simbol(a).to(type(result))
 template X(simbol; a, b):       auto = nimpy.pyImport("binascii").simbol(a, b).to(type(result))
 template X(simbol; a, b, c):    auto = nimpy.pyImport("binascii").simbol(a, b, c).to(type(result))
 template X(simbol; a, b, c, d): auto = nimpy.pyImport("binascii").simbol(a, b, c, d).to(type(result))
+
 proc hexlify*(data: string):        string = X hexlify, data
 proc a2b_hex*(data: string):        string = X a2b_hex, data
 proc unhexlify*(data: string):      string = X unhexlify, data
