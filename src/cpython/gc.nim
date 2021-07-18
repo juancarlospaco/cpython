@@ -37,3 +37,12 @@ proc set_threshold*(threshold0, threshold1: int) = X set_threshold, threshold0, 
 proc set_threshold*(threshold0: int) = X set_threshold, threshold0
 proc get_count*(): tuple[count0, count1, count2: int] = X get_count
 proc get_threshold*(): tuple[threshold0, threshold1, threshold2: int] = X get_threshold
+
+template nogc*(code) =
+  ## Temporarily disable the Python Garbage Collector,
+  ## run your code, and enable Garbage Collector again.
+  try:
+    disable()
+    code
+  finally:
+    enable()
