@@ -1,9 +1,11 @@
 ## * https://docs.python.org/3.10/library/syslog.html
 import nimpy
+
 template X(simbol)          = discard nimpy.pyImport("syslog").simbol()
 template X(simbol; a)       = discard nimpy.pyImport("syslog").simbol(a)
 template X(simbol; a, b)    = discard nimpy.pyImport("syslog").simbol(a, b)
 template X(simbol; a, b, c) = discard nimpy.pyImport("syslog").simbol(a, b, c)
+
 proc closelog*()                        = X closelog
 proc openlog*()                         = X openlog
 proc syslog*(message: string)           = X syslog, message
