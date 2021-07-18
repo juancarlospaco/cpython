@@ -1,7 +1,9 @@
 ## * https://docs.python.org/3.10/library/cmath.html
 import nimpy
+
 template X(simbol):       auto = nimpy.pyImport("cmath").simbol(x).to(type(result))
 template X(simbol; a, b): auto = nimpy.pyImport("cmath").simbol(a, b).to(type(result))
+
 proc exp*(x: int):     int   = X exp
 proc exp*(x: float):   float = X exp
 proc log*(x: int):     int   = X log
