@@ -1,8 +1,10 @@
 ## * https://docs.python.org/3.10/library/base64.html
 import nimpy
+
 template X(simbol; a):       auto = nimpy.pyImport("base64").simbol(a).to(type(result))
 template X(simbol; a, b):    auto = nimpy.pyImport("base64").simbol(a, b).to(type(result))
 template X(simbol; a, b, c): auto = nimpy.pyImport("base64").simbol(a, b, c).to(type(result))
+
 proc b64encode*(s, altchars: string):                 string = X b64encode, s, altchars
 proc b64encode*(s: string):                           string = X b64encode, s
 proc b64decode*(s, altchars: string; validate=false): string = X b64decode, s, altchars, validate
