@@ -1,10 +1,12 @@
 ## * https://docs.python.org/3.10/library/mimetypes.html
 import nimpy
+
 template X(simbol)          = discard nimpy.pyImport("mimetypes").simbol()
 template X(simbol; a)       = discard nimpy.pyImport("mimetypes").simbol(a)
 template X(simbol; a, b, c) = discard nimpy.pyImport("mimetypes").simbol(a, b, c)
 template X(simbol; a, b): auto =
   when declared result: nimpy.pyImport("mimetypes").simbol(a, b).to(type(result)) else: discard nimpy.pyImport("mimetypes").simbol(a, b)
+
 proc init*(files: seq[string])                                     = X init, files
 proc init*()                                                       = X init
 proc read_mime_types*(filename: string)                            = X read_mime_types, filename
