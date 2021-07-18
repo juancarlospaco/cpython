@@ -1,6 +1,6 @@
 ## * https://docs.python.org/3.10/library/gc.html
 from std/os import splitFile
-import nimpy  # Nimpy wont take varargs nor openArray nor T for all arguments at the time of writing.
+import nimpy
 let module = nimpy.pyImport(static(currentSourcePath().splitFile.name))
 template X(simbol): auto =
   when declared result: module.simbol().to(type(result)) else: discard module.simbol()
