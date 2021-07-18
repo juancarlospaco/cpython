@@ -1,11 +1,13 @@
 ## * https://docs.python.org/3.10/library/random.html
 import nimpy
+
 template X(simbol): auto =
   when declared result: nimpy.pyImport("random").simbol().to(type(result)) else: discard nimpy.pyImport("random").simbol()
 template X(simbol; a, b): auto =
   when declared result: nimpy.pyImport("random").simbol(a, b).to(type(result)) else: discard nimpy.pyImport("random").simbol(a, b)
 template X(simbol; a): auto = nimpy.pyImport("random").simbol(a).to(type(result))
 template X(simbol; a, b, c): auto = nimpy.pyImport("random").simbol(a, b, c).to(type(result))
+
 proc seed*() = X seed
 proc seed*(a: int; version=2) = X seed, a, version
 proc randbytes*(n: int): string = X randbytes
