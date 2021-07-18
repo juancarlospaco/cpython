@@ -1,6 +1,16 @@
 # Alternative StdLib for Nim for Python targets
 
 
+![](https://img.shields.io/github/languages/top/juancarlospaco/cpython?style=for-the-badge)
+![](https://img.shields.io/github/stars/juancarlospaco/cpython?style=for-the-badge)
+![](https://img.shields.io/maintenance/yes/2021?style=for-the-badge)
+![](https://img.shields.io/github/languages/code-size/juancarlospaco/cpython?style=for-the-badge)
+![](https://img.shields.io/github/issues-raw/juancarlospaco/cpython?style=for-the-badge "Bugs")
+![](https://img.shields.io/github/issues-pr-raw/juancarlospaco/cpython?style=for-the-badge "PRs")
+![](https://img.shields.io/github/last-commit/juancarlospaco/cpython?style=for-the-badge "Commits")
+![](https://github.com/juancarlospaco/cpython/workflows/Build/badge.svg?branch=main)
+
+
 # Design
 
 - 1 Dependency only.
