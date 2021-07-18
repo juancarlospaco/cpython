@@ -1,10 +1,7 @@
 ## * https://docs.python.org/3.10/library/textwrap.html
 import nimpy
-const module = "textwrap"
-template X(simbol; a): auto =
-  when declared result: pyImport(module).simbol(a).to(type(result)) else: discard pyImport(module).simbol(a)
-template X(simbol; a, b): auto =
-  when declared result: pyImport(module).simbol(a, b).to(type(result)) else: discard pyImport(module).simbol(a, b)
+template X(simbol; a):    auto = nimpy.pyImport("termios").simbol(a).to(type(result))
+template X(simbol; a, b): auto = nimpy.pyImport("termios").simbol(a, b).to(type(result))
 proc wrap*(text: string; width=70): string = X wrap, text, width
 proc fill*(text: string; width=70): string = X fill, text, width
 proc dedent*(text: string):         string = X dedent, text
