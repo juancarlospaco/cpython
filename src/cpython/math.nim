@@ -1,8 +1,10 @@
 ## * https://docs.python.org/3.10/library/math.html
 import nimpy
+
 template X(simbol; a):                      auto = nimpy.pyImport("math").simbol(a).to(type(result))
 template X(simbol; a, b):                   auto = nimpy.pyImport("math").simbol(a, b).to(type(result))
 template X(simbol; a, b, c):                auto = nimpy.pyImport("math").simbol(a, b, c).to(type(result))
+
 proc ceil*(x: int or float):                  float = X ceil, x
 proc comb*(n, k: int or float):               float = X comb, n, k
 proc fabs*(x: int or float):                  float = X fabs, x
