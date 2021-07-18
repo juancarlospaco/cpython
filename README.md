@@ -32,6 +32,11 @@
 - Python >`3.0` minimal, >=`3.10` recommended.
 
 
+# Stars
+
+![](https://starchart.cc/juancarlospaco/cpython.svg)
+
+
 # See also
 
 - [**For Python Programmers**](https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers#table-of-contents)
