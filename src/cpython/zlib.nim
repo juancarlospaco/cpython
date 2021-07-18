@@ -1,8 +1,10 @@
 ## * https://docs.python.org/3.10/library/zlib.html
 import nimpy
+
 template X(simbol; a):       auto = nimpy.pyImport("zlib").simbol(a).to(type(result))
 template X(simbol; a, b):    auto = nimpy.pyImport("zlib").simbol(a, b).to(type(result))
 template X(simbol; a, b, c): auto = nimpy.pyImport("zlib").simbol(a, b, c).to(type(result))
+
 proc adler32*(data: string; value: int):             string = X adler32, data, value
 proc adler32*(data: string):                         string = X adler32, data
 proc crc32*(data: string; value: int):               string = X crc32, data, value
