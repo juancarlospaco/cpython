@@ -13,8 +13,6 @@
 
 # Documentation
 
-[For actual documentation use Python official documentation, works too.](https://docs.python.org/3.10/py-modindex.html)
-
 - :heavy_check_mark: [base64](https://docs.python.org/3.10/library/base64.html) :arrow_right: https://juancarlospaco.github.io/cpython/base64.html
 - :heavy_check_mark: [binascii](https://docs.python.org/3.10/library/binascii.html) :arrow_right: https://juancarlospaco.github.io/cpython/binascii.html
 - :heavy_check_mark: [binhex](https://docs.python.org/3.10/library/binhex.html) :arrow_right: https://juancarlospaco.github.io/cpython/binhex.html
@@ -78,6 +76,8 @@
 - :heavy_check_mark: [zipapp](https://docs.python.org/3.10/library/zipapp.html) :arrow_right: https://juancarlospaco.github.io/cpython/zipapp.html
 - :heavy_check_mark: [zlib](https://docs.python.org/3.10/library/zlib.html) :arrow_right: https://juancarlospaco.github.io/cpython/zlib.html
 - [Open an issue for more Python libraries that you want wrapped!](https://github.com/juancarlospaco/cpython/issues) (1 issue per 1 lib).
+
+[For more documentation, use Python official documentation, works too.](https://docs.python.org/3.10/py-modindex.html)
 
 
 # Design
