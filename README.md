@@ -74,6 +74,7 @@
 - :heavy_check_mark: [turtle](https://docs.python.org/3.10/library/turtle.html) :arrow_right: https://juancarlospaco.github.io/cpython/turtle.html
 - :heavy_check_mark: [unicodedata](https://docs.python.org/3.10/library/unicodedata.html) :arrow_right: https://juancarlospaco.github.io/cpython/unicodedata.html
 - :heavy_check_mark: [uu](https://docs.python.org/3.10/library/uu.html) :arrow_right: https://juancarlospaco.github.io/cpython/uu.html
+- :heavy_check_mark: [uuid](https://docs.python.org/3.10/library/uuid.html) :arrow_right: https://juancarlospaco.github.io/cpython/uuid.html
 - :heavy_check_mark: [warnings](https://docs.python.org/3.10/library/warnings.html) :arrow_right: https://juancarlospaco.github.io/cpython/warnings.html
 - :heavy_check_mark: [webbrowser](https://docs.python.org/3.10/library/webbrowser.html) :arrow_right: https://juancarlospaco.github.io/cpython/webbrowser.html
 - :heavy_check_mark: [winsound](https://docs.python.org/3.10/library/winsound.html) :arrow_right: https://juancarlospaco.github.io/cpython/winsound.html
