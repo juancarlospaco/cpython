@@ -92,7 +92,6 @@
 - Stuff deprecated/removed in Python before year 2020 will not be supported.
 - We do not deprecate stuff, even if Python deprecate/remove it, it will keep working for Nim.
 - Each file is completely self-contained standalone, you can copy just 1 file on your project and use it.
-- Real strong inferred static typing for Python.
 - Package version == Python version.
 
 
