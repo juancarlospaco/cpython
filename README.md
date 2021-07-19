@@ -44,6 +44,11 @@
 ![](https://starchart.cc/juancarlospaco/cpython.svg)
 
 
+# I want X library
+
+- [Open an issue for more Python libraries that you want wrapped!](https://github.com/juancarlospaco/cpython/issues) (1 issue per 1 lib).
+
+
 # See also
 
 - [**For Python Programmers**](https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers#table-of-contents)
