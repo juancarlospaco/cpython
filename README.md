@@ -106,6 +106,11 @@
 ![](https://starchart.cc/juancarlospaco/cpython.svg)
 
 
+# Doing Web Dev ?
+
+- [Alternative StdLib for Nim for NodeJS/JavaScript targets, hijacks NodeJS StdLib for Nim.](https://github.com/juancarlospaco/nodejs#alternative-stdlib-for-nim-for-nodejsjavascript-targets)
+
+
 # See also
 
 - [**For Python Programmers**](https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers#table-of-contents)
