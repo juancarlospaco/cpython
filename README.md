@@ -114,7 +114,7 @@
 ![](https://starchart.cc/juancarlospaco/cpython.svg)
 
 
-# Doing Web Dev ?
+# Doing JavaScript or Web Dev ?
 
 - [Alternative StdLib for Nim for NodeJS/JavaScript targets, hijacks NodeJS StdLib for Nim.](https://github.com/juancarlospaco/nodejs#alternative-stdlib-for-nim-for-nodejsjavascript-targets)
 
