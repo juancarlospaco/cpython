@@ -72,6 +72,7 @@
 - :heavy_check_mark: [timeit](https://docs.python.org/3.10/library/timeit.html) :arrow_right: https://juancarlospaco.github.io/cpython/timeit.html
 - :heavy_check_mark: [tty](https://docs.python.org/3.10/library/tty.html) :arrow_right: https://juancarlospaco.github.io/cpython/tty.html
 - :heavy_check_mark: [turtle](https://docs.python.org/3.10/library/turtle.html) :arrow_right: https://juancarlospaco.github.io/cpython/turtle.html
+- :heavy_check_mark: [unicodedata](https://docs.python.org/3.10/library/unicodedata.html) :arrow_right: https://juancarlospaco.github.io/cpython/unicodedata.html
 - :heavy_check_mark: [uu](https://docs.python.org/3.10/library/uu.html) :arrow_right: https://juancarlospaco.github.io/cpython/uu.html
 - :heavy_check_mark: [warnings](https://docs.python.org/3.10/library/warnings.html) :arrow_right: https://juancarlospaco.github.io/cpython/warnings.html
 - :heavy_check_mark: [webbrowser](https://docs.python.org/3.10/library/webbrowser.html) :arrow_right: https://juancarlospaco.github.io/cpython/webbrowser.html
