@@ -32,6 +32,12 @@
 - Python >`3.0` minimal, >=`3.10` recommended.
 
 
+# TODO
+
+- Windows-only functions are not wrapped yet because I use Arch.
+  If you use Windows send Pull Request.
+
+
 # Stars
 
 ![](https://starchart.cc/juancarlospaco/cpython.svg)
