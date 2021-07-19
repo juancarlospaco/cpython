@@ -1,6 +1,6 @@
 # Alternative StdLib for Nim for Python targets
 
-![](python-wat.png)
+![](nim-python-hybrid0.png)
 
 ![](https://img.shields.io/github/languages/top/juancarlospaco/cpython?style=for-the-badge)
 ![](https://img.shields.io/github/stars/juancarlospaco/cpython?style=for-the-badge)
