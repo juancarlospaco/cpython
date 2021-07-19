@@ -1,1 +1,1 @@
-src/cpython/* linguist-vendored
+*.* linguist-language=Python
