@@ -1,6 +1,6 @@
 # Alternative StdLib for Nim for Python targets
 
-![](nim-python-hybrid0.png)
+![](https://raw.githubusercontent.com/juancarlospaco/cpython/nim/nim-python-hybrid0.png)
 
 ![](https://img.shields.io/github/languages/top/juancarlospaco/cpython?style=for-the-badge)
 ![](https://img.shields.io/github/stars/juancarlospaco/cpython?style=for-the-badge)
@@ -90,7 +90,6 @@
 - Same API as Python StdLib, same function names, same argument names.
 - Same module filenames as Python StdLib, same imports as Python StdLib.
 - It does not use anything from Nim standard library, very future-proof.
-- No imports, no Macros, no variables, in the whole project, very future-proof.
 - Stuff deprecated/removed in Python before year 2020 will not be supported.
 - We do not deprecate stuff, even if Python deprecate/remove it, it will keep working for Nim.
 - Each file is completely self-contained standalone, you can copy just 1 file on your project and use it.
