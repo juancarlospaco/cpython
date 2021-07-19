@@ -15,7 +15,7 @@
 
 [For actual documentation use Python official documentation, works too.](https://docs.python.org/3.10/py-modindex.html)
 
-
+- :heavy_check_mark: [base64](https://docs.python.org/3.10/library/base64.html) :arrow_right: https://juancarlospaco.github.io/cpython/base64.html
 
 
 # Design
