@@ -100,6 +100,11 @@
 - Python ( >`2.7` works but unsupported, >`3.5` minimal, >=`3.10` recommended).
 
 
+# Install
+
+- `nimble install https://github.com/juancarlospaco/cpython.git`
+
+
 # Stars
 
 ![](https://starchart.cc/juancarlospaco/cpython.svg)
