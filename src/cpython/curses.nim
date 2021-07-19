@@ -1,25 +1,16 @@
 ## * https://docs.python.org/3.10/library/curses.html
-from std/os import splitFile
 import nimpy
-let module = nimpy.pyImport(static(currentSourcePath().splitFile.name))
+
 template X(simbol): auto =
-  when declared result: module.simbol().to(type(result)) else: discard module.simbol()
+  when declared result: nimpy.pyImport("curses").simbol().to(type(result)) else: discard nimpy.pyImport("curses").simbol()
 template X(simbol; a): auto =
-  when declared result: module.simbol(a).to(type(result)) else: discard module.simbol(a)
+  when declared result: nimpy.pyImport("curses").simbol(a).to(type(result)) else: discard nimpy.pyImport("curses").simbol(a)
 template X(simbol; a, b): auto =
-  when declared result: module.simbol(a, b).to(type(result)) else: discard module.simbol(a, b)
+  when declared result: nimpy.pyImport("curses").simbol(a, b).to(type(result)) else: discard nimpy.pyImport("curses").simbol(a, b)
 template X(simbol; a, b, c): auto =
-  when declared result: module.simbol(a, b, c).to(type(result)) else: discard module.simbol(a, b, c)
+  when declared result: nimpy.pyImport("curses").simbol(a, b, c).to(type(result)) else: discard nimpy.pyImport("curses").simbol(a, b, c)
 template X(simbol; a, b, c, d): auto =
-  when declared result: module.simbol(a, b, c, d).to(type(result)) else: discard module.simbol(a, b, c, d)
-template X(simbol; a, b, c, d, e): auto =
-  when declared result: module.simbol(a, b, c, d, e).to(type(result)) else: discard module.simbol(a, b, c, d, e)
-template X(simbol; a, b, c, d, e, f): auto =
-  when declared result: module.simbol(a, b, c, d, e, f).to(type(result)) else: discard module.simbol(a, b, c, d, e, f)
-template X(simbol; a, b, c, d, e, f, g): auto =
-  when declared result: module.simbol(a, b, c, d, e, f, g).to(type(result)) else: discard module.simbol(a, b, c, d, e, f, g)
-template X(simbol; a, b, c, d, e, f, g, h): auto =
-  when declared result: module.simbol(a, b, c, d, e, f, g, h).to(type(result)) else: discard module.simbol(a, b, c, d, e, f, g, h)
+  when declared result: nimpy.pyImport("curses").simbol(a, b, c, d).to(type(result)) else: discard nimpy.pyImport("curses").simbol(a, b, c, d)
 template Z(simbol): auto = nimpy.pyImport("curses.ascii").simbol(c).to(type(result))
 
 proc isalnum*(c: string or char):  bool = Z isalnum
@@ -64,9 +55,6 @@ proc killchar*():                string = X killchar
 proc longname*():                string = X longname
 proc meta*(flag: bool)                  = X meta
 proc getsyx*():        tuple[y, x: int] = X getsyx
-proc curs_set*(visibility: range[0..2]) = X curs_set, visibility
-proc initscr*()                         = X initscr
-proc mousemask*(mousemask: int):    int = X mousemask, mousemask
 proc napms*(ms: int)                    = X napms
 proc nl*()                              = X nl
 proc nocbreak*()                        = X nocbreak
@@ -83,7 +71,27 @@ proc reset_prog_mode*()                 = X reset_prog_mode
 proc reset_shell_mode*()                = X reset_shell_mode
 proc resetty*()                         = X resetty
 proc halfdelay*(tenths: range[1..255])  = X halfdelay, tenths
-
+proc savetty*()                         = X savetty
+proc get_escdelay*():               int = X get_escdelay
+proc resize_term*(nlines, ncols: int)   = X resize_term, nlines, ncols
+proc set_escdelay*(ms: int)             = X set_escdelay
+proc get_tabsize*():                int = X get_tabsize
+proc set_tabsize*(size: int):       int = X set_tabsize, size
+proc setsyx*(y, x: int):            int = X setsyx, y, x
+proc setupterm*(term: string; fd = -1)  = X setupterm, term, fd
+proc start_color*()                     = X start_color
+proc termattrs*():                  int = X termattrs
+proc termname*():                string = X termname
+proc tigetflag*(capname: int):      int = X tigetflag, capname
+proc tigetnum*(capname: int):       int = X tigetnum, capname
+proc tigetstr*(capname: string):    int = X tigetstr, capname
+proc typeahead*(fd: int)                = X typeahead, fd
+proc update_lines_cols*()               = X update_lines_cols
+proc unget_wch*(ch: char or string)     = X unget_wch, ch
+proc use_env*(flag: bool)               = X use_env, flag
+proc use_default_colors*()              = X use_default_colors
+proc unctrl*(ch: char or string): string = X unctrl, ch
+proc ungetch*(ch: char or string): string = X ungetch, ch
 proc color_content*(color_number: int): tuple[red, green, blue: int] = X color_content, color_number
 proc color_pair*(pair_number: int): string = X color_pair, pair_number
 proc getmouse*(): tuple[id, x, y, z, bstate: int] = X getmouse
@@ -91,21 +99,3 @@ proc has_extended_color_support*(): bool = X has_extended_color_support
 proc init_color*(color_number, r, g, b: range[0..1000]) = X init_color, color_number, r, g, b
 proc is_term_resized*(nlines, ncols: int) = X is_term_resized, nlines, ncols
 proc pair_content*(pair_number: int): tuple[fg, bg: int] = X pair_content, pair_number
-
-
-
-
-
-
-
-
-
-
-
-
-
-proc *() = X
-
-
-
-
