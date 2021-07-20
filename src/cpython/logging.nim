@@ -17,3 +17,4 @@ proc disable*(level: string or int)               = X disable, level
 proc addLevelName*(level: int; levelName: string) = X addLevelName, level, levelName
 proc getLevelName*(level: int): string            = X getLevelName, level
 proc shutdown*()                                  = X shutdown
+proc captureWarnings*(capture: bool)              = X captureWarnings, capture
