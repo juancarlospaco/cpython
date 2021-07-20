@@ -2,7 +2,7 @@
 import nimpy
 
 template X(simbol; a, b): auto = discard nimpy.pyImport("logging").simbol(a, b)
-template X(simbol): auto = discard nimpy.pyImport("logging").simbol()
+template X(simbol):       auto = discard nimpy.pyImport("logging").simbol()
 template X(simbol; a): auto =
   when declared result: nimpy.pyImport("logging").simbol(a).to(type(result)) else: discard nimpy.pyImport("logging").simbol(a)
 
