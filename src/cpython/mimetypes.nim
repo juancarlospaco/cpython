@@ -6,6 +6,11 @@ template X(simbol; a)       = discard nimpy.pyImport("mimetypes").simbol(a)
 template X(simbol; a, b, c) = discard nimpy.pyImport("mimetypes").simbol(a, b, c)
 template X(simbol; a, b): auto =
   when declared result: nimpy.pyImport("mimetypes").simbol(a, b).to(type(result)) else: discard nimpy.pyImport("mimetypes").simbol(a, b)
+template `:=`(simbol; tipe: typedesc) =
+  let simbol* {.inject.}: tipe = nimpy.pyImport("mimetypes").simbol.to(tipe)
+
+inited     := bool
+knownfiles := seq[string]
 
 proc init*(files: seq[string])                                     = X init, files
 proc init*()                                                       = X init
