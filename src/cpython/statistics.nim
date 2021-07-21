@@ -1,6 +1,7 @@
 ## * https://docs.python.org/3.10/library/statistics.html
 from std/os import splitFile
 import nimpy
+
 let module = nimpy.pyImport(static(currentSourcePath().splitFile.name))
 template X(simbol): auto =
   when declared result: module.simbol().to(type(result)) else: discard module.simbol()
@@ -20,6 +21,7 @@ template X(simbol; a, b, c, d, e, f, g): auto =
   when declared result: module.simbol(a, b, c, d, e, f, g).to(type(result)) else: discard module.simbol(a, b, c, d, e, f, g)
 template X(simbol; a, b, c, d, e, f, g, h): auto =
   when declared result: module.simbol(a, b, c, d, e, f, g, h).to(type(result)) else: discard module.simbol(a, b, c, d, e, f, g, h)
+
 proc median_low*(data: seq[int]):       int    = X median_low, data
 proc median_low*(data: seq[float]):     float  = X median_low, data
 proc median_high*(data: seq[int]):      int    = X median_high, data
