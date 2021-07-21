@@ -112,12 +112,14 @@
 
 # Requisites
 
-- Python ( >`2.7` works but unsupported, >`3.5` minimal, >=`3.10` recommended).
+- Python ( >`2.7` works but unsupported, >`3.5` minimal, >=`3.10` recommended ).
 
 
 # Install
 
-- `nimble install https://github.com/juancarlospaco/cpython.git`
+```
+nimble install https://github.com/juancarlospaco/cpython.git
+```
 
 
 # Stars
