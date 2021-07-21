@@ -28,6 +28,7 @@
 - :heavy_check_mark: [dbd](https://docs.python.org/3.10/library/dbd.html) :arrow_right: https://juancarlospaco.github.io/cpython/dbd.html
 - :heavy_check_mark: [doctest](https://docs.python.org/3.10/library/doctest.html) :arrow_right: https://juancarlospaco.github.io/cpython/doctest.html
 - :heavy_check_mark: [ensurepip](https://docs.python.org/3.10/library/ensurepip.html) :arrow_right: https://juancarlospaco.github.io/cpython/ensurepip.html
+- :heavy_check_mark: [faulthandler](https://docs.python.org/3.10/library/faulthandler.html) :arrow_right: https://juancarlospaco.github.io/cpython/faulthandler.html
 - :heavy_check_mark: [fcntl](https://docs.python.org/3.10/library/fcntl.html) :arrow_right: https://juancarlospaco.github.io/cpython/fcntl.html
 - :heavy_check_mark: [filecmp](https://docs.python.org/3.10/library/filecmp.html) :arrow_right: https://juancarlospaco.github.io/cpython/filecmp.html
 - :heavy_check_mark: [fnmatch](https://docs.python.org/3.10/library/fnmatch.html) :arrow_right: https://juancarlospaco.github.io/cpython/fnmatch.html
