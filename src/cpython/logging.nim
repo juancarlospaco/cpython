@@ -5,6 +5,15 @@ template X(simbol; a, b): auto = discard nimpy.pyImport("logging").simbol(a, b)
 template X(simbol):       auto = discard nimpy.pyImport("logging").simbol()
 template X(simbol; a): auto =
   when declared result: nimpy.pyImport("logging").simbol(a).to(type(result)) else: discard nimpy.pyImport("logging").simbol(a)
+template `:=`(simbol; tipe: static[typedesc]) =
+  let simbol* {.inject.}: tipe = nimpy.pyImport("logging").simbol.to(tipe)
+
+CRITICAL := int
+ERROR    := int
+WARNING  := int
+INFO     := int
+DEBUG    := int
+NOTSET   := int
 
 proc debug*(msg: string; args: varargs[auto])     = X debug, msg, args
 proc info*(msg: string; args: varargs[auto])      = X info, msg, args
