@@ -8,7 +8,7 @@ template X(simbol): auto =
 template X(simbol; a): auto =
   when declared result: nimpy.pyImport("imp").simbol(a).to(type(result)) else: discard nimpy.pyImport("imp").simbol(a)
 template `:=`(simbol; tipe: static[typedesc]) =
-  let simbol* {.inject.}: tipe = nimpy.pyImport("gc").simbol.to(tipe)
+  let simbol* {.inject.}: tipe = nimpy.pyImport("imp").simbol.to(tipe)
 
 PY_SOURCE     := int
 PY_COMPILED   := int
