@@ -3,6 +3,14 @@ import nimpy
 
 template X(simbol):       auto = nimpy.pyImport("cmath").simbol(x).to(type(result))
 template X(simbol; a, b): auto = nimpy.pyImport("cmath").simbol(a, b).to(type(result))
+template `:=`(simbol; tipe: typedesc) =
+  let simbol* {.inject.}: tipe = nimpy.pyImport("cmath").simbol.to(tipe)
+
+pi  := float
+e   := float
+tau := float
+inf := float
+nan := float
 
 proc exp*(x: int):     int   = X exp
 proc exp*(x: float):   float = X exp
