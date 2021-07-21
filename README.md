@@ -102,7 +102,7 @@
 - Same API as Python StdLib, same function names, same argument names.
 - Use the vanilla official Python StdLib that you already know by memory.
 - Same module filenames as Python StdLib, same imports as Python StdLib.
-- Documentation online, but also any Python documentation works too.
+- Documentation online, but also any Python documentation should work too.
 - It does not use anything from Nim standard library, very future-proof.
 - Stuff deprecated/removed in Python before year 2020 will not be supported.
 - We do not deprecate stuff, even if Python deprecate/remove it, it will keep working for Nim.
