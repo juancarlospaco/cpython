@@ -7,6 +7,15 @@ template X(simbol): auto =
   when declared result: nimpy.pyImport("imp").simbol().to(type(result)) else: discard nimpy.pyImport("imp").simbol()
 template X(simbol; a): auto =
   when declared result: nimpy.pyImport("imp").simbol(a).to(type(result)) else: discard nimpy.pyImport("imp").simbol(a)
+template `:=`(simbol; tipe: static[typedesc]) =
+  let simbol* {.inject.}: tipe = nimpy.pyImport("gc").simbol.to(tipe)
+
+PY_SOURCE     := int
+PY_COMPILED   := int
+C_EXTENSION   := int
+PKG_DIRECTORY := int
+C_BUILTIN     := int
+PY_FROZEN     := int
 
 proc get_magic*(): string = X get_magic
 proc get_suffixes*(): seq[tuple[suffix, mode, tipe: string]] = X get_suffixes
