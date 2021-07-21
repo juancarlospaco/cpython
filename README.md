@@ -92,9 +92,9 @@
 # Design
 
 - 1 Dependency only.
-- Compatible with ARC/ORC.
 - 1 Nim module per 1 Python module.
-- Module files are <200 lines of code each.
+- Compatible with ARC, ORC, `strictFuncs`.
+- Module files are <200 lines each of pure Nim code.
 - Same API as Python StdLib, same function names, same argument names.
 - Same module filenames as Python StdLib, same imports as Python StdLib.
 - Documentation online, but also any Python documentation works too.
