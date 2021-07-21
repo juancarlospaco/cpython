@@ -1,5 +1,6 @@
 ## * https://docs.python.org/3.10/library/shutil.html
 import nimpy
+
 const module = "shutil"
 template X(simbol): auto =
   when declared result: pyImport(module).simbol().to(type(result)) else: discard pyImport(module).simbol()
@@ -13,6 +14,7 @@ template X(simbol; a, b, c, d): auto =
   when declared result: pyImport(module).simbol(a, b, c, d).to(type(result)) else: discard pyImport(module).simbol(a, b, c, d)
 template X(simbol; a, b, c, d, e, f): auto =
   when declared result: pyImport(module).simbol(a, b, c, d, e, f).to(type(result)) else: discard pyImport(module).simbol(a, b, c, d, e, f)
+
 proc copyfile*(source, destination: string) = X copyfile, source, destination
 proc copymode*(source, destination: string) = X copymode, source, destination
 proc copystat*(source, destination: string) = X copystat, source, destination
