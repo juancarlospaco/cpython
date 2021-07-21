@@ -4,6 +4,14 @@ import nimpy
 template X(simbol; a):                      auto = nimpy.pyImport("math").simbol(a).to(type(result))
 template X(simbol; a, b):                   auto = nimpy.pyImport("math").simbol(a, b).to(type(result))
 template X(simbol; a, b, c):                auto = nimpy.pyImport("math").simbol(a, b, c).to(type(result))
+template `:=`(simbol; tipe: static[typedesc]) =
+  let simbol* {.inject.}: tipe = nimpy.pyImport("math").simbol.to(tipe)
+
+pi  := float
+e   := float
+tau := float
+inf := float
+nan := float
 
 proc ceil*(x: int or float):                  float = X ceil, x
 proc comb*(n, k: int or float):               float = X comb, n, k
