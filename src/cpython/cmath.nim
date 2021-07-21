@@ -3,7 +3,7 @@ import nimpy
 
 template X(simbol):       auto = nimpy.pyImport("cmath").simbol(x).to(type(result))
 template X(simbol; a, b): auto = nimpy.pyImport("cmath").simbol(a, b).to(type(result))
-template `:=`(simbol; tipe: typedesc) =
+template `:=`(simbol; tipe: static[typedesc]) =
   let simbol* {.inject.}: tipe = nimpy.pyImport("cmath").simbol.to(tipe)
 
 pi  := float
