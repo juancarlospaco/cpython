@@ -7,6 +7,14 @@ template X(simbol): auto =
   when declared result: nimpy.pyImport("gc").simbol().to(type(result)) else: discard nimpy.pyImport("gc").simbol()
 template X(simbol; a): auto =
   when declared result: nimpy.pyImport("gc").simbol(a).to(type(result)) else: discard nimpy.pyImport("gc").simbol(a)
+template `:=`(simbol; tipe: static[typedesc]) =
+  let simbol* {.inject.}: tipe = nimpy.pyImport("gc").simbol.to(tipe)
+
+DEBUG_STATS         := int
+DEBUG_COLLECTABLE   := int
+DEBUG_UNCOLLECTABLE := int
+DEBUG_SAVEALL       := int
+DEBUG_LEAK          := int
 
 proc enable*()                         = X enable
 proc disable*()                        = X disable
