@@ -12,7 +12,7 @@ template X(simbol; a, b, c): auto =
 template X(simbol; a, b, c, d): auto =
   when declared result: nimpy.pyImport("curses").simbol(a, b, c, d).to(type(result)) else: discard nimpy.pyImport("curses").simbol(a, b, c, d)
 template Z(simbol): auto = nimpy.pyImport("curses.ascii").simbol(c).to(type(result))
-template `:=`(simbol; tipe: static[typedesc]) =
+template `:=`(simbol; tipe: typedesc) =
   let simbol* {.inject.}: tipe = nimpy.pyImport("curses").simbol.to(tipe)
 
 ERR          := int
