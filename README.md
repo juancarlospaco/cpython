@@ -134,7 +134,7 @@ nimble install https://github.com/juancarlospaco/cpython.git
 
 #### Why?
 
-The idea comes from [the community of Nim en Espanol Telegram group.](https://t.me/NimArgentina)
+The idea comes from [the community of "Nim en Espanol" Telegram group (Spanish).](https://t.me/NimArgentina)
 
 [![](poll.png)](https://t.me/NimArgentina)
 
