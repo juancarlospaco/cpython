@@ -132,11 +132,11 @@ nimble install https://github.com/juancarlospaco/cpython.git
 - [Alternative StdLib for Nim for NodeJS/JavaScript targets, hijacks NodeJS StdLib for Nim.](https://github.com/juancarlospaco/nodejs#alternative-stdlib-for-nim-for-nodejsjavascript-targets)
 
 
-# Why?
+#### Why?
 
 The idea comes from [the community of Nim en Espanol Telegram group.](https://t.me/NimArgentina)
 
-![](poll.png)
+[![](poll.png)](https://t.me/NimArgentina)
 
 
 # See also
