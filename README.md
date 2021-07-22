@@ -97,7 +97,6 @@
 - 1 Nim module per 1 Python module.
 - Compatible with ARC, ORC, `strictFuncs`.
 - Module files are <200 lines each of pure Nim code.
-- Improves IDE auto-completions for better user experiences.
 - Enforces real strong inferred static typing with UFCS for Python.
 - Same API as Python StdLib, same function names, same argument names.
 - Use the vanilla official Python StdLib that you already know by memory.
