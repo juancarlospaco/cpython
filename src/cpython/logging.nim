@@ -15,15 +15,17 @@ INFO     := int
 DEBUG    := int
 NOTSET   := int
 
-proc debug*(msg: string; args: varargs[auto])     = X debug, msg, args
-proc info*(msg: string; args: varargs[auto])      = X info, msg, args
-proc warning*(msg: string; args: varargs[auto])   = X warning, msg, args
-proc error*(msg: string; args: varargs[auto])     = X error, msg, args
-proc critical*(msg: string; args: varargs[auto])  = X critical, msg, args
-proc exception*(msg: string; args: varargs[auto]) = X exception, msg, args
-proc log*(msg: string; args: varargs[auto])       = X log, msg, args
 proc disable*(level: string or int)               = X disable, level
 proc addLevelName*(level: int; levelName: string) = X addLevelName, level, levelName
 proc getLevelName*(level: int): string            = X getLevelName, level
 proc shutdown*()                                  = X shutdown
 proc captureWarnings*(capture: bool)              = X captureWarnings, capture
+
+when false:  # Nimpy does not like varargs ?.
+  proc debug*(msg: string; args: varargs[auto])     = X debug, msg, args
+  proc info*(msg: string; args: varargs[auto])      = X info, msg, args
+  proc warning*(msg: string; args: varargs[auto])   = X warning, msg, args
+  proc error*(msg: string; args: varargs[auto])     = X error, msg, args
+  proc critical*(msg: string; args: varargs[auto])  = X critical, msg, args
+  proc exception*(msg: string; args: varargs[auto]) = X exception, msg, args
+  proc log*(msg: string; args: varargs[auto])       = X log, msg, args
