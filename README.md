@@ -96,7 +96,6 @@
 - :trollface: More supported modules soon...
 - :trollface: [Open an issue for more Python libraries that you want wrapped!](https://github.com/juancarlospaco/cpython/issues) (1 issue per 1 lib).
 
-
 [For more documentation, use Python official documentation, works too.](https://docs.python.org/3.10/py-modindex.html)
 
 
@@ -115,7 +114,7 @@
 - Stuff deprecated/removed in Python before year 2020 will not be supported.
 - We do not deprecate stuff, even if Python deprecate/remove it, it will keep working for Nim.
 - Each file is completely self-contained standalone, you can copy just 1 file on your project and use it.
-- If Python removes a module from StdLib you must obtain the `.py` file somehow, but the `.nim` remains here.
+- If Python removes a module from StdLib you must obtain the `.py` file somehow, but the `.nim` remains.
 - Package version == Python version.
 
 
