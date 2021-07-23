@@ -1,68 +1,67 @@
 ## * https://docs.python.org/3.10/library/os.html
 import nimpy
-{.push used.}
-const module = "os"
+
 template X(simbol): auto =
-  when declared result: pyImport(module).simbol().to(type(result)) else: discard pyImport(module).simbol()
+  when declared result: nimpy.pyImport("os").simbol().to(type(result)) else: discard nimpy.pyImport("os").simbol()
 template X(simbol; a): auto =
-  when declared result: pyImport(module).simbol(a).to(type(result)) else: discard pyImport(module).simbol(a)
+  when declared result: nimpy.pyImport("os").simbol(a).to(type(result)) else: discard nimpy.pyImport("os").simbol(a)
 template X(simbol; a, b): auto =
-  when declared result: pyImport(module).simbol(a, b).to(type(result)) else: discard pyImport(module).simbol(a, b)
+  when declared result: nimpy.pyImport("os").simbol(a, b).to(type(result)) else: discard nimpy.pyImport("os").simbol(a, b)
 template X(simbol; a, b, c): auto =
-  when declared result: pyImport(module).simbol(a, b, c).to(type(result)) else: discard pyImport(module).simbol(a, b, c)
+  when declared result:nimpy.pyImport("os").simbol(a, b, c).to(type(result)) else: discard nimpy.pyImport("os").simbol(a, b, c)
 template X(simbol; a, b, c, d): auto =
-  when declared result: pyImport(module).simbol(a, b, c, d).to(type(result)) else: discard pyImport(module).simbol(a, b, c, d)
+  when declared result: nimpy.pyImport("os").simbol(a, b, c, d).to(type(result)) else: discard nimpy.pyImport("os").simbol(a, b, c, d)
 template X(simbol; a, b, c, d, e): auto =
-  when declared result: pyImport(module).simbol(a, b, c, d, e).to(type(result)) else: discard pyImport(module).simbol(a, b, c, d, e)
-{.pop.}
+  when declared result: nimpy.pyImport("os").simbol(a, b, c, d, e).to(type(result)) else: discard nimpy.pyImport("os").simbol(a, b, c, d, e)
+
 proc getcwd*(): string = X getcwd
-proc getpgid*(pid: int): int = X getpgid, pid  ## https://docs.python.org/3.10/library/os.html#os.getpgid
+proc getpgid*(pid: int): int = X getpgid, pid
 proc chdir*(path: string) = X chdir, path
-proc fspath*(path: string): string = X fspath, path ## https://docs.python.org/3.10/library/os.html#os.fspath
-proc get_exec_path*(): seq[string] = X get_exec_path  ## https://docs.python.org/3.10/library/os.html#os.get_exec_path
-proc ctermid*(): string = X ctermid       ## https://docs.python.org/3.10/library/os.html#os.ctermid
-proc getegid*(): int = X getegid          ## https://docs.python.org/3.10/library/os.html#os.getegid
-proc geteuid*(): int = X geteuid          ## https://docs.python.org/3.10/library/os.html#os.geteuid
-proc getgid*(): int = X getgid            ## https://docs.python.org/3.10/library/os.html#os.getgid
-proc getgroups*(): seq[int] = X getgroups ## https://docs.python.org/3.10/library/os.html#os.getgroups
-proc getlogin*(): string = X getlogin     ## https://docs.python.org/3.10/library/os.html#os.getlogin
-proc getpgrp*(): int = X getpgrp          ## https://docs.python.org/3.10/library/os.html#os.getpgrp
-proc getpid*(): int = X getpid            ## https://docs.python.org/3.10/library/os.html#os.getpid
-proc getenv*(key: string; default = ""): string = X getenv, key, default    ## https://docs.python.org/3.10/library/os.html#os.getenv
-proc getenvb*(key: string; default = ""): string = X getenvb, key, default  ## https://docs.python.org/3.10/library/os.html#os.getenvb
-proc getgrouplist*(user: string; group: int): seq[int] = X getgrouplist, user, group  ## https://docs.python.org/3.10/library/os.html#os.getgrouplist
-proc getppid*(): int = X getppid  ## https://docs.python.org/3.10/library/os.html#os.getppid
-proc getpriority*(which: string; who: int): int = X getpriority, which, who  ## https://docs.python.org/3.10/library/os.html#os.getpriority
-proc getresuid*(): tuple[ruid: int, euid: int, suid: int] = X getresuid  ## https://docs.python.org/3.10/library/os.html#os.getresuid
-proc getresgid*(): tuple[rgid: int, egid: int, sgid: int] = X getresgid  ## https://docs.python.org/3.10/library/os.html#os.getresgid
-proc getuid*(): int = X getuid  ## https://docs.python.org/3.10/library/os.html#os.getuid
-proc initgroups*(username: string; gid: int): seq[int] = X initgroups, username, gid  ## https://docs.python.org/3.10/library/os.html#os.initgroups
-proc putenv*(key, value: string) = X putenv, key, value  ## https://docs.python.org/3.10/library/os.html#os.putenv
-proc setegid*(egid: int) = X setegid, egid  ## https://docs.python.org/3.10/library/os.html#os.setegid
-proc seteuid*(euid: int) = X seteuid, euid  ## https://docs.python.org/3.10/library/os.html#os.seteuid
-proc setgid*(gid: int) = X setgid, gid  ## https://docs.python.org/3.10/library/os.html#os.setgid
-proc setgroups*(groups: seq[int]) = X setgroups, groups  ## https://docs.python.org/3.10/library/os.html#os.setgroups
-proc setpgrp*() = X setpgrp  ## https://docs.python.org/3.10/library/os.html#os.setpgrp
-proc setpgid*(pid, pgrp: int) = X setpgid, pid, pgrp ## https://docs.python.org/3.10/library/os.html#os.setpgid
-proc setpriority*(which, who: int; priority: -20..19 = 0) = X setpriority, which, who, priority  ## https://docs.python.org/3.10/library/os.html#os.setpriority
-proc setregid*(rgid, egid: int) = X setregid  ## https://docs.python.org/3.10/library/os.html#os.setregid
-proc setresgid*(rgid, egid, sgid: int) = X setresgid, rgid, egid, sgid  ## https://docs.python.org/3.10/library/os.html#os.setresgid
-proc setresuid*(ruid, euid, suid: int) = X setresuid, ruid, euid, suid  ## https://docs.python.org/3.10/library/os.html#os.setresuid
-proc setreuid*(ruid, euid: int) = X setreuid, ruid, euid  ## https://docs.python.org/3.10/library/os.html#os.setreuid
-proc getsid*(pid: int): int = X getsid, pid  ## https://docs.python.org/3.10/library/os.html#os.getsid
-proc setsid*() = X setsid  ## https://docs.python.org/3.10/library/os.html#os.setsid
-proc setuid*(uid: int) = X setuid, uid  ## https://docs.python.org/3.10/library/os.html#os.setuid
-proc strerror*(errorCode: int): string = X strerror, errorCode  ## https://docs.python.org/3.10/library/os.html#os.strerror
-proc umask*(mask: int): int = X umask, mask  ## https://docs.python.org/3.10/library/os.html#os.umask
-proc uname*(): tuple[sysname, nodename, release, version, machine: string] = X uname  ## https://docs.python.org/3.10/library/os.html#os.uname
-proc unsetenv*(key: string) = X unsetenv, key  ## https://docs.python.org/3.10/library/os.html#os.unsetenv
-proc close*(fileDescriptor: int) = X close, fileDescriptor  ## https://docs.python.org/3.10/library/os.html#os.close
-proc closerange*(fromFileDescriptor, toFileDescriptor: int) = X closerange, fromFileDescriptor, toFileDescriptor  ## https://docs.python.org/3.10/library/os.html#os.closerange
-proc copy_file_range*(src, dst, count: int): int = X copy_file_range, src, dst, count  ## https://docs.python.org/3.10/library/os.html#os.copy_file_range
-proc device_encoding*(fd: int): string = X device_encoding, fd ## https://docs.python.org/3.10/library/os.html#os.device_encoding
-proc fchmod*(fd, mode: int) = X fchmod, fd, mode ## https://docs.python.org/3.10/library/os.html#os.fchmod
-proc fchown*(fd, uid, gid: int) = X fchown, fd, uid, gid ## https://docs.python.org/3.10/library/os.html#os.fchown
-proc fdatasync*(fd: int) = X fdatasync, fd ## https://docs.python.org/3.10/library/os.html#os.fdatasync
+proc fspath*(path: string): string = X fspath, path
+proc get_exec_path*(): seq[string] = X get_exec_path
+proc ctermid*(): string = X ctermid
+proc getegid*(): int = X getegid
+proc geteuid*(): int = X geteuid
+proc getgid*(): int = X getgid
+proc getgroups*(): seq[int] = X getgroups
+proc getlogin*(): string = X getlogin
+proc getpgrp*(): int = X getpgrp
+proc getpid*(): int = X getpid
+proc getenv*(key: string; default = ""): string = X getenv, key, default
+proc getenvb*(key: string; default = ""): string = X getenvb, key, default
+proc getgrouplist*(user: string; group: int): seq[int] = X getgrouplist, user, group
+proc getppid*(): int = X getppid
+proc getpriority*(which: string; who: int): int = X getpriority, which, who
+proc getresuid*(): tuple[ruid: int, euid: int, suid: int] = X getresuid
+proc getresgid*(): tuple[rgid: int, egid: int, sgid: int] = X getresgid
+proc getuid*(): int = X getuid
+proc initgroups*(username: string; gid: int): seq[int] = X initgroups, username, gid
+proc putenv*(key, value: string) = X putenv, key, value
+proc setegid*(egid: int) = X setegid, egid
+proc seteuid*(euid: int) = X seteuid, euid
+proc setgid*(gid: int) = X setgid, gid
+proc setgroups*(groups: seq[int]) = X setgroups, groups
+proc setpgrp*() = X setpgrp
+proc setpgid*(pid, pgrp: int) = X setpgid, pid, pgrp
+proc setpriority*(which, who: int; priority: -20..19 = 0) = X setpriority, which, who, priority
+proc setregid*(rgid, egid: int) = X setregid
+proc setresgid*(rgid, egid, sgid: int) = X setresgid, rgid, egid, sgid
+proc setresuid*(ruid, euid, suid: int) = X setresuid, ruid, euid, suid
+proc setreuid*(ruid, euid: int) = X setreuid, ruid, euid
+proc getsid*(pid: int): int = X getsid, pid
+proc setsid*() = X setsid
+proc setuid*(uid: int) = X setuid, uid
+proc strerror*(errorCode: int): string = X strerror, errorCode
+proc umask*(mask: int): int = X umask, mask
+proc uname*(): tuple[sysname, nodename, release, version, machine: string] = X uname
+proc unsetenv*(key: string) = X unsetenv, key
+proc close*(fileDescriptor: int) = X close, fileDescriptor
+proc closerange*(fromFileDescriptor, toFileDescriptor: int) = X closerange, fromFileDescriptor, toFileDescriptor
+proc copy_file_range*(src, dst, count: int): int = X copy_file_range, src, dst, count
+proc device_encoding*(fd: int): string = X device_encoding, fd
+proc fchmod*(fd, mode: int) = X fchmod, fd, mode
+proc fchown*(fd, uid, gid: int) = X fchown, fd, uid, gid
+proc fdatasync*(fd: int) = X fdatasync, fd
 proc fsync*(fd: int) = X fsync, fd ## https://docs.python.org/3.10/library/os.html#os.fsync
 proc ftruncate*(fd, len: int) = X ftruncate, fd, len ## https://docs.python.org/3.10/library/os.html#os.ftruncate
 proc get_blocking*(fd: int): bool = X get_blocking, fd ## https://docs.python.org/3.10/library/os.html#os.get_blocking
@@ -129,50 +128,38 @@ proc getxattr*(path, attribute: string; follow_symlinks=true): string = X getxat
 proc listxattr*(path: string; follow_symlinks=true): seq[string] = X listxattr, path, follow_symlinks  ## https://docs.python.org/3.10/library/os.html#os.listxattr
 proc removexattr*(path, attribute: string; follow_symlinks=true) = X removexattr, path, attribute, follow_symlinks  ## https://docs.python.org/3.10/library/os.html#os.removexattr
 proc setxattr*(path, attribute, value: string; flags=0; follow_symlinks=true) = X setxattr, path, attribute, value, flags, follow_symlinks ## https://docs.python.org/3.10/library/os.html#os.setxattr
-proc abort*() = X abort ## https://docs.python.org/3.10/library/os.html#os.abort
-proc add_dll_directory*(path: string) = X add_dll_directory, path ## https://docs.python.org/3.10/library/os.html#os.add_dll_directory
-proc fork*(): int = X fork ## https://docs.python.org/3.10/library/os.html#os.fork
-proc forkpty*(): tuple[pid, fd: int] = X forkpty  ## https://docs.python.org/3.10/library/os.html#os.forkpty
-proc kill*(pid, sig: int) = X kill, pid, sig  ## https://docs.python.org/3.10/library/os.html#os.kill
-proc killpg*(pgid, sig: int) = X killpg, pgid, sig  ## https://docs.python.org/3.10/library/os.html#os.killpg
-proc nice*(increment: int): int = X nice, increment ## https://docs.python.org/3.10/library/os.html#os.nice
-proc pidfd_open*(pid: int; flags=0): int = X pidfd_open, pid, flags  ## https://docs.python.org/3.10/library/os.html#os.pidfd_open
-proc startfile*(path, operation, arguments, cwd: string) = X startfile, path, operation, arguments, cwd  ## https://docs.python.org/3.10/library/os.html#os.startfile
-proc startfile*(path: string) = X startfile, path  ## https://docs.python.org/3.10/library/os.html#os.startfile
-proc system*(command: string): int = X system, command  ## https://docs.python.org/3.10/library/os.html#os.system
-proc times*(): tuple[user, system, children_user, children_system, elapsed: float] = X times  ## https://docs.python.org/3.10/library/os.html#os.times
-proc wait*(): tuple[pid, exitCode: int] = X wait ## https://docs.python.org/3.10/library/os.html#os.wait
-proc waitpid*(pid, options: int): tuple[pid, exitCode: int] = X waitpid, pid, options  ## https://docs.python.org/3.10/library/os.html#os.waitpid
-proc waitstatus_to_exitcode*(status: int): int = X waitstatus_to_exitcode, status  ## https://docs.python.org/3.10/library/os.html#os.waitstatus_to_exitcode
-proc WCOREDUMP*(status: int): bool = X WCOREDUMP, status       ## https://docs.python.org/3.10/library/os.html#os.WCOREDUMP
-proc WIFCONTINUED*(status: int): bool = X WIFCONTINUED, status ## https://docs.python.org/3.10/library/os.html#os.WIFCONTINUED
-proc WIFSTOPPED*(status: int): bool = X WIFSTOPPED, status     ## https://docs.python.org/3.10/library/os.html#os.WIFSTOPPED
-proc WIFSIGNALED*(status: int): bool = X WIFSIGNALED, status   ## https://docs.python.org/3.10/library/os.html#os.WIFSIGNALED
-proc WIFEXITED*(status: int): bool = X WIFEXITED, status       ## https://docs.python.org/3.10/library/os.html#os.WIFEXITED
-proc WEXITSTATUS*(status: int): int = X WEXITSTATUS, status    ## https://docs.python.org/3.10/library/os.html#os.WEXITSTATUS
-proc WSTOPSIG*(status: int): int = X WSTOPSIG, status          ## https://docs.python.org/3.10/library/os.html#os.WSTOPSIG
-proc WTERMSIG*(status: int): int = X WTERMSIG, status          ## https://docs.python.org/3.10/library/os.html#os.WTERMSIG
-proc sched_get_priority_min*(policy: int): int = X sched_get_priority_min, policy  ## https://docs.python.org/3.10/library/os.html#os.sched_get_priority_min
-proc sched_get_priority_max*(policy: int): int = X sched_get_priority_max, policy  ## https://docs.python.org/3.10/library/os.html#os.sched_get_priority_max
-proc sched_getscheduler*(pid: int): int = X sched_getscheduler, pid  ## https://docs.python.org/3.10/library/os.html#os.sched_getscheduler
-proc sched_rr_get_interval*(pid: int): float = X sched_rr_get_interval, pid ## https://docs.python.org/3.10/library/os.html#os.sched_rr_get_interval
-proc sched_yield*() = X sched_yield ## https://docs.python.org/3.10/library/os.html#os.sched_yield
-proc sched_setaffinity*(pid: int; mask: seq[int]) = X sched_setaffinity, pid, mask  ## https://docs.python.org/3.10/library/os.html#os.sched_setaffinity
-proc confstr*(name: string): string = X confstr, name  ## https://docs.python.org/3.10/library/os.html#os.confstr
-proc cpu_count*(): int = X cpu_count ## https://docs.python.org/3.10/library/os.html#os.cpu_count
-proc getloadavg*(): array[3, float] = X getloadavg ## https://docs.python.org/3.10/library/os.html#os.getloadavg
-proc sysconf*(name: string): int = X sysconf, name  ## https://docs.python.org/3.10/library/os.html#os.sysconf
-proc getrandom*(size: int; flags = 0): seq[byte] = X getrandom, size, flags ## https://docs.python.org/3.10/library/os.html#os.getrandom
-proc urandom*(size: int): string = X urandom, size ## https://docs.python.org/3.10/library/os.html#os.urandom
-
-
-discard """
-proc *() = X ## https://docs.python.org/3.10/library/os.html#os.
-"""
-
-
-
-
-
-
-
+proc abort*() = X abort
+proc add_dll_directory*(path: string) = X add_dll_directory, path
+proc fork*(): int = X fork
+proc forkpty*(): tuple[pid, fd: int] = X forkpty
+proc kill*(pid, sig: int) = X kill, pid, sig
+proc killpg*(pgid, sig: int) = X killpg, pgid, sig
+proc nice*(increment: int): int = X nice, increment
+proc pidfd_open*(pid: int; flags=0): int = X pidfd_open, pid, flags
+proc startfile*(path, operation, arguments, cwd: string) = X startfile, path, operation, arguments, cwd
+proc startfile*(path: string) = X startfile, path
+proc system*(command: string): int = X system, command
+proc times*(): tuple[user, system, children_user, children_system, elapsed: float] = X times
+proc wait*(): tuple[pid, exitCode: int] = X wait
+proc waitpid*(pid, options: int): tuple[pid, exitCode: int] = X waitpid, pid, options
+proc waitstatus_to_exitcode*(status: int): int = X waitstatus_to_exitcode, status
+proc WCOREDUMP*(status: int): bool = X WCOREDUMP, status
+proc WIFCONTINUED*(status: int): bool = X WIFCONTINUED, status
+proc WIFSTOPPED*(status: int): bool = X WIFSTOPPED, status
+proc WIFSIGNALED*(status: int): bool = X WIFSIGNALED, status
+proc WIFEXITED*(status: int): bool = X WIFEXITED, status
+proc WEXITSTATUS*(status: int): int = X WEXITSTATUS, status
+proc WSTOPSIG*(status: int): int = X WSTOPSIG, status
+proc WTERMSIG*(status: int): int = X WTERMSIG, status
+proc sched_get_priority_min*(policy: int): int = X sched_get_priority_min, policy
+proc sched_get_priority_max*(policy: int): int = X sched_get_priority_max, policy
+proc sched_getscheduler*(pid: int): int = X sched_getscheduler, pid
+proc sched_rr_get_interval*(pid: int): float = X sched_rr_get_interval, pid
+proc sched_yield*() = X sched_yield
+proc sched_setaffinity*(pid: int; mask: seq[int]) = X sched_setaffinity, pid, mask
+proc confstr*(name: string): string = X confstr, name
+proc cpu_count*(): int = X cpu_count
+proc getloadavg*(): array[3, float] = X getloadavg
+proc sysconf*(name: string): int = X sysconf, name
+proc getrandom*(size: int; flags = 0): seq[byte] = X getrandom, size, flags
+proc urandom*(size: int): string = X urandom, size
