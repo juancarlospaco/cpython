@@ -62,72 +62,72 @@ proc device_encoding*(fd: int): string = X device_encoding, fd
 proc fchmod*(fd, mode: int) = X fchmod, fd, mode
 proc fchown*(fd, uid, gid: int) = X fchown, fd, uid, gid
 proc fdatasync*(fd: int) = X fdatasync, fd
-proc fsync*(fd: int) = X fsync, fd ## https://docs.python.org/3.10/library/os.html#os.fsync
-proc ftruncate*(fd, len: int) = X ftruncate, fd, len ## https://docs.python.org/3.10/library/os.html#os.ftruncate
-proc get_blocking*(fd: int): bool = X get_blocking, fd ## https://docs.python.org/3.10/library/os.html#os.get_blocking
-proc isatty*(fd: int): bool = X isatty, fd ## https://docs.python.org/3.10/library/os.html#os.isatty
-proc lseek*(fd, pos, how: int): int = X lseek, fd, pos, how ## https://docs.python.org/3.10/library/os.html#os.lseek
-proc openpty*(): tuple[master, slave: int] = X openpty ## https://docs.python.org/3.10/library/os.html#os.openpty
-proc pipe*(): tuple[read, write: int] = X pipe ## https://docs.python.org/3.10/library/os.html#os.pipe
-proc pipe2*(flags: int): tuple[read, write: int] = X pipe2, flags ## https://docs.python.org/3.10/library/os.html#os.pipe2
-proc posix_fallocate*(fd, offset, len: int) = X posix_fallocate, fd, offset, len  ## https://docs.python.org/3.10/library/os.html#os.posix_fallocate
-proc posix_fadvise*(fd, offset, len, advice: int) = X posix_fadvise, fd, offset, len, advice ## https://docs.python.org/3.10/library/os.html#os.posix_fadvise
-proc pread*(fd, n, offset: int): string = X pread, fd, n, offset ## https://docs.python.org/3.10/library/os.html#os.pread
-proc pwrite*(fd: int; str: string; offset: int): int = X pwrite, fd, str, offset ## https://docs.python.org/3.10/library/os.html#os.pwrite
-proc read*(fd, n: int): string = X read, fd, n ## https://docs.python.org/3.10/library/os.html#os.read
-proc sendfile*(out_fd, in_fd, offset, count: int): int = X sendfile ## https://docs.python.org/3.10/library/os.html#os.sendfile
-proc splice*(src, dst, count: int) = X splice, src, dst, count ## https://docs.python.org/3.10/library/os.html#os.splice
-proc tcgetpgrp*(fd: int): int = X tcgetpgrp, fd ## https://docs.python.org/3.10/library/os.html#os.tcgetpgrp
-proc tcsetpgrp*(fd, pg: int) = X tcsetpgrp, fd, pg ## https://docs.python.org/3.10/library/os.html#os.tcsetpgrp
-proc ttyname*(fd: int): string = X ttyname, fd ## https://docs.python.org/3.10/library/os.html#os.ttyname
-proc write*(fd: int; str: string): int = X write, fd, str  ## https://docs.python.org/3.10/library/os.html#os.write
-proc get_terminal_size*(fd: int) = X get_terminal_size, fd  ## https://docs.python.org/3.10/library/os.html#os.get_terminal_size
-proc get_inheritable*(fd: int): bool = X get_inheritable, fd ## https://docs.python.org/3.10/library/os.html#os.get_inheritable
-proc set_inheritable*(fd: int; inheritable: bool) = X set_inheritable, fd, inheritable  ## https://docs.python.org/3.10/library/os.html#os.set_inheritable
-proc access*(path: string; mode: int): bool = X access, path  ## https://docs.python.org/3.10/library/os.html#os.access
-proc access*(path: string; mode: int; effective_ids, follow_symlinks: bool): bool = X access, path, mode, effective_ids, follow_symlinks  ## https://docs.python.org/3.10/library/os.html#os.access
-proc chflags*(path: string; flags: int) = X chflags, path, flags  ## https://docs.python.org/3.10/library/os.html#os.chflags
-proc chflags*(path: string; flags: int; follow_symlinks: bool) = X chflags, path, flags, follow_symlinks  ## https://docs.python.org/3.10/library/os.html#os.chflags
-proc chmod*(path: string; mode: int) = X chmod, path, mode ## https://docs.python.org/3.10/library/os.html#os.chmod
-proc chmod*(path: string; mode: int; follow_symlinks: bool) = X chmod, path, mode, follow_symlinks ## https://docs.python.org/3.10/library/os.html#os.chmod
-proc chown*(path: string; uid, gid: int) = X chown, path, uid, gid  ## https://docs.python.org/3.10/library/os.html#os.chown
-proc chown*(path: string; uid, gid: int; follow_symlinks: bool) = X chown, path, uid, gid, follow_symlinks  ## https://docs.python.org/3.10/library/os.html#os.chown
-proc chroot*(path: string) = X chroot, path ## https://docs.python.org/3.10/library/os.html#os.chroot
-proc fchdir*(fd: int) = X fchdir, fd ## https://docs.python.org/3.10/library/os.html#os.fchdir
-proc getcwdb*(): string = X getcwdb ## https://docs.python.org/3.10/library/os.html#os.getcwdb
-proc lchflags*(path: string; flags: int) = X lchflags, path, flags  ## https://docs.python.org/3.10/library/os.html#os.lchflags
-proc lchmod*(path: string; mode: int) = X lchmod, path, mode  ## https://docs.python.org/3.10/library/os.html#os.lchmod
-proc lchown*(path: string; uid, gid: int) = X lchown, path, uid, gid  ## https://docs.python.org/3.10/library/os.html#os.lchown
-proc link*(src, dst: string) = X link, src, dst ## https://docs.python.org/3.10/library/os.html#os.link
-proc link*(src, dst: string; follow_symlinks: bool) = X link, src, dst, follow_symlinks  ## https://docs.python.org/3.10/library/os.html#os.link
-proc listdir*(path = "."): seq[string] = X listdir, path  ## https://docs.python.org/3.10/library/os.html#os.listdir
-proc mkdir*(path: string; mode = 511) = X mkdir, path, mode  ## https://docs.python.org/3.10/library/os.html#os.mkdir
-proc makedirs*(name: string; mode=511, exist_ok=false) = X makedirs, name, mode, exist_ok  ## https://docs.python.org/3.10/library/os.html#os.makedirs
-proc mkfifo*(path: string; mode=438) = X mkfifo, path, mode  ## https://docs.pythn.org/3.10/library/os.html#os.mkfifo
-proc mknod*(path: string, mode=384, device=0) = X mknod, path, mode, device  ## https://docs.python.org/3.10/library/os.html#os.mknod
-proc major*(device: int): int = X major, device  ## https://docs.python.org/3.10/library/os.html#os.major
-proc minor*(device: int): int = X minor, device  ## https://docs.python.org/3.10/library/os.html#os.minor
-proc makedev*(major, minor: int) = X makedev, major, minor ## https://docs.python.org/3.10/library/os.html#os.makedev
-proc readlink*(path: string): string = X readlink, path  ## https://docs.python.org/3.10/library/os.html#os.readlink
-proc remove*(path: string) = X remove, path  ## https://docs.python.org/3.10/library/os.html#os.remove
-proc removedirs*(path: string) = X removedirs, path  ## https://docs.python.org/3.10/library/os.html#os.removedirs
-proc rename*(src, dst: string) = X rename, src, dst  ## https://docs.python.org/3.10/library/os.html#os.rename
-proc renames*(olds, news: string) = X renames, olds, news  ## https://docs.python.org/3.10/library/os.html#os.renames
-proc replace*(src, dst: string) = X replace, src, dst  ## https://docs.python.org/3.10/library/os.h# Nimpy wont take varargs nor openArray nor T for all arguments at the time of writing.tml#os.replace
-proc rmdir*(path: string) = X rmdir, path ## https://docs.python.org/3.10/library/os.html#os.rmdir
-proc symlink*(src, dst: string; target_is_directory=false) = X symlink, src, dst, target_is_directory ## https://docs.python.org/3.10/library/os.html#os.symlink
-proc sync*() = X sync ## https://docs.python.org/3.10/library/os.html#os.sync
-proc truncate*(path: string; len: int) = X truncate, path, len  ## https://docs.python.org/3.10/library/os.html#os.truncate
-proc unlink*(path: string) = X unlink, path  ## https://docs.python.org/3.10/library/os.html#os.unlink
-proc utime*(path: string) = X utime, path  ## https://docs.python.org/3.10/library/os.html#os.utime
-proc memfd_create*(path: string): int = X memfd_create, path  ## https://docs.python.org/3.10/library/os.html#os.memfd_create
-proc eventfd*(initval: int): int = X eventfd, initval  ## https://docs.python.org/3.10/library/os.html#os.eventfd
-proc eventfd_write*(fd: int; value: string) = X eventfd_write, fd, value  ## https://docs.python.org/3.10/library/os.html#os.eventfd_write
-proc eventfd_read*(fd: int): int = X eventfd_read, fd  ## https://docs.python.org/3.10/library/os.html#os.eventfd_read
-proc getxattr*(path, attribute: string; follow_symlinks=true): string = X getxattr, path, attribute, follow_symlinks  ## https://docs.python.org/3.10/library/os.html#os.getxattr
-proc listxattr*(path: string; follow_symlinks=true): seq[string] = X listxattr, path, follow_symlinks  ## https://docs.python.org/3.10/library/os.html#os.listxattr
-proc removexattr*(path, attribute: string; follow_symlinks=true) = X removexattr, path, attribute, follow_symlinks  ## https://docs.python.org/3.10/library/os.html#os.removexattr
-proc setxattr*(path, attribute, value: string; flags=0; follow_symlinks=true) = X setxattr, path, attribute, value, flags, follow_symlinks ## https://docs.python.org/3.10/library/os.html#os.setxattr
+proc fsync*(fd: int) = X fsync, fd
+proc ftruncate*(fd, len: int) = X ftruncate, fd, len
+proc get_blocking*(fd: int): bool = X get_blocking, fd
+proc isatty*(fd: int): bool = X isatty, fd
+proc lseek*(fd, pos, how: int): int = X lseek, fd, pos, how
+proc openpty*(): tuple[master, slave: int] = X openpty
+proc pipe*(): tuple[read, write: int] = X pipe
+proc pipe2*(flags: int): tuple[read, write: int] = X pipe2, flags
+proc posix_fallocate*(fd, offset, len: int) = X posix_fallocate, fd, offset, len
+proc posix_fadvise*(fd, offset, len, advice: int) = X posix_fadvise, fd, offset, len, advice
+proc pread*(fd, n, offset: int): string = X pread, fd, n, offset
+proc pwrite*(fd: int; str: string; offset: int): int = X pwrite, fd, str, offset
+proc read*(fd, n: int): string = X read, fd, n
+proc sendfile*(out_fd, in_fd, offset, count: int): int = X sendfile
+proc splice*(src, dst, count: int) = X splice, src, dst, count
+proc tcgetpgrp*(fd: int): int = X tcgetpgrp, fd
+proc tcsetpgrp*(fd, pg: int) = X tcsetpgrp, fd, pg
+proc ttyname*(fd: int): string = X ttyname, fd
+proc write*(fd: int; str: string): int = X write, fd, str
+proc get_terminal_size*(fd: int) = X get_terminal_size, fd
+proc get_inheritable*(fd: int): bool = X get_inheritable, fd
+proc set_inheritable*(fd: int; inheritable: bool) = X set_inheritable, fd, inheritable
+proc access*(path: string; mode: int): bool = X access, path
+proc access*(path: string; mode: int; effective_ids, follow_symlinks: bool): bool = X access, path, mode, effective_ids, follow_symlinks
+proc chflags*(path: string; flags: int) = X chflags, path, flags
+proc chflags*(path: string; flags: int; follow_symlinks: bool) = X chflags, path, flags, follow_symlinks
+proc chmod*(path: string; mode: int) = X chmod, path, mode
+proc chmod*(path: string; mode: int; follow_symlinks: bool) = X chmod, path, mode, follow_symlinks
+proc chown*(path: string; uid, gid: int) = X chown, path, uid, gid
+proc chown*(path: string; uid, gid: int; follow_symlinks: bool) = X chown, path, uid, gid, follow_symlinks
+proc chroot*(path: string) = X chroot, path
+proc fchdir*(fd: int) = X fchdir, fd
+proc getcwdb*(): string = X getcwdb
+proc lchflags*(path: string; flags: int) = X lchflags, path, flags
+proc lchmod*(path: string; mode: int) = X lchmod, path, mode
+proc lchown*(path: string; uid, gid: int) = X lchown, path, uid, gid
+proc link*(src, dst: string) = X link, src, dst
+proc link*(src, dst: string; follow_symlinks: bool) = X link, src, dst, follow_symlinks
+proc listdir*(path = "."): seq[string] = X listdir, path
+proc mkdir*(path: string; mode = 511) = X mkdir, path, mode
+proc makedirs*(name: string; mode=511, exist_ok=false) = X makedirs, name, mode, exist_ok
+proc mkfifo*(path: string; mode=438) = X mkfifo, path, mode
+proc mknod*(path: string, mode=384, device=0) = X mknod, path, mode, device
+proc major*(device: int): int = X major, device
+proc minor*(device: int): int = X minor, device
+proc makedev*(major, minor: int) = X makedev, major, minor
+proc readlink*(path: string): string = X readlink, path
+proc remove*(path: string) = X remove, path
+proc removedirs*(path: string) = X removedirs, path
+proc rename*(src, dst: string) = X rename, src, dst
+proc renames*(olds, news: string) = X renames, olds, news
+proc replace*(src, dst: string) = X replace, src, dst
+proc rmdir*(path: string) = X rmdir, path
+proc symlink*(src, dst: string; target_is_directory=false) = X symlink, src, dst, target_is_directory
+proc sync*() = X sync
+proc truncate*(path: string; len: int) = X truncate, path, len
+proc unlink*(path: string) = X unlink, path
+proc utime*(path: string) = X utime, path
+proc memfd_create*(path: string): int = X memfd_create, path
+proc eventfd*(initval: int): int = X eventfd, initval
+proc eventfd_write*(fd: int; value: string) = X eventfd_write, fd, value
+proc eventfd_read*(fd: int): int = X eventfd_read, fd
+proc getxattr*(path, attribute: string; follow_symlinks=true): string = X getxattr, path, attribute, follow_symlinks
+proc listxattr*(path: string; follow_symlinks=true): seq[string] = X listxattr, path, follow_symlinks
+proc removexattr*(path, attribute: string; follow_symlinks=true) = X removexattr, path, attribute, follow_symlinks
+proc setxattr*(path, attribute, value: string; flags=0; follow_symlinks=true) = X setxattr, path, attribute, value, flags, follow_symlinks
 proc abort*() = X abort
 proc add_dll_directory*(path: string) = X add_dll_directory, path
 proc fork*(): int = X fork
