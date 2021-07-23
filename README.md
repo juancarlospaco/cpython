@@ -64,6 +64,7 @@
 - :heavy_check_mark: [quopri](https://docs.python.org/3.10/library/quopri.html) :arrow_right: https://juancarlospaco.github.io/cpython/quopri.html
 - :heavy_check_mark: [random](https://docs.python.org/3.10/library/random.html) :arrow_right: https://juancarlospaco.github.io/cpython/random.html
 - :heavy_check_mark: [re](https://docs.python.org/3.10/library/re.html) :arrow_right: https://juancarlospaco.github.io/cpython/re.html
+- :heavy_check_mark: [resource](https://docs.python.org/3.10/library/resource.html) :arrow_right: https://juancarlospaco.github.io/cpython/resource.html
 - :heavy_check_mark: [runpy](https://docs.python.org/3.10/library/runpy.html) :arrow_right: https://juancarlospaco.github.io/cpython/runpy.html
 - :heavy_check_mark: [secrets](https://docs.python.org/3.10/library/secrets.html) :arrow_right: https://juancarlospaco.github.io/cpython/secrets.html
 - :heavy_check_mark: [shutil](https://docs.python.org/3.10/library/shutil.html) :arrow_right: https://juancarlospaco.github.io/cpython/shutil.html
