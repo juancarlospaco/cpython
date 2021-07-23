@@ -34,6 +34,7 @@ function main() {
     }
   }
 
+  const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
   function switchTheme(e) {
       if (e.target.checked) {
           document.documentElement.setAttribute('data-theme', 'dark');
@@ -44,19 +45,13 @@ function main() {
       }
   }
 
-  const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-  if (toggleSwitch !== null) {
-    toggleSwitch.addEventListener('change', switchTheme, false);
-  }
+  toggleSwitch.addEventListener('change', switchTheme, false);
 
-  var currentTheme = localStorage.getItem('theme');
-  if (!currentTheme && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    currentTheme = 'dark';
-  }
+  const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
   if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
 
-    if (currentTheme === 'dark' && toggleSwitch !== null) {
+    if (currentTheme === 'dark') {
       toggleSwitch.checked = true;
     }
   }
@@ -98,6 +93,320 @@ window.addEventListener('DOMContentLoaded', main);
     </select>
   </div>
   <ul class="simple simple-toc" id="toc-list">
+<li>
+  <a class="reference reference-toplevel" href="#9" id="59">Lets</a>
+  <ul class="simple simple-toc-section">
+      <li><a class="reference" href="#name"
+    title="name: string = to(getAttr(pyImport(&quot;os&quot;), &quot;name&quot;), string)">name</a></li>
+  <li><a class="reference" href="#curdir"
+    title="curdir: string = to(getAttr(pyImport(&quot;os&quot;), &quot;curdir&quot;), string)">curdir</a></li>
+  <li><a class="reference" href="#pardir"
+    title="pardir: string = to(getAttr(pyImport(&quot;os&quot;), &quot;pardir&quot;), string)">pardir</a></li>
+  <li><a class="reference" href="#sep"
+    title="sep: string = to(getAttr(pyImport(&quot;os&quot;), &quot;sep&quot;), string)">sep</a></li>
+  <li><a class="reference" href="#altsep"
+    title="altsep: string = to(getAttr(pyImport(&quot;os&quot;), &quot;altsep&quot;), string)">altsep</a></li>
+  <li><a class="reference" href="#extsep"
+    title="extsep: string = to(getAttr(pyImport(&quot;os&quot;), &quot;extsep&quot;), string)">extsep</a></li>
+  <li><a class="reference" href="#pathsep"
+    title="pathsep: string = to(getAttr(pyImport(&quot;os&quot;), &quot;pathsep&quot;), string)">pathsep</a></li>
+  <li><a class="reference" href="#defpath"
+    title="defpath: string = to(getAttr(pyImport(&quot;os&quot;), &quot;defpath&quot;), string)">defpath</a></li>
+  <li><a class="reference" href="#linesep"
+    title="linesep: string = to(getAttr(pyImport(&quot;os&quot;), &quot;linesep&quot;), string)">linesep</a></li>
+  <li><a class="reference" href="#devnull"
+    title="devnull: string = to(getAttr(pyImport(&quot;os&quot;), &quot;devnull&quot;), string)">devnull</a></li>
+  <li><a class="reference" href="#PRIO_PROCESS"
+    title="PRIO_PROCESS: int = to(getAttr(pyImport(&quot;os&quot;), &quot;PRIO_PROCESS&quot;), int)">PRIO_PROCESS</a></li>
+  <li><a class="reference" href="#PRIO_PGRP"
+    title="PRIO_PGRP: int = to(getAttr(pyImport(&quot;os&quot;), &quot;PRIO_PGRP&quot;), int)">PRIO_PGRP</a></li>
+  <li><a class="reference" href="#PRIO_USER"
+    title="PRIO_USER: int = to(getAttr(pyImport(&quot;os&quot;), &quot;PRIO_USER&quot;), int)">PRIO_USER</a></li>
+  <li><a class="reference" href="#F_LOCK"
+    title="F_LOCK: int = to(getAttr(pyImport(&quot;os&quot;), &quot;F_LOCK&quot;), int)">F_LOCK</a></li>
+  <li><a class="reference" href="#F_TLOCK"
+    title="F_TLOCK: int = to(getAttr(pyImport(&quot;os&quot;), &quot;F_TLOCK&quot;), int)">F_TLOCK</a></li>
+  <li><a class="reference" href="#F_ULOCK"
+    title="F_ULOCK: int = to(getAttr(pyImport(&quot;os&quot;), &quot;F_ULOCK&quot;), int)">F_ULOCK</a></li>
+  <li><a class="reference" href="#F_TEST"
+    title="F_TEST: int = to(getAttr(pyImport(&quot;os&quot;), &quot;F_TEST&quot;), int)">F_TEST</a></li>
+  <li><a class="reference" href="#SEEK_SET"
+    title="SEEK_SET: int = to(getAttr(pyImport(&quot;os&quot;), &quot;SEEK_SET&quot;), int)">SEEK_SET</a></li>
+  <li><a class="reference" href="#SEEK_CUR"
+    title="SEEK_CUR: int = to(getAttr(pyImport(&quot;os&quot;), &quot;SEEK_CUR&quot;), int)">SEEK_CUR</a></li>
+  <li><a class="reference" href="#SEEK_END"
+    title="SEEK_END: int = to(getAttr(pyImport(&quot;os&quot;), &quot;SEEK_END&quot;), int)">SEEK_END</a></li>
+  <li><a class="reference" href="#O_RDONLY"
+    title="O_RDONLY: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_RDONLY&quot;), int)">O_RDONLY</a></li>
+  <li><a class="reference" href="#O_WRONLY"
+    title="O_WRONLY: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_WRONLY&quot;), int)">O_WRONLY</a></li>
+  <li><a class="reference" href="#O_RDWR"
+    title="O_RDWR: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_RDWR&quot;), int)">O_RDWR</a></li>
+  <li><a class="reference" href="#O_APPEND"
+    title="O_APPEND: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_APPEND&quot;), int)">O_APPEND</a></li>
+  <li><a class="reference" href="#O_CREAT"
+    title="O_CREAT: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_CREAT&quot;), int)">O_CREAT</a></li>
+  <li><a class="reference" href="#O_EXCL"
+    title="O_EXCL: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_EXCL&quot;), int)">O_EXCL</a></li>
+  <li><a class="reference" href="#O_TRUNC"
+    title="O_TRUNC: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_TRUNC&quot;), int)">O_TRUNC</a></li>
+  <li><a class="reference" href="#O_DSYNC"
+    title="O_DSYNC: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_DSYNC&quot;), int)">O_DSYNC</a></li>
+  <li><a class="reference" href="#O_RSYNC"
+    title="O_RSYNC: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_RSYNC&quot;), int)">O_RSYNC</a></li>
+  <li><a class="reference" href="#O_SYNC"
+    title="O_SYNC: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_SYNC&quot;), int)">O_SYNC</a></li>
+  <li><a class="reference" href="#O_NDELAY"
+    title="O_NDELAY: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_NDELAY&quot;), int)">O_NDELAY</a></li>
+  <li><a class="reference" href="#O_NONBLOCK"
+    title="O_NONBLOCK: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_NONBLOCK&quot;), int)">O_NONBLOCK</a></li>
+  <li><a class="reference" href="#O_NOCTTY"
+    title="O_NOCTTY: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_NOCTTY&quot;), int)">O_NOCTTY</a></li>
+  <li><a class="reference" href="#O_CLOEXEC"
+    title="O_CLOEXEC: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_CLOEXEC&quot;), int)">O_CLOEXEC</a></li>
+  <li><a class="reference" href="#O_BINARY"
+    title="O_BINARY: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_BINARY&quot;), int)">O_BINARY</a></li>
+  <li><a class="reference" href="#O_NOINHERIT"
+    title="O_NOINHERIT: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_NOINHERIT&quot;), int)">O_NOINHERIT</a></li>
+  <li><a class="reference" href="#O_SHORT_LIVED"
+    title="O_SHORT_LIVED: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_SHORT_LIVED&quot;), int)">O_SHORT_LIVED</a></li>
+  <li><a class="reference" href="#O_TEMPORARY"
+    title="O_TEMPORARY: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_TEMPORARY&quot;), int)">O_TEMPORARY</a></li>
+  <li><a class="reference" href="#O_RANDOM"
+    title="O_RANDOM: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_RANDOM&quot;), int)">O_RANDOM</a></li>
+  <li><a class="reference" href="#O_SEQUENTIAL"
+    title="O_SEQUENTIAL: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_SEQUENTIAL&quot;), int)">O_SEQUENTIAL</a></li>
+  <li><a class="reference" href="#O_TEXT"
+    title="O_TEXT: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_TEXT&quot;), int)">O_TEXT</a></li>
+  <li><a class="reference" href="#O_EVTONLY"
+    title="O_EVTONLY: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_EVTONLY&quot;), int)">O_EVTONLY</a></li>
+  <li><a class="reference" href="#O_FSYNC"
+    title="O_FSYNC: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_FSYNC&quot;), int)">O_FSYNC</a></li>
+  <li><a class="reference" href="#O_SYMLINK"
+    title="O_SYMLINK: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_SYMLINK&quot;), int)">O_SYMLINK</a></li>
+  <li><a class="reference" href="#O_NOFOLLOW_ANY"
+    title="O_NOFOLLOW_ANY: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_NOFOLLOW_ANY&quot;), int)">O_NOFOLLOW_ANY</a></li>
+  <li><a class="reference" href="#O_ASYNC"
+    title="O_ASYNC: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_ASYNC&quot;), int)">O_ASYNC</a></li>
+  <li><a class="reference" href="#O_DIRECT"
+    title="O_DIRECT: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_DIRECT&quot;), int)">O_DIRECT</a></li>
+  <li><a class="reference" href="#O_DIRECTORY"
+    title="O_DIRECTORY: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_DIRECTORY&quot;), int)">O_DIRECTORY</a></li>
+  <li><a class="reference" href="#O_NOFOLLOW"
+    title="O_NOFOLLOW: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_NOFOLLOW&quot;), int)">O_NOFOLLOW</a></li>
+  <li><a class="reference" href="#O_NOATIME"
+    title="O_NOATIME: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_NOATIME&quot;), int)">O_NOATIME</a></li>
+  <li><a class="reference" href="#O_PATH"
+    title="O_PATH: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_PATH&quot;), int)">O_PATH</a></li>
+  <li><a class="reference" href="#O_TMPFILE"
+    title="O_TMPFILE: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_TMPFILE&quot;), int)">O_TMPFILE</a></li>
+  <li><a class="reference" href="#O_SHLOCK"
+    title="O_SHLOCK: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_SHLOCK&quot;), int)">O_SHLOCK</a></li>
+  <li><a class="reference" href="#O_EXLOCK"
+    title="O_EXLOCK: int = to(getAttr(pyImport(&quot;os&quot;), &quot;O_EXLOCK&quot;), int)">O_EXLOCK</a></li>
+  <li><a class="reference" href="#POSIX_FADV_NORMAL"
+    title="POSIX_FADV_NORMAL: int = to(getAttr(pyImport(&quot;os&quot;), &quot;POSIX_FADV_NORMAL&quot;), int)">POSIX_FADV_NORMAL</a></li>
+  <li><a class="reference" href="#POSIX_FADV_SEQUENTIAL"
+    title="POSIX_FADV_SEQUENTIAL: int = to(getAttr(pyImport(&quot;os&quot;), &quot;POSIX_FADV_SEQUENTIAL&quot;),
+                                int)">POSIX_FADV_SEQUENTIAL</a></li>
+  <li><a class="reference" href="#POSIX_FADV_RANDOM"
+    title="POSIX_FADV_RANDOM: int = to(getAttr(pyImport(&quot;os&quot;), &quot;POSIX_FADV_RANDOM&quot;), int)">POSIX_FADV_RANDOM</a></li>
+  <li><a class="reference" href="#POSIX_FADV_NOREUSE"
+    title="POSIX_FADV_NOREUSE: int = to(getAttr(pyImport(&quot;os&quot;), &quot;POSIX_FADV_NOREUSE&quot;), int)">POSIX_FADV_NOREUSE</a></li>
+  <li><a class="reference" href="#POSIX_FADV_WILLNEED"
+    title="POSIX_FADV_WILLNEED: int = to(getAttr(pyImport(&quot;os&quot;), &quot;POSIX_FADV_WILLNEED&quot;),
+                              int)">POSIX_FADV_WILLNEED</a></li>
+  <li><a class="reference" href="#POSIX_FADV_DONTNEED"
+    title="POSIX_FADV_DONTNEED: int = to(getAttr(pyImport(&quot;os&quot;), &quot;POSIX_FADV_DONTNEED&quot;),
+                              int)">POSIX_FADV_DONTNEED</a></li>
+  <li><a class="reference" href="#RWF_NOWAIT"
+    title="RWF_NOWAIT: int = to(getAttr(pyImport(&quot;os&quot;), &quot;RWF_NOWAIT&quot;), int)">RWF_NOWAIT</a></li>
+  <li><a class="reference" href="#RWF_HIPRI"
+    title="RWF_HIPRI: int = to(getAttr(pyImport(&quot;os&quot;), &quot;RWF_HIPRI&quot;), int)">RWF_HIPRI</a></li>
+  <li><a class="reference" href="#RWF_DSYNC"
+    title="RWF_DSYNC: int = to(getAttr(pyImport(&quot;os&quot;), &quot;RWF_DSYNC&quot;), int)">RWF_DSYNC</a></li>
+  <li><a class="reference" href="#RWF_SYNC"
+    title="RWF_SYNC: int = to(getAttr(pyImport(&quot;os&quot;), &quot;RWF_SYNC&quot;), int)">RWF_SYNC</a></li>
+  <li><a class="reference" href="#RWF_APPEND"
+    title="RWF_APPEND: int = to(getAttr(pyImport(&quot;os&quot;), &quot;RWF_APPEND&quot;), int)">RWF_APPEND</a></li>
+  <li><a class="reference" href="#SPLICE_F_MOVE"
+    title="SPLICE_F_MOVE: int = to(getAttr(pyImport(&quot;os&quot;), &quot;SPLICE_F_MOVE&quot;), int)">SPLICE_F_MOVE</a></li>
+  <li><a class="reference" href="#SPLICE_F_NONBLOCK"
+    title="SPLICE_F_NONBLOCK: int = to(getAttr(pyImport(&quot;os&quot;), &quot;SPLICE_F_NONBLOCK&quot;), int)">SPLICE_F_NONBLOCK</a></li>
+  <li><a class="reference" href="#SPLICE_F_MORE"
+    title="SPLICE_F_MORE: int = to(getAttr(pyImport(&quot;os&quot;), &quot;SPLICE_F_MORE&quot;), int)">SPLICE_F_MORE</a></li>
+  <li><a class="reference" href="#F_OK"
+    title="F_OK: int = to(getAttr(pyImport(&quot;os&quot;), &quot;F_OK&quot;), int)">F_OK</a></li>
+  <li><a class="reference" href="#R_OK"
+    title="R_OK: int = to(getAttr(pyImport(&quot;os&quot;), &quot;R_OK&quot;), int)">R_OK</a></li>
+  <li><a class="reference" href="#W_OK"
+    title="W_OK: int = to(getAttr(pyImport(&quot;os&quot;), &quot;W_OK&quot;), int)">W_OK</a></li>
+  <li><a class="reference" href="#X_OK"
+    title="X_OK: int = to(getAttr(pyImport(&quot;os&quot;), &quot;X_OK&quot;), int)">X_OK</a></li>
+  <li><a class="reference" href="#MFD_CLOEXEC"
+    title="MFD_CLOEXEC: int = to(getAttr(pyImport(&quot;os&quot;), &quot;MFD_CLOEXEC&quot;), int)">MFD_CLOEXEC</a></li>
+  <li><a class="reference" href="#MFD_ALLOW_SEALING"
+    title="MFD_ALLOW_SEALING: int = to(getAttr(pyImport(&quot;os&quot;), &quot;MFD_ALLOW_SEALING&quot;), int)">MFD_ALLOW_SEALING</a></li>
+  <li><a class="reference" href="#MFD_HUGETLB"
+    title="MFD_HUGETLB: int = to(getAttr(pyImport(&quot;os&quot;), &quot;MFD_HUGETLB&quot;), int)">MFD_HUGETLB</a></li>
+  <li><a class="reference" href="#MFD_HUGE_SHIFT"
+    title="MFD_HUGE_SHIFT: int = to(getAttr(pyImport(&quot;os&quot;), &quot;MFD_HUGE_SHIFT&quot;), int)">MFD_HUGE_SHIFT</a></li>
+  <li><a class="reference" href="#MFD_HUGE_MASK"
+    title="MFD_HUGE_MASK: int = to(getAttr(pyImport(&quot;os&quot;), &quot;MFD_HUGE_MASK&quot;), int)">MFD_HUGE_MASK</a></li>
+  <li><a class="reference" href="#MFD_HUGE_64KB"
+    title="MFD_HUGE_64KB: int = to(getAttr(pyImport(&quot;os&quot;), &quot;MFD_HUGE_64KB&quot;), int)">MFD_HUGE_64KB</a></li>
+  <li><a class="reference" href="#MFD_HUGE_512KB"
+    title="MFD_HUGE_512KB: int = to(getAttr(pyImport(&quot;os&quot;), &quot;MFD_HUGE_512KB&quot;), int)">MFD_HUGE_512KB</a></li>
+  <li><a class="reference" href="#MFD_HUGE_1MB"
+    title="MFD_HUGE_1MB: int = to(getAttr(pyImport(&quot;os&quot;), &quot;MFD_HUGE_1MB&quot;), int)">MFD_HUGE_1MB</a></li>
+  <li><a class="reference" href="#MFD_HUGE_2MB"
+    title="MFD_HUGE_2MB: int = to(getAttr(pyImport(&quot;os&quot;), &quot;MFD_HUGE_2MB&quot;), int)">MFD_HUGE_2MB</a></li>
+  <li><a class="reference" href="#MFD_HUGE_8MB"
+    title="MFD_HUGE_8MB: int = to(getAttr(pyImport(&quot;os&quot;), &quot;MFD_HUGE_8MB&quot;), int)">MFD_HUGE_8MB</a></li>
+  <li><a class="reference" href="#MFD_HUGE_16MB"
+    title="MFD_HUGE_16MB: int = to(getAttr(pyImport(&quot;os&quot;), &quot;MFD_HUGE_16MB&quot;), int)">MFD_HUGE_16MB</a></li>
+  <li><a class="reference" href="#MFD_HUGE_32MB"
+    title="MFD_HUGE_32MB: int = to(getAttr(pyImport(&quot;os&quot;), &quot;MFD_HUGE_32MB&quot;), int)">MFD_HUGE_32MB</a></li>
+  <li><a class="reference" href="#MFD_HUGE_256MB"
+    title="MFD_HUGE_256MB: int = to(getAttr(pyImport(&quot;os&quot;), &quot;MFD_HUGE_256MB&quot;), int)">MFD_HUGE_256MB</a></li>
+  <li><a class="reference" href="#MFD_HUGE_512MB"
+    title="MFD_HUGE_512MB: int = to(getAttr(pyImport(&quot;os&quot;), &quot;MFD_HUGE_512MB&quot;), int)">MFD_HUGE_512MB</a></li>
+  <li><a class="reference" href="#MFD_HUGE_1GB"
+    title="MFD_HUGE_1GB: int = to(getAttr(pyImport(&quot;os&quot;), &quot;MFD_HUGE_1GB&quot;), int)">MFD_HUGE_1GB</a></li>
+  <li><a class="reference" href="#MFD_HUGE_2GB"
+    title="MFD_HUGE_2GB: int = to(getAttr(pyImport(&quot;os&quot;), &quot;MFD_HUGE_2GB&quot;), int)">MFD_HUGE_2GB</a></li>
+  <li><a class="reference" href="#MFD_HUGE_16GB"
+    title="MFD_HUGE_16GB: int = to(getAttr(pyImport(&quot;os&quot;), &quot;MFD_HUGE_16GB&quot;), int)">MFD_HUGE_16GB</a></li>
+  <li><a class="reference" href="#EFD_CLOEXEC"
+    title="EFD_CLOEXEC: int = to(getAttr(pyImport(&quot;os&quot;), &quot;EFD_CLOEXEC&quot;), int)">EFD_CLOEXEC</a></li>
+  <li><a class="reference" href="#EFD_NONBLOCK"
+    title="EFD_NONBLOCK: int = to(getAttr(pyImport(&quot;os&quot;), &quot;EFD_NONBLOCK&quot;), int)">EFD_NONBLOCK</a></li>
+  <li><a class="reference" href="#EFD_SEMAPHORE"
+    title="EFD_SEMAPHORE: int = to(getAttr(pyImport(&quot;os&quot;), &quot;EFD_SEMAPHORE&quot;), int)">EFD_SEMAPHORE</a></li>
+  <li><a class="reference" href="#XATTR_SIZE_MAX"
+    title="XATTR_SIZE_MAX: int = to(getAttr(pyImport(&quot;os&quot;), &quot;XATTR_SIZE_MAX&quot;), int)">XATTR_SIZE_MAX</a></li>
+  <li><a class="reference" href="#XATTR_CREATE"
+    title="XATTR_CREATE: int = to(getAttr(pyImport(&quot;os&quot;), &quot;XATTR_CREATE&quot;), int)">XATTR_CREATE</a></li>
+  <li><a class="reference" href="#XATTR_REPLACE"
+    title="XATTR_REPLACE: int = to(getAttr(pyImport(&quot;os&quot;), &quot;XATTR_REPLACE&quot;), int)">XATTR_REPLACE</a></li>
+  <li><a class="reference" href="#EX_OK"
+    title="EX_OK: int = to(getAttr(pyImport(&quot;os&quot;), &quot;EX_OK&quot;), int)">EX_OK</a></li>
+  <li><a class="reference" href="#EX_USAGE"
+    title="EX_USAGE: int = to(getAttr(pyImport(&quot;os&quot;), &quot;EX_USAGE&quot;), int)">EX_USAGE</a></li>
+  <li><a class="reference" href="#EX_DATAERR"
+    title="EX_DATAERR: int = to(getAttr(pyImport(&quot;os&quot;), &quot;EX_DATAERR&quot;), int)">EX_DATAERR</a></li>
+  <li><a class="reference" href="#EX_NOINPUT"
+    title="EX_NOINPUT: int = to(getAttr(pyImport(&quot;os&quot;), &quot;EX_NOINPUT&quot;), int)">EX_NOINPUT</a></li>
+  <li><a class="reference" href="#EX_NOUSER"
+    title="EX_NOUSER: int = to(getAttr(pyImport(&quot;os&quot;), &quot;EX_NOUSER&quot;), int)">EX_NOUSER</a></li>
+  <li><a class="reference" href="#EX_NOHOST"
+    title="EX_NOHOST: int = to(getAttr(pyImport(&quot;os&quot;), &quot;EX_NOHOST&quot;), int)">EX_NOHOST</a></li>
+  <li><a class="reference" href="#EX_UNAVAILABLE"
+    title="EX_UNAVAILABLE: int = to(getAttr(pyImport(&quot;os&quot;), &quot;EX_UNAVAILABLE&quot;), int)">EX_UNAVAILABLE</a></li>
+  <li><a class="reference" href="#EX_SOFTWARE"
+    title="EX_SOFTWARE: int = to(getAttr(pyImport(&quot;os&quot;), &quot;EX_SOFTWARE&quot;), int)">EX_SOFTWARE</a></li>
+  <li><a class="reference" href="#EX_OSERR"
+    title="EX_OSERR: int = to(getAttr(pyImport(&quot;os&quot;), &quot;EX_OSERR&quot;), int)">EX_OSERR</a></li>
+  <li><a class="reference" href="#EX_OSFILE"
+    title="EX_OSFILE: int = to(getAttr(pyImport(&quot;os&quot;), &quot;EX_OSFILE&quot;), int)">EX_OSFILE</a></li>
+  <li><a class="reference" href="#EX_CANTCREAT"
+    title="EX_CANTCREAT: int = to(getAttr(pyImport(&quot;os&quot;), &quot;EX_CANTCREAT&quot;), int)">EX_CANTCREAT</a></li>
+  <li><a class="reference" href="#EX_IOERR"
+    title="EX_IOERR: int = to(getAttr(pyImport(&quot;os&quot;), &quot;EX_IOERR&quot;), int)">EX_IOERR</a></li>
+  <li><a class="reference" href="#EX_TEMPFAIL"
+    title="EX_TEMPFAIL: int = to(getAttr(pyImport(&quot;os&quot;), &quot;EX_TEMPFAIL&quot;), int)">EX_TEMPFAIL</a></li>
+  <li><a class="reference" href="#EX_PROTOCOL"
+    title="EX_PROTOCOL: int = to(getAttr(pyImport(&quot;os&quot;), &quot;EX_PROTOCOL&quot;), int)">EX_PROTOCOL</a></li>
+  <li><a class="reference" href="#EX_NOPERM"
+    title="EX_NOPERM: int = to(getAttr(pyImport(&quot;os&quot;), &quot;EX_NOPERM&quot;), int)">EX_NOPERM</a></li>
+  <li><a class="reference" href="#EX_CONFIG"
+    title="EX_CONFIG: int = to(getAttr(pyImport(&quot;os&quot;), &quot;EX_CONFIG&quot;), int)">EX_CONFIG</a></li>
+  <li><a class="reference" href="#EX_NOTFOUND"
+    title="EX_NOTFOUND: int = to(getAttr(pyImport(&quot;os&quot;), &quot;EX_NOTFOUND&quot;), int)">EX_NOTFOUND</a></li>
+  <li><a class="reference" href="#POSIX_SPAWN_OPEN"
+    title="POSIX_SPAWN_OPEN: int = to(getAttr(pyImport(&quot;os&quot;), &quot;POSIX_SPAWN_OPEN&quot;), int)">POSIX_SPAWN_OPEN</a></li>
+  <li><a class="reference" href="#POSIX_SPAWN_CLOSE"
+    title="POSIX_SPAWN_CLOSE: int = to(getAttr(pyImport(&quot;os&quot;), &quot;POSIX_SPAWN_CLOSE&quot;), int)">POSIX_SPAWN_CLOSE</a></li>
+  <li><a class="reference" href="#POSIX_SPAWN_DUP2"
+    title="POSIX_SPAWN_DUP2: int = to(getAttr(pyImport(&quot;os&quot;), &quot;POSIX_SPAWN_DUP2&quot;), int)">POSIX_SPAWN_DUP2</a></li>
+  <li><a class="reference" href="#P_NOWAIT"
+    title="P_NOWAIT: int = to(getAttr(pyImport(&quot;os&quot;), &quot;P_NOWAIT&quot;), int)">P_NOWAIT</a></li>
+  <li><a class="reference" href="#P_NOWAITO"
+    title="P_NOWAITO: int = to(getAttr(pyImport(&quot;os&quot;), &quot;P_NOWAITO&quot;), int)">P_NOWAITO</a></li>
+  <li><a class="reference" href="#P_WAIT"
+    title="P_WAIT: int = to(getAttr(pyImport(&quot;os&quot;), &quot;P_WAIT&quot;), int)">P_WAIT</a></li>
+  <li><a class="reference" href="#P_DETACH"
+    title="P_DETACH: int = to(getAttr(pyImport(&quot;os&quot;), &quot;P_DETACH&quot;), int)">P_DETACH</a></li>
+  <li><a class="reference" href="#P_OVERLAY"
+    title="P_OVERLAY: int = to(getAttr(pyImport(&quot;os&quot;), &quot;P_OVERLAY&quot;), int)">P_OVERLAY</a></li>
+  <li><a class="reference" href="#P_PID"
+    title="P_PID: int = to(getAttr(pyImport(&quot;os&quot;), &quot;P_PID&quot;), int)">P_PID</a></li>
+  <li><a class="reference" href="#P_PGID"
+    title="P_PGID: int = to(getAttr(pyImport(&quot;os&quot;), &quot;P_PGID&quot;), int)">P_PGID</a></li>
+  <li><a class="reference" href="#P_ALL"
+    title="P_ALL: int = to(getAttr(pyImport(&quot;os&quot;), &quot;P_ALL&quot;), int)">P_ALL</a></li>
+  <li><a class="reference" href="#P_PIDFD"
+    title="P_PIDFD: int = to(getAttr(pyImport(&quot;os&quot;), &quot;P_PIDFD&quot;), int)">P_PIDFD</a></li>
+  <li><a class="reference" href="#WEXITED"
+    title="WEXITED: int = to(getAttr(pyImport(&quot;os&quot;), &quot;WEXITED&quot;), int)">WEXITED</a></li>
+  <li><a class="reference" href="#WSTOPPED"
+    title="WSTOPPED: int = to(getAttr(pyImport(&quot;os&quot;), &quot;WSTOPPED&quot;), int)">WSTOPPED</a></li>
+  <li><a class="reference" href="#WNOWAIT"
+    title="WNOWAIT: int = to(getAttr(pyImport(&quot;os&quot;), &quot;WNOWAIT&quot;), int)">WNOWAIT</a></li>
+  <li><a class="reference" href="#CLD_EXITED"
+    title="CLD_EXITED: int = to(getAttr(pyImport(&quot;os&quot;), &quot;CLD_EXITED&quot;), int)">CLD_EXITED</a></li>
+  <li><a class="reference" href="#CLD_KILLED"
+    title="CLD_KILLED: int = to(getAttr(pyImport(&quot;os&quot;), &quot;CLD_KILLED&quot;), int)">CLD_KILLED</a></li>
+  <li><a class="reference" href="#CLD_DUMPED"
+    title="CLD_DUMPED: int = to(getAttr(pyImport(&quot;os&quot;), &quot;CLD_DUMPED&quot;), int)">CLD_DUMPED</a></li>
+  <li><a class="reference" href="#CLD_TRAPPED"
+    title="CLD_TRAPPED: int = to(getAttr(pyImport(&quot;os&quot;), &quot;CLD_TRAPPED&quot;), int)">CLD_TRAPPED</a></li>
+  <li><a class="reference" href="#CLD_STOPPED"
+    title="CLD_STOPPED: int = to(getAttr(pyImport(&quot;os&quot;), &quot;CLD_STOPPED&quot;), int)">CLD_STOPPED</a></li>
+  <li><a class="reference" href="#CLD_CONTINUED"
+    title="CLD_CONTINUED: int = to(getAttr(pyImport(&quot;os&quot;), &quot;CLD_CONTINUED&quot;), int)">CLD_CONTINUED</a></li>
+  <li><a class="reference" href="#WNOHANG"
+    title="WNOHANG: int = to(getAttr(pyImport(&quot;os&quot;), &quot;WNOHANG&quot;), int)">WNOHANG</a></li>
+  <li><a class="reference" href="#WCONTINUED"
+    title="WCONTINUED: int = to(getAttr(pyImport(&quot;os&quot;), &quot;WCONTINUED&quot;), int)">WCONTINUED</a></li>
+  <li><a class="reference" href="#WUNTRACED"
+    title="WUNTRACED: int = to(getAttr(pyImport(&quot;os&quot;), &quot;WUNTRACED&quot;), int)">WUNTRACED</a></li>
+  <li><a class="reference" href="#SCHED_OTHER"
+    title="SCHED_OTHER: int = to(getAttr(pyImport(&quot;os&quot;), &quot;SCHED_OTHER&quot;), int)">SCHED_OTHER</a></li>
+  <li><a class="reference" href="#SCHED_BATCH"
+    title="SCHED_BATCH: int = to(getAttr(pyImport(&quot;os&quot;), &quot;SCHED_BATCH&quot;), int)">SCHED_BATCH</a></li>
+  <li><a class="reference" href="#SCHED_IDLE"
+    title="SCHED_IDLE: int = to(getAttr(pyImport(&quot;os&quot;), &quot;SCHED_IDLE&quot;), int)">SCHED_IDLE</a></li>
+  <li><a class="reference" href="#SCHED_SPORADIC"
+    title="SCHED_SPORADIC: int = to(getAttr(pyImport(&quot;os&quot;), &quot;SCHED_SPORADIC&quot;), int)">SCHED_SPORADIC</a></li>
+  <li><a class="reference" href="#SCHED_FIFO"
+    title="SCHED_FIFO: int = to(getAttr(pyImport(&quot;os&quot;), &quot;SCHED_FIFO&quot;), int)">SCHED_FIFO</a></li>
+  <li><a class="reference" href="#SCHED_RR"
+    title="SCHED_RR: int = to(getAttr(pyImport(&quot;os&quot;), &quot;SCHED_RR&quot;), int)">SCHED_RR</a></li>
+  <li><a class="reference" href="#SCHED_RESET_ON_FORK"
+    title="SCHED_RESET_ON_FORK: int = to(getAttr(pyImport(&quot;os&quot;), &quot;SCHED_RESET_ON_FORK&quot;),
+                              int)">SCHED_RESET_ON_FORK</a></li>
+  <li><a class="reference" href="#RTLD_LAZY"
+    title="RTLD_LAZY: int = to(getAttr(pyImport(&quot;os&quot;), &quot;RTLD_LAZY&quot;), int)">RTLD_LAZY</a></li>
+  <li><a class="reference" href="#RTLD_NOW"
+    title="RTLD_NOW: int = to(getAttr(pyImport(&quot;os&quot;), &quot;RTLD_NOW&quot;), int)">RTLD_NOW</a></li>
+  <li><a class="reference" href="#RTLD_GLOBAL"
+    title="RTLD_GLOBAL: int = to(getAttr(pyImport(&quot;os&quot;), &quot;RTLD_GLOBAL&quot;), int)">RTLD_GLOBAL</a></li>
+  <li><a class="reference" href="#RTLD_LOCAL"
+    title="RTLD_LOCAL: int = to(getAttr(pyImport(&quot;os&quot;), &quot;RTLD_LOCAL&quot;), int)">RTLD_LOCAL</a></li>
+  <li><a class="reference" href="#RTLD_NODELETE"
+    title="RTLD_NODELETE: int = to(getAttr(pyImport(&quot;os&quot;), &quot;RTLD_NODELETE&quot;), int)">RTLD_NODELETE</a></li>
+  <li><a class="reference" href="#RTLD_NOLOAD"
+    title="RTLD_NOLOAD: int = to(getAttr(pyImport(&quot;os&quot;), &quot;RTLD_NOLOAD&quot;), int)">RTLD_NOLOAD</a></li>
+  <li><a class="reference" href="#RTLD_DEEPBIND"
+    title="RTLD_DEEPBIND: int = to(getAttr(pyImport(&quot;os&quot;), &quot;RTLD_DEEPBIND&quot;), int)">RTLD_DEEPBIND</a></li>
+  <li><a class="reference" href="#GRND_NONBLOCK"
+    title="GRND_NONBLOCK: int = to(getAttr(pyImport(&quot;os&quot;), &quot;GRND_NONBLOCK&quot;), int)">GRND_NONBLOCK</a></li>
+  <li><a class="reference" href="#GRND_RANDOM"
+    title="GRND_RANDOM: int = to(getAttr(pyImport(&quot;os&quot;), &quot;GRND_RANDOM&quot;), int)">GRND_RANDOM</a></li>
+
+  </ul>
+</li>
 <li>
   <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
   <ul class="simple simple-toc-section">
@@ -842,7 +1151,1080 @@ window.addEventListener('DOMContentLoaded', main);
   <p class="module-desc"><ul class="simple"><li><a class="reference external" href="https://docs.python.org/3.10/library/os.html">https://docs.python.org/3.10/library/os.html</a></li>
 </ul>
 </p>
-  <div class="section" id="12">
+  <div class="section" id="9">
+<h1><a class="toc-backref" href="#9">Lets</a></h1>
+<dl class="item">
+<a id="name"></a>
+<dt><pre><a href="os.html#name"><span class="Identifier">name</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;name&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="curdir"></a>
+<dt><pre><a href="os.html#curdir"><span class="Identifier">curdir</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;curdir&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="pardir"></a>
+<dt><pre><a href="os.html#pardir"><span class="Identifier">pardir</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;pardir&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="sep"></a>
+<dt><pre><a href="os.html#sep"><span class="Identifier">sep</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;sep&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="altsep"></a>
+<dt><pre><a href="os.html#altsep"><span class="Identifier">altsep</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;altsep&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="extsep"></a>
+<dt><pre><a href="os.html#extsep"><span class="Identifier">extsep</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;extsep&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="pathsep"></a>
+<dt><pre><a href="os.html#pathsep"><span class="Identifier">pathsep</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;pathsep&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="defpath"></a>
+<dt><pre><a href="os.html#defpath"><span class="Identifier">defpath</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;defpath&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="linesep"></a>
+<dt><pre><a href="os.html#linesep"><span class="Identifier">linesep</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;linesep&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="devnull"></a>
+<dt><pre><a href="os.html#devnull"><span class="Identifier">devnull</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;devnull&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="PRIO_PROCESS"></a>
+<dt><pre><a href="os.html#PRIO_PROCESS"><span class="Identifier">PRIO_PROCESS</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;PRIO_PROCESS&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="PRIO_PGRP"></a>
+<dt><pre><a href="os.html#PRIO_PGRP"><span class="Identifier">PRIO_PGRP</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;PRIO_PGRP&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="PRIO_USER"></a>
+<dt><pre><a href="os.html#PRIO_USER"><span class="Identifier">PRIO_USER</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;PRIO_USER&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="F_LOCK"></a>
+<dt><pre><a href="os.html#F_LOCK"><span class="Identifier">F_LOCK</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;F_LOCK&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="F_TLOCK"></a>
+<dt><pre><a href="os.html#F_TLOCK"><span class="Identifier">F_TLOCK</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;F_TLOCK&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="F_ULOCK"></a>
+<dt><pre><a href="os.html#F_ULOCK"><span class="Identifier">F_ULOCK</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;F_ULOCK&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="F_TEST"></a>
+<dt><pre><a href="os.html#F_TEST"><span class="Identifier">F_TEST</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;F_TEST&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="SEEK_SET"></a>
+<dt><pre><a href="os.html#SEEK_SET"><span class="Identifier">SEEK_SET</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;SEEK_SET&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="SEEK_CUR"></a>
+<dt><pre><a href="os.html#SEEK_CUR"><span class="Identifier">SEEK_CUR</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;SEEK_CUR&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="SEEK_END"></a>
+<dt><pre><a href="os.html#SEEK_END"><span class="Identifier">SEEK_END</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;SEEK_END&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_RDONLY"></a>
+<dt><pre><a href="os.html#O_RDONLY"><span class="Identifier">O_RDONLY</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_RDONLY&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_WRONLY"></a>
+<dt><pre><a href="os.html#O_WRONLY"><span class="Identifier">O_WRONLY</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_WRONLY&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_RDWR"></a>
+<dt><pre><a href="os.html#O_RDWR"><span class="Identifier">O_RDWR</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_RDWR&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_APPEND"></a>
+<dt><pre><a href="os.html#O_APPEND"><span class="Identifier">O_APPEND</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_APPEND&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_CREAT"></a>
+<dt><pre><a href="os.html#O_CREAT"><span class="Identifier">O_CREAT</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_CREAT&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_EXCL"></a>
+<dt><pre><a href="os.html#O_EXCL"><span class="Identifier">O_EXCL</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_EXCL&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_TRUNC"></a>
+<dt><pre><a href="os.html#O_TRUNC"><span class="Identifier">O_TRUNC</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_TRUNC&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_DSYNC"></a>
+<dt><pre><a href="os.html#O_DSYNC"><span class="Identifier">O_DSYNC</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_DSYNC&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_RSYNC"></a>
+<dt><pre><a href="os.html#O_RSYNC"><span class="Identifier">O_RSYNC</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_RSYNC&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_SYNC"></a>
+<dt><pre><a href="os.html#O_SYNC"><span class="Identifier">O_SYNC</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_SYNC&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_NDELAY"></a>
+<dt><pre><a href="os.html#O_NDELAY"><span class="Identifier">O_NDELAY</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_NDELAY&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_NONBLOCK"></a>
+<dt><pre><a href="os.html#O_NONBLOCK"><span class="Identifier">O_NONBLOCK</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_NONBLOCK&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_NOCTTY"></a>
+<dt><pre><a href="os.html#O_NOCTTY"><span class="Identifier">O_NOCTTY</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_NOCTTY&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_CLOEXEC"></a>
+<dt><pre><a href="os.html#O_CLOEXEC"><span class="Identifier">O_CLOEXEC</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_CLOEXEC&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_BINARY"></a>
+<dt><pre><a href="os.html#O_BINARY"><span class="Identifier">O_BINARY</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_BINARY&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_NOINHERIT"></a>
+<dt><pre><a href="os.html#O_NOINHERIT"><span class="Identifier">O_NOINHERIT</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_NOINHERIT&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_SHORT_LIVED"></a>
+<dt><pre><a href="os.html#O_SHORT_LIVED"><span class="Identifier">O_SHORT_LIVED</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_SHORT_LIVED&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_TEMPORARY"></a>
+<dt><pre><a href="os.html#O_TEMPORARY"><span class="Identifier">O_TEMPORARY</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_TEMPORARY&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_RANDOM"></a>
+<dt><pre><a href="os.html#O_RANDOM"><span class="Identifier">O_RANDOM</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_RANDOM&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_SEQUENTIAL"></a>
+<dt><pre><a href="os.html#O_SEQUENTIAL"><span class="Identifier">O_SEQUENTIAL</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_SEQUENTIAL&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_TEXT"></a>
+<dt><pre><a href="os.html#O_TEXT"><span class="Identifier">O_TEXT</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_TEXT&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_EVTONLY"></a>
+<dt><pre><a href="os.html#O_EVTONLY"><span class="Identifier">O_EVTONLY</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_EVTONLY&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_FSYNC"></a>
+<dt><pre><a href="os.html#O_FSYNC"><span class="Identifier">O_FSYNC</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_FSYNC&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_SYMLINK"></a>
+<dt><pre><a href="os.html#O_SYMLINK"><span class="Identifier">O_SYMLINK</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_SYMLINK&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_NOFOLLOW_ANY"></a>
+<dt><pre><a href="os.html#O_NOFOLLOW_ANY"><span class="Identifier">O_NOFOLLOW_ANY</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_NOFOLLOW_ANY&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_ASYNC"></a>
+<dt><pre><a href="os.html#O_ASYNC"><span class="Identifier">O_ASYNC</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_ASYNC&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_DIRECT"></a>
+<dt><pre><a href="os.html#O_DIRECT"><span class="Identifier">O_DIRECT</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_DIRECT&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_DIRECTORY"></a>
+<dt><pre><a href="os.html#O_DIRECTORY"><span class="Identifier">O_DIRECTORY</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_DIRECTORY&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_NOFOLLOW"></a>
+<dt><pre><a href="os.html#O_NOFOLLOW"><span class="Identifier">O_NOFOLLOW</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_NOFOLLOW&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_NOATIME"></a>
+<dt><pre><a href="os.html#O_NOATIME"><span class="Identifier">O_NOATIME</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_NOATIME&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_PATH"></a>
+<dt><pre><a href="os.html#O_PATH"><span class="Identifier">O_PATH</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_PATH&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_TMPFILE"></a>
+<dt><pre><a href="os.html#O_TMPFILE"><span class="Identifier">O_TMPFILE</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_TMPFILE&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_SHLOCK"></a>
+<dt><pre><a href="os.html#O_SHLOCK"><span class="Identifier">O_SHLOCK</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_SHLOCK&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="O_EXLOCK"></a>
+<dt><pre><a href="os.html#O_EXLOCK"><span class="Identifier">O_EXLOCK</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;O_EXLOCK&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="POSIX_FADV_NORMAL"></a>
+<dt><pre><a href="os.html#POSIX_FADV_NORMAL"><span class="Identifier">POSIX_FADV_NORMAL</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;POSIX_FADV_NORMAL&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="POSIX_FADV_SEQUENTIAL"></a>
+<dt><pre><a href="os.html#POSIX_FADV_SEQUENTIAL"><span class="Identifier">POSIX_FADV_SEQUENTIAL</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;POSIX_FADV_SEQUENTIAL&quot;</span><span class="Other">)</span><span class="Other">,</span>
+                                <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="POSIX_FADV_RANDOM"></a>
+<dt><pre><a href="os.html#POSIX_FADV_RANDOM"><span class="Identifier">POSIX_FADV_RANDOM</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;POSIX_FADV_RANDOM&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="POSIX_FADV_NOREUSE"></a>
+<dt><pre><a href="os.html#POSIX_FADV_NOREUSE"><span class="Identifier">POSIX_FADV_NOREUSE</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;POSIX_FADV_NOREUSE&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="POSIX_FADV_WILLNEED"></a>
+<dt><pre><a href="os.html#POSIX_FADV_WILLNEED"><span class="Identifier">POSIX_FADV_WILLNEED</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;POSIX_FADV_WILLNEED&quot;</span><span class="Other">)</span><span class="Other">,</span>
+                              <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="POSIX_FADV_DONTNEED"></a>
+<dt><pre><a href="os.html#POSIX_FADV_DONTNEED"><span class="Identifier">POSIX_FADV_DONTNEED</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;POSIX_FADV_DONTNEED&quot;</span><span class="Other">)</span><span class="Other">,</span>
+                              <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="RWF_NOWAIT"></a>
+<dt><pre><a href="os.html#RWF_NOWAIT"><span class="Identifier">RWF_NOWAIT</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;RWF_NOWAIT&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="RWF_HIPRI"></a>
+<dt><pre><a href="os.html#RWF_HIPRI"><span class="Identifier">RWF_HIPRI</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;RWF_HIPRI&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="RWF_DSYNC"></a>
+<dt><pre><a href="os.html#RWF_DSYNC"><span class="Identifier">RWF_DSYNC</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;RWF_DSYNC&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="RWF_SYNC"></a>
+<dt><pre><a href="os.html#RWF_SYNC"><span class="Identifier">RWF_SYNC</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;RWF_SYNC&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="RWF_APPEND"></a>
+<dt><pre><a href="os.html#RWF_APPEND"><span class="Identifier">RWF_APPEND</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;RWF_APPEND&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="SPLICE_F_MOVE"></a>
+<dt><pre><a href="os.html#SPLICE_F_MOVE"><span class="Identifier">SPLICE_F_MOVE</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;SPLICE_F_MOVE&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="SPLICE_F_NONBLOCK"></a>
+<dt><pre><a href="os.html#SPLICE_F_NONBLOCK"><span class="Identifier">SPLICE_F_NONBLOCK</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;SPLICE_F_NONBLOCK&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="SPLICE_F_MORE"></a>
+<dt><pre><a href="os.html#SPLICE_F_MORE"><span class="Identifier">SPLICE_F_MORE</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;SPLICE_F_MORE&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="F_OK"></a>
+<dt><pre><a href="os.html#F_OK"><span class="Identifier">F_OK</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;F_OK&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="R_OK"></a>
+<dt><pre><a href="os.html#R_OK"><span class="Identifier">R_OK</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;R_OK&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="W_OK"></a>
+<dt><pre><a href="os.html#W_OK"><span class="Identifier">W_OK</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;W_OK&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="X_OK"></a>
+<dt><pre><a href="os.html#X_OK"><span class="Identifier">X_OK</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;X_OK&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="MFD_CLOEXEC"></a>
+<dt><pre><a href="os.html#MFD_CLOEXEC"><span class="Identifier">MFD_CLOEXEC</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;MFD_CLOEXEC&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="MFD_ALLOW_SEALING"></a>
+<dt><pre><a href="os.html#MFD_ALLOW_SEALING"><span class="Identifier">MFD_ALLOW_SEALING</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;MFD_ALLOW_SEALING&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="MFD_HUGETLB"></a>
+<dt><pre><a href="os.html#MFD_HUGETLB"><span class="Identifier">MFD_HUGETLB</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;MFD_HUGETLB&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="MFD_HUGE_SHIFT"></a>
+<dt><pre><a href="os.html#MFD_HUGE_SHIFT"><span class="Identifier">MFD_HUGE_SHIFT</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;MFD_HUGE_SHIFT&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="MFD_HUGE_MASK"></a>
+<dt><pre><a href="os.html#MFD_HUGE_MASK"><span class="Identifier">MFD_HUGE_MASK</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;MFD_HUGE_MASK&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="MFD_HUGE_64KB"></a>
+<dt><pre><a href="os.html#MFD_HUGE_64KB"><span class="Identifier">MFD_HUGE_64KB</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;MFD_HUGE_64KB&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="MFD_HUGE_512KB"></a>
+<dt><pre><a href="os.html#MFD_HUGE_512KB"><span class="Identifier">MFD_HUGE_512KB</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;MFD_HUGE_512KB&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="MFD_HUGE_1MB"></a>
+<dt><pre><a href="os.html#MFD_HUGE_1MB"><span class="Identifier">MFD_HUGE_1MB</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;MFD_HUGE_1MB&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="MFD_HUGE_2MB"></a>
+<dt><pre><a href="os.html#MFD_HUGE_2MB"><span class="Identifier">MFD_HUGE_2MB</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;MFD_HUGE_2MB&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="MFD_HUGE_8MB"></a>
+<dt><pre><a href="os.html#MFD_HUGE_8MB"><span class="Identifier">MFD_HUGE_8MB</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;MFD_HUGE_8MB&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="MFD_HUGE_16MB"></a>
+<dt><pre><a href="os.html#MFD_HUGE_16MB"><span class="Identifier">MFD_HUGE_16MB</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;MFD_HUGE_16MB&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="MFD_HUGE_32MB"></a>
+<dt><pre><a href="os.html#MFD_HUGE_32MB"><span class="Identifier">MFD_HUGE_32MB</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;MFD_HUGE_32MB&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="MFD_HUGE_256MB"></a>
+<dt><pre><a href="os.html#MFD_HUGE_256MB"><span class="Identifier">MFD_HUGE_256MB</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;MFD_HUGE_256MB&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="MFD_HUGE_512MB"></a>
+<dt><pre><a href="os.html#MFD_HUGE_512MB"><span class="Identifier">MFD_HUGE_512MB</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;MFD_HUGE_512MB&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="MFD_HUGE_1GB"></a>
+<dt><pre><a href="os.html#MFD_HUGE_1GB"><span class="Identifier">MFD_HUGE_1GB</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;MFD_HUGE_1GB&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="MFD_HUGE_2GB"></a>
+<dt><pre><a href="os.html#MFD_HUGE_2GB"><span class="Identifier">MFD_HUGE_2GB</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;MFD_HUGE_2GB&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="MFD_HUGE_16GB"></a>
+<dt><pre><a href="os.html#MFD_HUGE_16GB"><span class="Identifier">MFD_HUGE_16GB</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;MFD_HUGE_16GB&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="EFD_CLOEXEC"></a>
+<dt><pre><a href="os.html#EFD_CLOEXEC"><span class="Identifier">EFD_CLOEXEC</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;EFD_CLOEXEC&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="EFD_NONBLOCK"></a>
+<dt><pre><a href="os.html#EFD_NONBLOCK"><span class="Identifier">EFD_NONBLOCK</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;EFD_NONBLOCK&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="EFD_SEMAPHORE"></a>
+<dt><pre><a href="os.html#EFD_SEMAPHORE"><span class="Identifier">EFD_SEMAPHORE</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;EFD_SEMAPHORE&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="XATTR_SIZE_MAX"></a>
+<dt><pre><a href="os.html#XATTR_SIZE_MAX"><span class="Identifier">XATTR_SIZE_MAX</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;XATTR_SIZE_MAX&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="XATTR_CREATE"></a>
+<dt><pre><a href="os.html#XATTR_CREATE"><span class="Identifier">XATTR_CREATE</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;XATTR_CREATE&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="XATTR_REPLACE"></a>
+<dt><pre><a href="os.html#XATTR_REPLACE"><span class="Identifier">XATTR_REPLACE</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;XATTR_REPLACE&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="EX_OK"></a>
+<dt><pre><a href="os.html#EX_OK"><span class="Identifier">EX_OK</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;EX_OK&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="EX_USAGE"></a>
+<dt><pre><a href="os.html#EX_USAGE"><span class="Identifier">EX_USAGE</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;EX_USAGE&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="EX_DATAERR"></a>
+<dt><pre><a href="os.html#EX_DATAERR"><span class="Identifier">EX_DATAERR</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;EX_DATAERR&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="EX_NOINPUT"></a>
+<dt><pre><a href="os.html#EX_NOINPUT"><span class="Identifier">EX_NOINPUT</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;EX_NOINPUT&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="EX_NOUSER"></a>
+<dt><pre><a href="os.html#EX_NOUSER"><span class="Identifier">EX_NOUSER</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;EX_NOUSER&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="EX_NOHOST"></a>
+<dt><pre><a href="os.html#EX_NOHOST"><span class="Identifier">EX_NOHOST</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;EX_NOHOST&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="EX_UNAVAILABLE"></a>
+<dt><pre><a href="os.html#EX_UNAVAILABLE"><span class="Identifier">EX_UNAVAILABLE</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;EX_UNAVAILABLE&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="EX_SOFTWARE"></a>
+<dt><pre><a href="os.html#EX_SOFTWARE"><span class="Identifier">EX_SOFTWARE</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;EX_SOFTWARE&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="EX_OSERR"></a>
+<dt><pre><a href="os.html#EX_OSERR"><span class="Identifier">EX_OSERR</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;EX_OSERR&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="EX_OSFILE"></a>
+<dt><pre><a href="os.html#EX_OSFILE"><span class="Identifier">EX_OSFILE</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;EX_OSFILE&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="EX_CANTCREAT"></a>
+<dt><pre><a href="os.html#EX_CANTCREAT"><span class="Identifier">EX_CANTCREAT</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;EX_CANTCREAT&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="EX_IOERR"></a>
+<dt><pre><a href="os.html#EX_IOERR"><span class="Identifier">EX_IOERR</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;EX_IOERR&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="EX_TEMPFAIL"></a>
+<dt><pre><a href="os.html#EX_TEMPFAIL"><span class="Identifier">EX_TEMPFAIL</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;EX_TEMPFAIL&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="EX_PROTOCOL"></a>
+<dt><pre><a href="os.html#EX_PROTOCOL"><span class="Identifier">EX_PROTOCOL</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;EX_PROTOCOL&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="EX_NOPERM"></a>
+<dt><pre><a href="os.html#EX_NOPERM"><span class="Identifier">EX_NOPERM</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;EX_NOPERM&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="EX_CONFIG"></a>
+<dt><pre><a href="os.html#EX_CONFIG"><span class="Identifier">EX_CONFIG</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;EX_CONFIG&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="EX_NOTFOUND"></a>
+<dt><pre><a href="os.html#EX_NOTFOUND"><span class="Identifier">EX_NOTFOUND</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;EX_NOTFOUND&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="POSIX_SPAWN_OPEN"></a>
+<dt><pre><a href="os.html#POSIX_SPAWN_OPEN"><span class="Identifier">POSIX_SPAWN_OPEN</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;POSIX_SPAWN_OPEN&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="POSIX_SPAWN_CLOSE"></a>
+<dt><pre><a href="os.html#POSIX_SPAWN_CLOSE"><span class="Identifier">POSIX_SPAWN_CLOSE</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;POSIX_SPAWN_CLOSE&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="POSIX_SPAWN_DUP2"></a>
+<dt><pre><a href="os.html#POSIX_SPAWN_DUP2"><span class="Identifier">POSIX_SPAWN_DUP2</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;POSIX_SPAWN_DUP2&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="P_NOWAIT"></a>
+<dt><pre><a href="os.html#P_NOWAIT"><span class="Identifier">P_NOWAIT</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;P_NOWAIT&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="P_NOWAITO"></a>
+<dt><pre><a href="os.html#P_NOWAITO"><span class="Identifier">P_NOWAITO</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;P_NOWAITO&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="P_WAIT"></a>
+<dt><pre><a href="os.html#P_WAIT"><span class="Identifier">P_WAIT</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;P_WAIT&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="P_DETACH"></a>
+<dt><pre><a href="os.html#P_DETACH"><span class="Identifier">P_DETACH</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;P_DETACH&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="P_OVERLAY"></a>
+<dt><pre><a href="os.html#P_OVERLAY"><span class="Identifier">P_OVERLAY</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;P_OVERLAY&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="P_PID"></a>
+<dt><pre><a href="os.html#P_PID"><span class="Identifier">P_PID</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;P_PID&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="P_PGID"></a>
+<dt><pre><a href="os.html#P_PGID"><span class="Identifier">P_PGID</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;P_PGID&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="P_ALL"></a>
+<dt><pre><a href="os.html#P_ALL"><span class="Identifier">P_ALL</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;P_ALL&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="P_PIDFD"></a>
+<dt><pre><a href="os.html#P_PIDFD"><span class="Identifier">P_PIDFD</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;P_PIDFD&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="WEXITED"></a>
+<dt><pre><a href="os.html#WEXITED"><span class="Identifier">WEXITED</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;WEXITED&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="WSTOPPED"></a>
+<dt><pre><a href="os.html#WSTOPPED"><span class="Identifier">WSTOPPED</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;WSTOPPED&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="WNOWAIT"></a>
+<dt><pre><a href="os.html#WNOWAIT"><span class="Identifier">WNOWAIT</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;WNOWAIT&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="CLD_EXITED"></a>
+<dt><pre><a href="os.html#CLD_EXITED"><span class="Identifier">CLD_EXITED</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;CLD_EXITED&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="CLD_KILLED"></a>
+<dt><pre><a href="os.html#CLD_KILLED"><span class="Identifier">CLD_KILLED</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;CLD_KILLED&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="CLD_DUMPED"></a>
+<dt><pre><a href="os.html#CLD_DUMPED"><span class="Identifier">CLD_DUMPED</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;CLD_DUMPED&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="CLD_TRAPPED"></a>
+<dt><pre><a href="os.html#CLD_TRAPPED"><span class="Identifier">CLD_TRAPPED</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;CLD_TRAPPED&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="CLD_STOPPED"></a>
+<dt><pre><a href="os.html#CLD_STOPPED"><span class="Identifier">CLD_STOPPED</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;CLD_STOPPED&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="CLD_CONTINUED"></a>
+<dt><pre><a href="os.html#CLD_CONTINUED"><span class="Identifier">CLD_CONTINUED</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;CLD_CONTINUED&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="WNOHANG"></a>
+<dt><pre><a href="os.html#WNOHANG"><span class="Identifier">WNOHANG</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;WNOHANG&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="WCONTINUED"></a>
+<dt><pre><a href="os.html#WCONTINUED"><span class="Identifier">WCONTINUED</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;WCONTINUED&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="WUNTRACED"></a>
+<dt><pre><a href="os.html#WUNTRACED"><span class="Identifier">WUNTRACED</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;WUNTRACED&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="SCHED_OTHER"></a>
+<dt><pre><a href="os.html#SCHED_OTHER"><span class="Identifier">SCHED_OTHER</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;SCHED_OTHER&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="SCHED_BATCH"></a>
+<dt><pre><a href="os.html#SCHED_BATCH"><span class="Identifier">SCHED_BATCH</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;SCHED_BATCH&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="SCHED_IDLE"></a>
+<dt><pre><a href="os.html#SCHED_IDLE"><span class="Identifier">SCHED_IDLE</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;SCHED_IDLE&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="SCHED_SPORADIC"></a>
+<dt><pre><a href="os.html#SCHED_SPORADIC"><span class="Identifier">SCHED_SPORADIC</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;SCHED_SPORADIC&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="SCHED_FIFO"></a>
+<dt><pre><a href="os.html#SCHED_FIFO"><span class="Identifier">SCHED_FIFO</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;SCHED_FIFO&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="SCHED_RR"></a>
+<dt><pre><a href="os.html#SCHED_RR"><span class="Identifier">SCHED_RR</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;SCHED_RR&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="SCHED_RESET_ON_FORK"></a>
+<dt><pre><a href="os.html#SCHED_RESET_ON_FORK"><span class="Identifier">SCHED_RESET_ON_FORK</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;SCHED_RESET_ON_FORK&quot;</span><span class="Other">)</span><span class="Other">,</span>
+                              <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="RTLD_LAZY"></a>
+<dt><pre><a href="os.html#RTLD_LAZY"><span class="Identifier">RTLD_LAZY</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;RTLD_LAZY&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="RTLD_NOW"></a>
+<dt><pre><a href="os.html#RTLD_NOW"><span class="Identifier">RTLD_NOW</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;RTLD_NOW&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="RTLD_GLOBAL"></a>
+<dt><pre><a href="os.html#RTLD_GLOBAL"><span class="Identifier">RTLD_GLOBAL</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;RTLD_GLOBAL&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="RTLD_LOCAL"></a>
+<dt><pre><a href="os.html#RTLD_LOCAL"><span class="Identifier">RTLD_LOCAL</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;RTLD_LOCAL&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="RTLD_NODELETE"></a>
+<dt><pre><a href="os.html#RTLD_NODELETE"><span class="Identifier">RTLD_NODELETE</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;RTLD_NODELETE&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="RTLD_NOLOAD"></a>
+<dt><pre><a href="os.html#RTLD_NOLOAD"><span class="Identifier">RTLD_NOLOAD</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;RTLD_NOLOAD&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="RTLD_DEEPBIND"></a>
+<dt><pre><a href="os.html#RTLD_DEEPBIND"><span class="Identifier">RTLD_DEEPBIND</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;RTLD_DEEPBIND&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="GRND_NONBLOCK"></a>
+<dt><pre><a href="os.html#GRND_NONBLOCK"><span class="Identifier">GRND_NONBLOCK</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;GRND_NONBLOCK&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="GRND_RANDOM"></a>
+<dt><pre><a href="os.html#GRND_RANDOM"><span class="Identifier">GRND_RANDOM</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;os&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;GRND_RANDOM&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+
+</dl></div>
+<div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
 <a id="getcwd"></a>
@@ -2096,7 +3478,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-07-19 16:51:13 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-07-23 01:33:40 UTC</small>
       </div>
     </div>
   </div>
