@@ -7,7 +7,7 @@ template X(simbol; a): auto =
   when declared result: nimpy.pyImport("sys").simbol(a).to(type(result)) else: discard nimpy.pyImport("sys").simbol(a)
 template X(simbol; a, b): auto = nimpy.pyImport("sys").simbol(a, b).to(type(result))
 template `:=`(simbol; tipe: typedesc) =
-  let simbol* {.inject.}: tipe = nimpy.pyImport("math").simbol.to(tipe)
+  let simbol* {.inject.}: tipe = nimpy.pyImport("sys").simbol.to(tipe)
 
 abiflags             := string
 base_exec_prefix     := string
