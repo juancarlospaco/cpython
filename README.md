@@ -14,6 +14,7 @@
 
 # Documentation
 
+- :heavy_check_mark: [atexit](https://docs.python.org/3.10/library/atexit.html) :arrow_right: https://juancarlospaco.github.io/cpython/atexit.html
 - :heavy_check_mark: [base64](https://docs.python.org/3.10/library/base64.html) :arrow_right: https://juancarlospaco.github.io/cpython/base64.html
 - :heavy_check_mark: [binascii](https://docs.python.org/3.10/library/binascii.html) :arrow_right: https://juancarlospaco.github.io/cpython/binascii.html
 - :heavy_check_mark: [binhex](https://docs.python.org/3.10/library/binhex.html) :arrow_right: https://juancarlospaco.github.io/cpython/binhex.html
