@@ -24,6 +24,7 @@
 - :heavy_check_mark: [codeop](https://docs.python.org/3.10/library/codeop.html) :arrow_right: https://juancarlospaco.github.io/cpython/codeop.html
 - :heavy_check_mark: [colorsys](https://docs.python.org/3.10/library/colorsys.html) :arrow_right: https://juancarlospaco.github.io/cpython/colorsys.html
 - :heavy_check_mark: [compileall](https://docs.python.org/3.10/library/compileall.html) :arrow_right: https://juancarlospaco.github.io/cpython/compileall.html
+- :heavy_check_mark: [copy](https://docs.python.org/3.10/library/copy.html) :arrow_right: https://juancarlospaco.github.io/cpython/copy.html
 - :heavy_check_mark: [crypt](https://docs.python.org/3.10/library/crypt.html) :arrow_right: https://juancarlospaco.github.io/cpython/crypt.html
 - :heavy_check_mark: [curses](https://docs.python.org/3.10/library/curses.html) :arrow_right: https://juancarlospaco.github.io/cpython/curses.html
 - :heavy_check_mark: [dbd](https://docs.python.org/3.10/library/dbd.html) :arrow_right: https://juancarlospaco.github.io/cpython/dbd.html
