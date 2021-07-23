@@ -17,6 +17,7 @@
 - :heavy_check_mark: [base64](https://docs.python.org/3.10/library/base64.html) :arrow_right: https://juancarlospaco.github.io/cpython/base64.html
 - :heavy_check_mark: [binascii](https://docs.python.org/3.10/library/binascii.html) :arrow_right: https://juancarlospaco.github.io/cpython/binascii.html
 - :heavy_check_mark: [binhex](https://docs.python.org/3.10/library/binhex.html) :arrow_right: https://juancarlospaco.github.io/cpython/binhex.html
+- :heavy_check_mark: [builtins](https://docs.python.org/3.10/library/builtins.html) :arrow_right: https://juancarlospaco.github.io/cpython/builtins.html
 - :heavy_check_mark: [bz2](https://docs.python.org/3.10/library/bz2.html) :arrow_right: https://juancarlospaco.github.io/cpython/bz2.html
 - :heavy_check_mark: [cmath](https://docs.python.org/3.10/library/cmath.html) :arrow_right: https://juancarlospaco.github.io/cpython/cmath.html
 - :heavy_check_mark: [codecs](https://docs.python.org/3.10/library/codecs.html) :arrow_right: https://juancarlospaco.github.io/cpython/codecs.html
