@@ -70,6 +70,8 @@
 - :heavy_check_mark: [runpy](https://docs.python.org/3.10/library/runpy.html) :arrow_right: https://juancarlospaco.github.io/cpython/runpy.html
 - :heavy_check_mark: [secrets](https://docs.python.org/3.10/library/secrets.html) :arrow_right: https://juancarlospaco.github.io/cpython/secrets.html
 - :heavy_check_mark: [shutil](https://docs.python.org/3.10/library/shutil.html) :arrow_right: https://juancarlospaco.github.io/cpython/shutil.html
+- :heavy_check_mark: [signal](https://docs.python.org/3.10/library/signal.html) :arrow_right: https://juancarlospaco.github.io/cpython/signal.html
+- :heavy_check_mark: [site](https://docs.python.org/3.10/library/site.html) :arrow_right: https://juancarlospaco.github.io/cpython/site.html
 - :heavy_check_mark: [spwd](https://docs.python.org/3.10/library/spwd.html) :arrow_right: https://juancarlospaco.github.io/cpython/spwd.html
 - :heavy_check_mark: [statistics](https://docs.python.org/3.10/library/statistics.html) :arrow_right: https://juancarlospaco.github.io/cpython/statistics.html
 - :heavy_check_mark: [struct](https://docs.python.org/3.10/library/struct.html) :arrow_right: https://juancarlospaco.github.io/cpython/struct.html
