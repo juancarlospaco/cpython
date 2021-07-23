@@ -53,6 +53,7 @@
 - :heavy_check_mark: [nis](https://docs.python.org/3.10/library/nis.html) :arrow_right: https://juancarlospaco.github.io/cpython/nis.html
 - :heavy_check_mark: [operator](https://docs.python.org/3.10/library/operator.html) :arrow_right: https://juancarlospaco.github.io/cpython/operator.html
 - :heavy_check_mark: [os](https://docs.python.org/3.10/library/os.html) :arrow_right: https://juancarlospaco.github.io/cpython/os.html
+- :heavy_check_mark: [pickletools](https://docs.python.org/3.10/library/pickletools.html) :arrow_right: https://juancarlospaco.github.io/cpython/pickletools.html
 - :heavy_check_mark: [pwd](https://docs.python.org/3.10/library/pwd.html) :arrow_right: https://juancarlospaco.github.io/cpython/pwd.html
 - :heavy_check_mark: [py_compile](https://docs.python.org/3.10/library/py_compile.html) :arrow_right: https://juancarlospaco.github.io/cpython/py_compile.html
 - :heavy_check_mark: [quopri](https://docs.python.org/3.10/library/quopri.html) :arrow_right: https://juancarlospaco.github.io/cpython/quopri.html
