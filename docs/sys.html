@@ -34,6 +34,7 @@ function main() {
     }
   }
 
+  const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
   function switchTheme(e) {
       if (e.target.checked) {
           document.documentElement.setAttribute('data-theme', 'dark');
@@ -44,19 +45,13 @@ function main() {
       }
   }
 
-  const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-  if (toggleSwitch !== null) {
-    toggleSwitch.addEventListener('change', switchTheme, false);
-  }
+  toggleSwitch.addEventListener('change', switchTheme, false);
 
-  var currentTheme = localStorage.getItem('theme');
-  if (!currentTheme && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    currentTheme = 'dark';
-  }
+  const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
   if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
 
-    if (currentTheme === 'dark' && toggleSwitch !== null) {
+    if (currentTheme === 'dark') {
       toggleSwitch.checked = true;
     }
   }
@@ -98,6 +93,102 @@ window.addEventListener('DOMContentLoaded', main);
     </select>
   </div>
   <ul class="simple simple-toc" id="toc-list">
+<li>
+  <a class="reference reference-toplevel" href="#9" id="59">Lets</a>
+  <ul class="simple simple-toc-section">
+      <li><a class="reference" href="#abiflags"
+    title="abiflags: string = to(getAttr(pyImport(&quot;math&quot;), &quot;abiflags&quot;), string)">abiflags</a></li>
+  <li><a class="reference" href="#base_exec_prefix"
+    title="base_exec_prefix: string = to(getAttr(pyImport(&quot;math&quot;), &quot;base_exec_prefix&quot;),
+                              string)">base_exec_prefix</a></li>
+  <li><a class="reference" href="#base_prefix"
+    title="base_prefix: string = to(getAttr(pyImport(&quot;math&quot;), &quot;base_prefix&quot;), string)">base_prefix</a></li>
+  <li><a class="reference" href="#byteorder"
+    title="byteorder: string = to(getAttr(pyImport(&quot;math&quot;), &quot;byteorder&quot;), string)">byteorder</a></li>
+  <li><a class="reference" href="#copyright"
+    title="copyright: string = to(getAttr(pyImport(&quot;math&quot;), &quot;copyright&quot;), string)">copyright</a></li>
+  <li><a class="reference" href="#pycache_prefix"
+    title="pycache_prefix: string = to(getAttr(pyImport(&quot;math&quot;), &quot;pycache_prefix&quot;), string)">pycache_prefix</a></li>
+  <li><a class="reference" href="#exec_prefix"
+    title="exec_prefix: string = to(getAttr(pyImport(&quot;math&quot;), &quot;exec_prefix&quot;), string)">exec_prefix</a></li>
+  <li><a class="reference" href="#executable"
+    title="executable: string = to(getAttr(pyImport(&quot;math&quot;), &quot;executable&quot;), string)">executable</a></li>
+  <li><a class="reference" href="#float_repr_style"
+    title="float_repr_style: string = to(getAttr(pyImport(&quot;math&quot;), &quot;float_repr_style&quot;),
+                              string)">float_repr_style</a></li>
+  <li><a class="reference" href="#platform"
+    title="platform: string = to(getAttr(pyImport(&quot;math&quot;), &quot;platform&quot;), string)">platform</a></li>
+  <li><a class="reference" href="#platlibdir"
+    title="platlibdir: string = to(getAttr(pyImport(&quot;math&quot;), &quot;platlibdir&quot;), string)">platlibdir</a></li>
+  <li><a class="reference" href="#prefix"
+    title="prefix: string = to(getAttr(pyImport(&quot;math&quot;), &quot;prefix&quot;), string)">prefix</a></li>
+  <li><a class="reference" href="#ps1"
+    title="ps1: string = to(getAttr(pyImport(&quot;math&quot;), &quot;ps1&quot;), string)">ps1</a></li>
+  <li><a class="reference" href="#ps2"
+    title="ps2: string = to(getAttr(pyImport(&quot;math&quot;), &quot;ps2&quot;), string)">ps2</a></li>
+  <li><a class="reference" href="#version"
+    title="version: string = to(getAttr(pyImport(&quot;math&quot;), &quot;version&quot;), string)">version</a></li>
+  <li><a class="reference" href="#winver"
+    title="winver: string = to(getAttr(pyImport(&quot;math&quot;), &quot;winver&quot;), string)">winver</a></li>
+  <li><a class="reference" href="#dllhandle"
+    title="dllhandle: int = to(getAttr(pyImport(&quot;math&quot;), &quot;dllhandle&quot;), int)">dllhandle</a></li>
+  <li><a class="reference" href="#hexversion"
+    title="hexversion: int = to(getAttr(pyImport(&quot;math&quot;), &quot;hexversion&quot;), int)">hexversion</a></li>
+  <li><a class="reference" href="#maxunicode"
+    title="maxunicode: int = to(getAttr(pyImport(&quot;math&quot;), &quot;maxunicode&quot;), int)">maxunicode</a></li>
+  <li><a class="reference" href="#tracebacklimit"
+    title="tracebacklimit: int = to(getAttr(pyImport(&quot;math&quot;), &quot;tracebacklimit&quot;), int)">tracebacklimit</a></li>
+  <li><a class="reference" href="#api_version"
+    title="api_version: int = to(getAttr(pyImport(&quot;math&quot;), &quot;api_version&quot;), int)">api_version</a></li>
+  <li><a class="reference" href="#maxsize"
+    title="maxsize: BiggestInt = to(getAttr(pyImport(&quot;math&quot;), &quot;maxsize&quot;), BiggestInt)">maxsize</a></li>
+  <li><a class="reference" href="#dont_write_bytecode"
+    title="dont_write_bytecode: bool = to(getAttr(pyImport(&quot;math&quot;), &quot;dont_write_bytecode&quot;),
+                               bool)">dont_write_bytecode</a></li>
+  <li><a class="reference" href="#builtin_module_names"
+    title="builtin_module_names: seq[string] = to(getAttr(pyImport(&quot;math&quot;),
+    &quot;builtin_module_names&quot;), seq[string])">builtin_module_names</a></li>
+  <li><a class="reference" href="#argv"
+    title="argv: seq[string] = to(getAttr(pyImport(&quot;math&quot;), &quot;argv&quot;), seq[string])">argv</a></li>
+  <li><a class="reference" href="#orig_argv"
+    title="orig_argv: seq[string] = to(getAttr(pyImport(&quot;math&quot;), &quot;orig_argv&quot;), seq[string])">orig_argv</a></li>
+  <li><a class="reference" href="#path"
+    title="path: seq[string] = to(getAttr(pyImport(&quot;math&quot;), &quot;path&quot;), seq[string])">path</a></li>
+  <li><a class="reference" href="#flags"
+    title="flags: tuple[debug, inspect, interactive, optimize, dont_write_bytecode,
+             no_user_site, no_site, ignore_environment, verbose, bytes_warning,
+             quiet, hash_randomization, isolated: int, dev_mode: bool,
+             utf8_mode: int] = to(getAttr(pyImport(&quot;math&quot;), &quot;flags&quot;), tuple[
+    debug, inspect, interactive, optimize, dont_write_bytecode, no_user_site,
+    no_site, ignore_environment, verbose, bytes_warning, quiet,
+    hash_randomization, isolated: int, dev_mode: bool, utf8_mode: int])">flags</a></li>
+  <li><a class="reference" href="#float_info"
+    title="float_info: tuple[max: float, max_exp, max_10_exp: int, min: float,
+                  min_exp, min_10_exp, dig, mant_dig: int, epsilon: float,
+                  radix, rounds: int] = to(
+    getAttr(pyImport(&quot;math&quot;), &quot;float_info&quot;), tuple[max: float,
+    max_exp, max_10_exp: int, min: float,
+    min_exp, min_10_exp, dig, mant_dig: int, epsilon: float, radix, rounds: int])">float_info</a></li>
+  <li><a class="reference" href="#hash_info"
+    title="hash_info: tuple[width, modulus, inf, nan, imag: int, algorithm: string,
+                 hash_bits, seed_bits, cutoff: int] = to(
+    getAttr(pyImport(&quot;math&quot;), &quot;hash_info&quot;), tuple[
+    width, modulus, inf, nan, imag: int, algorithm: string,
+    hash_bits, seed_bits, cutoff: int])">hash_info</a></li>
+  <li><a class="reference" href="#int_info"
+    title="int_info: tuple[bits_per_digit, sizeof_digit: int] = to(
+    getAttr(pyImport(&quot;math&quot;), &quot;int_info&quot;),
+    tuple[bits_per_digit, sizeof_digit: int])">int_info</a></li>
+  <li><a class="reference" href="#thread_info"
+    title="thread_info: tuple[name, lock, version: string] = to(
+    getAttr(pyImport(&quot;math&quot;), &quot;thread_info&quot;), tuple[name, lock, version: string])">thread_info</a></li>
+  <li><a class="reference" href="#version_info"
+    title="version_info: tuple[major, minor, micro: int, releaselevel: string, serial: int] = to(
+    getAttr(pyImport(&quot;math&quot;), &quot;version_info&quot;),
+    tuple[major, minor, micro: int, releaselevel: string, serial: int])">version_info</a></li>
+
+  </ul>
+</li>
 <li>
   <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
   <ul class="simple simple-toc-section">
@@ -217,7 +308,267 @@ window.addEventListener('DOMContentLoaded', main);
   <p class="module-desc"><ul class="simple"><li><a class="reference external" href="https://docs.python.org/3.10/library/sys.html">https://docs.python.org/3.10/library/sys.html</a></li>
 </ul>
 </p>
-  <div class="section" id="12">
+  <div class="section" id="9">
+<h1><a class="toc-backref" href="#9">Lets</a></h1>
+<dl class="item">
+<a id="abiflags"></a>
+<dt><pre><a href="sys.html#abiflags"><span class="Identifier">abiflags</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;abiflags&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="base_exec_prefix"></a>
+<dt><pre><a href="sys.html#base_exec_prefix"><span class="Identifier">base_exec_prefix</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;base_exec_prefix&quot;</span><span class="Other">)</span><span class="Other">,</span>
+                              <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="base_prefix"></a>
+<dt><pre><a href="sys.html#base_prefix"><span class="Identifier">base_prefix</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;base_prefix&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="byteorder"></a>
+<dt><pre><a href="sys.html#byteorder"><span class="Identifier">byteorder</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;byteorder&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="copyright"></a>
+<dt><pre><a href="sys.html#copyright"><span class="Identifier">copyright</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;copyright&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="pycache_prefix"></a>
+<dt><pre><a href="sys.html#pycache_prefix"><span class="Identifier">pycache_prefix</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;pycache_prefix&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="exec_prefix"></a>
+<dt><pre><a href="sys.html#exec_prefix"><span class="Identifier">exec_prefix</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;exec_prefix&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="executable"></a>
+<dt><pre><a href="sys.html#executable"><span class="Identifier">executable</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;executable&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="float_repr_style"></a>
+<dt><pre><a href="sys.html#float_repr_style"><span class="Identifier">float_repr_style</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;float_repr_style&quot;</span><span class="Other">)</span><span class="Other">,</span>
+                              <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="platform"></a>
+<dt><pre><a href="sys.html#platform"><span class="Identifier">platform</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;platform&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="platlibdir"></a>
+<dt><pre><a href="sys.html#platlibdir"><span class="Identifier">platlibdir</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;platlibdir&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="prefix"></a>
+<dt><pre><a href="sys.html#prefix"><span class="Identifier">prefix</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;prefix&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="ps1"></a>
+<dt><pre><a href="sys.html#ps1"><span class="Identifier">ps1</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;ps1&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="ps2"></a>
+<dt><pre><a href="sys.html#ps2"><span class="Identifier">ps2</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;ps2&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="version"></a>
+<dt><pre><a href="sys.html#version"><span class="Identifier">version</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;version&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="winver"></a>
+<dt><pre><a href="sys.html#winver"><span class="Identifier">winver</span></a><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;winver&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">string</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="dllhandle"></a>
+<dt><pre><a href="sys.html#dllhandle"><span class="Identifier">dllhandle</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;dllhandle&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="hexversion"></a>
+<dt><pre><a href="sys.html#hexversion"><span class="Identifier">hexversion</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;hexversion&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="maxunicode"></a>
+<dt><pre><a href="sys.html#maxunicode"><span class="Identifier">maxunicode</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;maxunicode&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="tracebacklimit"></a>
+<dt><pre><a href="sys.html#tracebacklimit"><span class="Identifier">tracebacklimit</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;tracebacklimit&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="api_version"></a>
+<dt><pre><a href="sys.html#api_version"><span class="Identifier">api_version</span></a><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;api_version&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="maxsize"></a>
+<dt><pre><a href="sys.html#maxsize"><span class="Identifier">maxsize</span></a><span class="Other">:</span> <span class="Identifier">BiggestInt</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;maxsize&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">BiggestInt</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="dont_write_bytecode"></a>
+<dt><pre><a href="sys.html#dont_write_bytecode"><span class="Identifier">dont_write_bytecode</span></a><span class="Other">:</span> <span class="Identifier">bool</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;dont_write_bytecode&quot;</span><span class="Other">)</span><span class="Other">,</span>
+                               <span class="Identifier">bool</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="builtin_module_names"></a>
+<dt><pre><a href="sys.html#builtin_module_names"><span class="Identifier">builtin_module_names</span></a><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span>
+    <span class="StringLit">&quot;builtin_module_names&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="argv"></a>
+<dt><pre><a href="sys.html#argv"><span class="Identifier">argv</span></a><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;argv&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="orig_argv"></a>
+<dt><pre><a href="sys.html#orig_argv"><span class="Identifier">orig_argv</span></a><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;orig_argv&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="path"></a>
+<dt><pre><a href="sys.html#path"><span class="Identifier">path</span></a><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;path&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="flags"></a>
+<dt><pre><a href="sys.html#flags"><span class="Identifier">flags</span></a><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">debug</span><span class="Other">,</span> <span class="Identifier">inspect</span><span class="Other">,</span> <span class="Identifier">interactive</span><span class="Other">,</span> <span class="Identifier">optimize</span><span class="Other">,</span> <span class="Identifier">dont_write_bytecode</span><span class="Other">,</span>
+             <span class="Identifier">no_user_site</span><span class="Other">,</span> <span class="Identifier">no_site</span><span class="Other">,</span> <span class="Identifier">ignore_environment</span><span class="Other">,</span> <span class="Identifier">verbose</span><span class="Other">,</span> <span class="Identifier">bytes_warning</span><span class="Other">,</span>
+             <span class="Identifier">quiet</span><span class="Other">,</span> <span class="Identifier">hash_randomization</span><span class="Other">,</span> <span class="Identifier">isolated</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">,</span> <span class="Identifier">dev_mode</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">,</span>
+             <span class="Identifier">utf8_mode</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">]</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span><span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;flags&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Keyword">tuple</span><span class="Other">[</span>
+    <span class="Identifier">debug</span><span class="Other">,</span> <span class="Identifier">inspect</span><span class="Other">,</span> <span class="Identifier">interactive</span><span class="Other">,</span> <span class="Identifier">optimize</span><span class="Other">,</span> <span class="Identifier">dont_write_bytecode</span><span class="Other">,</span> <span class="Identifier">no_user_site</span><span class="Other">,</span>
+    <span class="Identifier">no_site</span><span class="Other">,</span> <span class="Identifier">ignore_environment</span><span class="Other">,</span> <span class="Identifier">verbose</span><span class="Other">,</span> <span class="Identifier">bytes_warning</span><span class="Other">,</span> <span class="Identifier">quiet</span><span class="Other">,</span>
+    <span class="Identifier">hash_randomization</span><span class="Other">,</span> <span class="Identifier">isolated</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">,</span> <span class="Identifier">dev_mode</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">,</span> <span class="Identifier">utf8_mode</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="float_info"></a>
+<dt><pre><a href="sys.html#float_info"><span class="Identifier">float_info</span></a><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">max</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">,</span> <span class="Identifier">max_exp</span><span class="Other">,</span> <span class="Identifier">max_10_exp</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">,</span> <span class="Identifier">min</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">,</span>
+                  <span class="Identifier">min_exp</span><span class="Other">,</span> <span class="Identifier">min_10_exp</span><span class="Other">,</span> <span class="Identifier">dig</span><span class="Other">,</span> <span class="Identifier">mant_dig</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">,</span> <span class="Identifier">epsilon</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">,</span>
+                  <span class="Identifier">radix</span><span class="Other">,</span> <span class="Identifier">rounds</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">]</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span>
+    <span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;float_info&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">max</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">,</span>
+    <span class="Identifier">max_exp</span><span class="Other">,</span> <span class="Identifier">max_10_exp</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">,</span> <span class="Identifier">min</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">,</span>
+    <span class="Identifier">min_exp</span><span class="Other">,</span> <span class="Identifier">min_10_exp</span><span class="Other">,</span> <span class="Identifier">dig</span><span class="Other">,</span> <span class="Identifier">mant_dig</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">,</span> <span class="Identifier">epsilon</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">,</span> <span class="Identifier">radix</span><span class="Other">,</span> <span class="Identifier">rounds</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="hash_info"></a>
+<dt><pre><a href="sys.html#hash_info"><span class="Identifier">hash_info</span></a><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">width</span><span class="Other">,</span> <span class="Identifier">modulus</span><span class="Other">,</span> <span class="Identifier">inf</span><span class="Other">,</span> <span class="Identifier">nan</span><span class="Other">,</span> <span class="Identifier">imag</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">,</span> <span class="Identifier">algorithm</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">,</span>
+                 <span class="Identifier">hash_bits</span><span class="Other">,</span> <span class="Identifier">seed_bits</span><span class="Other">,</span> <span class="Identifier">cutoff</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">]</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span>
+    <span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;hash_info&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Keyword">tuple</span><span class="Other">[</span>
+    <span class="Identifier">width</span><span class="Other">,</span> <span class="Identifier">modulus</span><span class="Other">,</span> <span class="Identifier">inf</span><span class="Other">,</span> <span class="Identifier">nan</span><span class="Other">,</span> <span class="Identifier">imag</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">,</span> <span class="Identifier">algorithm</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">,</span>
+    <span class="Identifier">hash_bits</span><span class="Other">,</span> <span class="Identifier">seed_bits</span><span class="Other">,</span> <span class="Identifier">cutoff</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="int_info"></a>
+<dt><pre><a href="sys.html#int_info"><span class="Identifier">int_info</span></a><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">bits_per_digit</span><span class="Other">,</span> <span class="Identifier">sizeof_digit</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">]</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span>
+    <span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;int_info&quot;</span><span class="Other">)</span><span class="Other">,</span>
+    <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">bits_per_digit</span><span class="Other">,</span> <span class="Identifier">sizeof_digit</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="thread_info"></a>
+<dt><pre><a href="sys.html#thread_info"><span class="Identifier">thread_info</span></a><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">name</span><span class="Other">,</span> <span class="Identifier">lock</span><span class="Other">,</span> <span class="Identifier">version</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">]</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span>
+    <span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;thread_info&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">name</span><span class="Other">,</span> <span class="Identifier">lock</span><span class="Other">,</span> <span class="Identifier">version</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="version_info"></a>
+<dt><pre><a href="sys.html#version_info"><span class="Identifier">version_info</span></a><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">major</span><span class="Other">,</span> <span class="Identifier">minor</span><span class="Other">,</span> <span class="Identifier">micro</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">,</span> <span class="Identifier">releaselevel</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">,</span> <span class="Identifier">serial</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">]</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">(</span>
+    <span class="Identifier">getAttr</span><span class="Other">(</span><span class="Identifier">pyImport</span><span class="Other">(</span><span class="StringLit">&quot;math&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="StringLit">&quot;version_info&quot;</span><span class="Other">)</span><span class="Other">,</span>
+    <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">major</span><span class="Other">,</span> <span class="Identifier">minor</span><span class="Other">,</span> <span class="Identifier">micro</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">,</span> <span class="Identifier">releaselevel</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">,</span> <span class="Identifier">serial</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
+
+</dl></div>
+<div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
 <a id="breakpointhook"></a>
@@ -396,7 +747,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-07-19 16:56:25 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-07-23 00:25:31 UTC</small>
       </div>
     </div>
   </div>
