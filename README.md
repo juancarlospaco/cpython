@@ -76,6 +76,7 @@
 - :heavy_check_mark: [spwd](https://docs.python.org/3.10/library/spwd.html) :arrow_right: https://juancarlospaco.github.io/cpython/spwd.html
 - :heavy_check_mark: [statistics](https://docs.python.org/3.10/library/statistics.html) :arrow_right: https://juancarlospaco.github.io/cpython/statistics.html
 - :heavy_check_mark: [struct](https://docs.python.org/3.10/library/struct.html) :arrow_right: https://juancarlospaco.github.io/cpython/struct.html
+- :heavy_check_mark: [subprocess](https://docs.python.org/3.10/library/subprocess.html) :arrow_right: https://juancarlospaco.github.io/cpython/subprocess.html
 - :heavy_check_mark: [sys](https://docs.python.org/3.10/library/sys.html) :arrow_right: https://juancarlospaco.github.io/cpython/sys.html
 - :heavy_check_mark: [sysconfig](https://docs.python.org/3.10/library/sysconfig.html) :arrow_right: https://juancarlospaco.github.io/cpython/sysconfig.html
 - :heavy_check_mark: [syslog](https://docs.python.org/3.10/library/syslog.html) :arrow_right: https://juancarlospaco.github.io/cpython/syslog.html
