@@ -410,9 +410,19 @@ window.addEventListener('DOMContentLoaded', main);
 <li>
   <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
   <ul class="simple simple-toc-section">
-      <ul class="simple nested-toc-section">mkdir
+      <ul class="simple nested-toc-section">expandvars
+      <li><a class="reference" href="#expandvars%2Cstring"
+    title="expandvars(path: string): string">expandvars(path: string): string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">mkdir
       <li><a class="reference" href="#mkdir%2Cstring%2Cint"
     title="mkdir(path: string; mode = 511)">mkdir(path: string; mode = 511)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isfile
+      <li><a class="reference" href="#isfile%2Cstring"
+    title="isfile(path: string): bool">isfile(path: string): bool</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">eventfd_read
@@ -433,6 +443,11 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">killpg
       <li><a class="reference" href="#killpg%2Cint%2Cint"
     title="killpg(pgid, sig: int)">killpg(pgid, sig: int)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">commonprefix
+      <li><a class="reference" href="#commonprefix%2Cseq%5Bstring%5D"
+    title="commonprefix(paths: seq[string]): string">commonprefix(paths: seq[string]): string</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">getenvb
@@ -465,6 +480,16 @@ window.addEventListener('DOMContentLoaded', main);
     title="abort()">abort()</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">sameopenfile
+      <li><a class="reference" href="#sameopenfile%2Cint%2Cint"
+    title="sameopenfile(path1, path2: int): bool">sameopenfile(path1, path2: int): bool</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">normcase
+      <li><a class="reference" href="#normcase%2Cstring"
+    title="normcase(path: string): string">normcase(path: string): string</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">ftruncate
       <li><a class="reference" href="#ftruncate%2Cint%2Cint"
     title="ftruncate(fd, len: int)">ftruncate(fd, len: int)</a></li>
@@ -473,6 +498,16 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">memfd_create
       <li><a class="reference" href="#memfd_create%2Cstring"
     title="memfd_create(path: string): int">memfd_create(path: string): int</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">relpath
+      <li><a class="reference" href="#relpath%2Cstring"
+    title="relpath(path: string): string">relpath(path: string): string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">exists
+      <li><a class="reference" href="#exists%2Cstring"
+    title="exists(path: string): bool">exists(path: string): bool</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">device_encoding
@@ -518,6 +553,11 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">unsetenv
       <li><a class="reference" href="#unsetenv%2Cstring"
     title="unsetenv(key: string)">unsetenv(key: string)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">splitext
+      <li><a class="reference" href="#splitext%2Cstring"
+    title="splitext(path: string): tuple[root, ext: string]">splitext(path: string): tuple[root, ext: string]</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">eventfd
@@ -619,6 +659,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="cpu_count(): int">cpu_count(): int</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">basename
+      <li><a class="reference" href="#basename%2Cstring"
+    title="basename(path: string): string">basename(path: string): string</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">times
       <li><a class="reference" href="#times"
     title="times(): tuple[user, system, children_user, children_system, elapsed: float]">times(): tuple[user, system, children_user, children_system, elapsed: float]</a></li>
@@ -674,6 +719,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="fsync(fd: int)">fsync(fd: int)</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">samefile
+      <li><a class="reference" href="#samefile%2Cstring%2Cstring"
+    title="samefile(path1, path2: string): bool">samefile(path1, path2: string): bool</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">fork
       <li><a class="reference" href="#fork"
     title="fork(): int">fork(): int</a></li>
@@ -721,6 +771,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="getrandom(size: int; flags = 0): seq[byte]">getrandom(size: int; flags = 0): seq[byte]</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">realpath
+      <li><a class="reference" href="#realpath%2Cstring"
+    title="realpath(path: string): string">realpath(path: string): string</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">getpid
       <li><a class="reference" href="#getpid"
     title="getpid(): int">getpid(): int</a></li>
@@ -748,6 +803,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="setregid(rgid, egid: int)">setregid(rgid, egid: int)</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">getatime
+      <li><a class="reference" href="#getatime%2Cstring"
+    title="getatime(path: string): float">getatime(path: string): float</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">pidfd_open
       <li><a class="reference" href="#pidfd_open%2Cint%2Cint"
     title="pidfd_open(pid: int; flags = 0): int">pidfd_open(pid: int; flags = 0): int</a></li>
@@ -773,6 +833,16 @@ window.addEventListener('DOMContentLoaded', main);
     title="setpriority(which, who: int; priority: -20 .. 19 = 0)">setpriority(which, who: int; priority: -20 .. 19 = 0)</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">abspath
+      <li><a class="reference" href="#abspath%2Cstring"
+    title="abspath(path: string): string">abspath(path: string): string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">normpath
+      <li><a class="reference" href="#normpath%2Cstring"
+    title="normpath(path: string): string">normpath(path: string): string</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">getpgrp
       <li><a class="reference" href="#getpgrp"
     title="getpgrp(): int">getpgrp(): int</a></li>
@@ -796,6 +866,16 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">replace
       <li><a class="reference" href="#replace%2Cstring%2Cstring"
     title="replace(src, dst: string)">replace(src, dst: string)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">split
+      <li><a class="reference" href="#split%2Cstring"
+    title="split(path: string): tuple[head, tail: string]">split(path: string): tuple[head, tail: string]</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isdir
+      <li><a class="reference" href="#isdir%2Cstring"
+    title="isdir(path: string): bool">isdir(path: string): bool</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">getgrouplist
@@ -838,6 +918,16 @@ window.addEventListener('DOMContentLoaded', main);
     title="setsid()">setsid()</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">dirname
+      <li><a class="reference" href="#dirname%2Cstring"
+    title="dirname(path: string): string">dirname(path: string): string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">lexists
+      <li><a class="reference" href="#lexists%2Cstring"
+    title="lexists(path: string): bool">lexists(path: string): bool</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">add_dll_directory
       <li><a class="reference" href="#add_dll_directory%2Cstring"
     title="add_dll_directory(path: string)">add_dll_directory(path: string)</a></li>
@@ -870,6 +960,16 @@ window.addEventListener('DOMContentLoaded', main);
     title="utime(path: string)">utime(path: string)</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">commonpath
+      <li><a class="reference" href="#commonpath%2Cseq%5Bstring%5D"
+    title="commonpath(paths: seq[string]): string">commonpath(paths: seq[string]): string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">ismount
+      <li><a class="reference" href="#ismount%2Cstring"
+    title="ismount(path: string): bool">ismount(path: string): bool</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">sched_getscheduler
       <li><a class="reference" href="#sched_getscheduler%2Cint"
     title="sched_getscheduler(pid: int): int">sched_getscheduler(pid: int): int</a></li>
@@ -900,9 +1000,19 @@ window.addEventListener('DOMContentLoaded', main);
     title="removexattr(path, attribute: string; follow_symlinks = true)">removexattr(path, attribute: string; follow_symlinks = true)</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">getmtime
+      <li><a class="reference" href="#getmtime%2Cstring"
+    title="getmtime(path: string): float">getmtime(path: string): float</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">setreuid
       <li><a class="reference" href="#setreuid%2Cint%2Cint"
     title="setreuid(ruid, euid: int)">setreuid(ruid, euid: int)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isabs
+      <li><a class="reference" href="#isabs%2Cstring"
+    title="isabs(path: string): bool">isabs(path: string): bool</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">pwrite
@@ -930,6 +1040,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="get_terminal_size(fd: int)">get_terminal_size(fd: int)</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">islink
+      <li><a class="reference" href="#islink%2Cstring"
+    title="islink(path: string): bool">islink(path: string): bool</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">umask
       <li><a class="reference" href="#umask%2Cint"
     title="umask(mask: int): int">umask(mask: int): int</a></li>
@@ -948,6 +1063,11 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">close
       <li><a class="reference" href="#close%2Cint"
     title="close(fileDescriptor: int)">close(fileDescriptor: int)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">splitdrive
+      <li><a class="reference" href="#splitdrive%2Cstring"
+    title="splitdrive(path: string): tuple[drive, tail: string]">splitdrive(path: string): tuple[drive, tail: string]</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">getgid
@@ -1042,6 +1162,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="unlink(path: string)">unlink(path: string)</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">getctime
+      <li><a class="reference" href="#getctime%2Cstring"
+    title="getctime(path: string): float">getctime(path: string): float</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">setxattr
       <li><a class="reference" href="#setxattr%2Cstring%2Cstring%2Cstring%2Cint"
     title="setxattr(path, attribute, value: string; flags = 0; follow_symlinks = true)">setxattr(path, attribute, value: string; flags = 0; follow_symlinks = true)</a></li>
@@ -1060,6 +1185,11 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">waitstatus_to_exitcode
       <li><a class="reference" href="#waitstatus_to_exitcode%2Cint"
     title="waitstatus_to_exitcode(status: int): int">waitstatus_to_exitcode(status: int): int</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">getsize
+      <li><a class="reference" href="#getsize%2Cstring"
+    title="getsize(path: string): int">getsize(path: string): int</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">minor
@@ -1115,6 +1245,11 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">renames
       <li><a class="reference" href="#renames%2Cstring%2Cstring"
     title="renames(olds, news: string)">renames(olds, news: string)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">expanduser
+      <li><a class="reference" href="#expanduser%2Cstring"
+    title="expanduser(path: string): string">expanduser(path: string): string</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">getlogin
@@ -3468,6 +3603,229 @@ window.addEventListener('DOMContentLoaded', main);
 
 
 </dd>
+<a id="abspath,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#abspath%2Cstring"><span class="Identifier">abspath</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span>
+    <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="basename,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#basename%2Cstring"><span class="Identifier">basename</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span>
+    <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="commonpath,seq[string]"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#commonpath%2Cseq%5Bstring%5D"><span class="Identifier">commonpath</span></a><span class="Other">(</span><span class="Identifier">paths</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="commonprefix,seq[string]"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#commonprefix%2Cseq%5Bstring%5D"><span class="Identifier">commonprefix</span></a><span class="Other">(</span><span class="Identifier">paths</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="dirname,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#dirname%2Cstring"><span class="Identifier">dirname</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span>
+    <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="exists,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#exists%2Cstring"><span class="Identifier">exists</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span>
+    <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="lexists,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#lexists%2Cstring"><span class="Identifier">lexists</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span>
+    <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="expanduser,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#expanduser%2Cstring"><span class="Identifier">expanduser</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span>
+    <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="expandvars,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#expandvars%2Cstring"><span class="Identifier">expandvars</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span>
+    <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="getatime,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#getatime%2Cstring"><span class="Identifier">getatime</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">float</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span>
+    <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="getmtime,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#getmtime%2Cstring"><span class="Identifier">getmtime</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">float</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span>
+    <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="getctime,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#getctime%2Cstring"><span class="Identifier">getctime</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">float</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span>
+    <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="getsize,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#getsize%2Cstring"><span class="Identifier">getsize</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span>
+    <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="isabs,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#isabs%2Cstring"><span class="Identifier">isabs</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span>
+    <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="isfile,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#isfile%2Cstring"><span class="Identifier">isfile</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span>
+    <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="isdir,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#isdir%2Cstring"><span class="Identifier">isdir</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span>
+    <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="islink,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#islink%2Cstring"><span class="Identifier">islink</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span>
+    <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="ismount,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#ismount%2Cstring"><span class="Identifier">ismount</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span>
+    <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="samefile,string,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#samefile%2Cstring%2Cstring"><span class="Identifier">samefile</span></a><span class="Other">(</span><span class="Identifier">path1</span><span class="Other">,</span> <span class="Identifier">path2</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="sameopenfile,int,int"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#sameopenfile%2Cint%2Cint"><span class="Identifier">sameopenfile</span></a><span class="Other">(</span><span class="Identifier">path1</span><span class="Other">,</span> <span class="Identifier">path2</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="normcase,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#normcase%2Cstring"><span class="Identifier">normcase</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span>
+    <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="normpath,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#normpath%2Cstring"><span class="Identifier">normpath</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span>
+    <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="realpath,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#realpath%2Cstring"><span class="Identifier">realpath</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span>
+    <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="relpath,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#relpath%2Cstring"><span class="Identifier">relpath</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span>
+    <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="split,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#split%2Cstring"><span class="Identifier">split</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">head</span><span class="Other">,</span> <span class="Identifier">tail</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">]</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="splitdrive,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#splitdrive%2Cstring"><span class="Identifier">splitdrive</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">drive</span><span class="Other">,</span> <span class="Identifier">tail</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">]</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="splitext,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#splitext%2Cstring"><span class="Identifier">splitext</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">root</span><span class="Other">,</span> <span class="Identifier">ext</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">]</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
 
 </dl></div>
 
@@ -3478,7 +3836,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-07-23 01:33:40 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-07-24 06:42:44 UTC</small>
       </div>
     </div>
   </div>
