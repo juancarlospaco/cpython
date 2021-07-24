@@ -49,6 +49,7 @@
 - :heavy_check_mark: [html.entities](https://docs.python.org/3.10/library/html.entities.html) :arrow_right: https://juancarlospaco.github.io/cpython/html_entities.html
 - :heavy_check_mark: [imghdr](https://docs.python.org/3.10/library/imghdr.html) :arrow_right: https://juancarlospaco.github.io/cpython/imghdr.html
 - :heavy_check_mark: [imp](https://docs.python.org/3.10/library/imp.html) :arrow_right: https://juancarlospaco.github.io/cpython/imp.html
+- :heavy_check_mark: [importlib](https://docs.python.org/3.10/library/importlib.html) :arrow_right: https://juancarlospaco.github.io/cpython/importlib.html
 - :heavy_check_mark: [keyword](https://docs.python.org/3.10/library/keyword.html) :arrow_right: https://juancarlospaco.github.io/cpython/keyword.html
 - :heavy_check_mark: [linecache](https://docs.python.org/3.10/library/linecache.html) :arrow_right: https://juancarlospaco.github.io/cpython/linecache.html
 - :heavy_check_mark: [logging](https://docs.python.org/3.10/library/logging.html) :arrow_right: https://juancarlospaco.github.io/cpython/logging.html
