@@ -1,6 +1,8 @@
 ## * https://docs.python.org/3.10/library/os.html
 import nimpy
 
+template Y(simbol; a):    auto = nimpy.pyImport("os.path").simbol(a).to(type(result))
+template Y(simbol; a, b): auto = nimpy.pyImport("os.path").simbol(a, b).to(type(result))
 template X(simbol): auto =
   when declared result: nimpy.pyImport("os").simbol().to(type(result)) else: discard nimpy.pyImport("os").simbol()
 template X(simbol; a): auto =
@@ -318,3 +320,30 @@ proc getloadavg*(): array[3, float] = X getloadavg
 proc sysconf*(name: string): int = X sysconf, name
 proc getrandom*(size: int; flags = 0): seq[byte] = X getrandom, size, flags
 proc urandom*(size: int): string = X urandom, size
+proc abspath*(path: string): string = Y abspath, path
+proc basename*(path: string): string = Y basename, path
+proc commonpath*(paths: seq[string]): string = Y commonpath, paths
+proc commonprefix*(paths: seq[string]): string = Y commonprefix, paths
+proc dirname*(path: string): string = Y dirname, path
+proc exists*(path: string): bool = Y exists, path
+proc lexists*(path: string): bool = Y lexists, path
+proc expanduser*(path: string): string = Y expanduser, path
+proc expandvars*(path: string): string = Y expandvars, path
+proc getatime*(path: string): float = Y getatime, path
+proc getmtime*(path: string): float = Y getmtime, path
+proc getctime*(path: string): float = Y getctime, path
+proc getsize*(path: string): int = Y getsize, path
+proc isabs*(path: string): bool = Y isabs, path
+proc isfile*(path: string): bool = Y isfile, path
+proc isdir*(path: string): bool = Y isdir, path
+proc islink*(path: string): bool = Y islink, path
+proc ismount*(path: string): bool = Y ismount, path
+proc samefile*(path1, path2: string): bool = Y samefile, path1, path2
+proc sameopenfile*(path1, path2: int): bool = Y sameopenfile, path1, path2
+proc normcase*(path: string): string = Y normcase, path
+proc normpath*(path: string): string = Y normpath, path
+proc realpath*(path: string): string = Y realpath, path
+proc relpath*(path: string): string = Y relpath, path
+proc split*(path: string):      tuple[head, tail: string]  = Y split, path
+proc splitdrive*(path: string): tuple[drive, tail: string] = Y splitdrive, path
+proc splitext*(path: string):   tuple[root, ext: string]   = Y splitext, path
