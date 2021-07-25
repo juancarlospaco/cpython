@@ -115,6 +115,7 @@
 - 1 Nim module per 1 Python module.
 - Module files are <200 lines each of pure Nim code.
 - Compatible with ARC and ORC deterministic memory nanagement.
+- [Arbitrary precision big Decimals with all the operators for Nim.](https://juancarlospaco.github.io/cpython/decimal.html)
 - Enforces real strong inferred static typing with UFCS for Python.
 - Same API as Python StdLib, same function names, same argument names.
 - Use the vanilla official Python StdLib that you already know by memory.
@@ -126,7 +127,6 @@
 - We do not deprecate stuff, even if Python deprecate/remove it, it will keep working for Nim.
 - Each file is completely self-contained standalone, you can copy just 1 file on your project and use it.
 - If Python removes a module from StdLib you must obtain the `.py` file somehow, but the `.nim` remains.
-- [Arbitrary precision big Decimals with all the operators for Nim.](https://juancarlospaco.github.io/cpython/decimal.html)
 - Package version == Python version.
 
 
