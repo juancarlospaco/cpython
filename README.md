@@ -114,8 +114,8 @@
 - 1 Dependency only.
 - 1 Nim module per 1 Python module.
 - Module files are <200 lines each of pure Nim code.
-- Compatible with ARC and ORC deterministic memory nanagement.
 - [Arbitrary precision big Decimals with all the operators for Nim.](https://juancarlospaco.github.io/cpython/decimal.html)
+- Compatible with ARC and ORC deterministic memory nanagement.
 - Enforces real strong inferred static typing with UFCS for Python.
 - Same API as Python StdLib, same function names, same argument names.
 - Use the vanilla official Python StdLib that you already know by memory.
