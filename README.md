@@ -128,6 +128,7 @@
 - Each file is completely self-contained standalone, you can copy just 1 file on your project and use it.
 - If Python removes a module from StdLib you must obtain the `.py` file somehow, but the `.nim` remains.
 - Package version == Python version.
+- [Pet the turtle.](https://juancarlospaco.github.io/cpython/turtle.html)
 
 
 # Requisites
