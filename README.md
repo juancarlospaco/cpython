@@ -138,6 +138,12 @@
 # Install
 
 ```
+nimble install cpython
+```
+
+OR
+
+```
 nimble install https://github.com/juancarlospaco/cpython.git
 ```
 
