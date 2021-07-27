@@ -169,8 +169,10 @@ Also...
 
 - Whole new StdLib becomes usable for Nim, without Nim having to spend resources.
 - Showcase easy interoperability of Nim (CTypes is harder, Python is verbose, etc).
-- Others do it too (Scala/Kotlin uses Java StbLib, Swift uses Objective-C StdLib, etc).
 - [Arbitrary precision big Decimals for Nim.](https://juancarlospaco.github.io/cpython/decimal.html)
+- Others do it too (Scala/Kotlin uses Java StbLib, Swift uses Objective-C StdLib, etc).
+- Python does it too, Python is written in C therefore using C StdLib.
+- Make others work for free improving libs that you can use in Nim.
 - A place to pile up "Nim-ified" Python stuff.
 
 
