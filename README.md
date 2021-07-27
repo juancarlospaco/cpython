@@ -159,11 +159,19 @@ nimble install https://github.com/juancarlospaco/cpython.git
 - [Alternative StdLib for Nim for NodeJS/JavaScript targets, hijacks NodeJS StdLib for Nim.](https://github.com/juancarlospaco/nodejs#alternative-stdlib-for-nim-for-nodejsjavascript-targets)
 
 
-#### Why?
+## Why?
 
 The idea comes from [the community of "Nim en Espanol" Telegram group (Spanish).](https://t.me/NimArgentina)
 
 [![](poll.png)](https://t.me/NimArgentina)
+
+Also...
+
+- Whole new StdLib becomes usable for Nim, without Nim having to spend resources.
+- [Arbitrary precision big Decimals for Nim.](https://juancarlospaco.github.io/cpython/decimal.html)
+- Showcase easy interoperability of Nim (CTypes is harder, Python is verbose, etc).
+- Others do it too (Scala/Kotlin uses Java StbLib, Swift uses Objective-C StdLib, etc).
+- A place to pile up "Nim-ified" Python stuff.
 
 
 # See also
