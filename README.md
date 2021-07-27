@@ -168,9 +168,9 @@ The idea comes from [the community of "Nim en Espanol" Telegram group (Spanish).
 Also...
 
 - Whole new StdLib becomes usable for Nim, without Nim having to spend resources.
-- [Arbitrary precision big Decimals for Nim.](https://juancarlospaco.github.io/cpython/decimal.html)
 - Showcase easy interoperability of Nim (CTypes is harder, Python is verbose, etc).
 - Others do it too (Scala/Kotlin uses Java StbLib, Swift uses Objective-C StdLib, etc).
+- [Arbitrary precision big Decimals for Nim.](https://juancarlospaco.github.io/cpython/decimal.html)
 - A place to pile up "Nim-ified" Python stuff.
 
 
