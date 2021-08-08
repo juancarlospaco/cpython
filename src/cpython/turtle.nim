@@ -1,4 +1,25 @@
 ## * https://docs.python.org/3.10/library/turtle.html
+##
+## .. image:: https://docs.python.org/3.10/_images/turtle-star.png
+##
+## .. code-block:: nim
+##   import cpython/turtle
+##
+##   title "Nim Turtle"
+##   shape "turtle"
+##   shapesize 2, 2, 8
+##   color "green", "yellow"
+##   speed "fast"
+##   beginFill()
+##
+##   while true:
+##     forward 200
+##     left 170
+##     if position() < (1.0, 1.0):
+##       break
+##
+##   endFill()
+##   mainLoop()
 import nimpy
 
 template X(simbol): auto =
