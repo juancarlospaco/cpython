@@ -12,7 +12,7 @@ template X(simbol; a): auto =
 template X(simbol; a, b): auto =
   when declared result: nimpy.pyImport("blf").simbol(a, b).to(type(result)) else: discard nimpy.pyImport("blf").simbol(a, b)
 template `:=`(simbol; tipe: typedesc) =
-  let simbol* {.inject.}: tipe = nimpy.pyImport("builtins").simbol.to(tipe)
+  let simbol* {.inject.}: tipe = nimpy.pyImport("blf").simbol.to(tipe)
 
 CLIPPING        := int
 KERNING_DEFAULT := int
