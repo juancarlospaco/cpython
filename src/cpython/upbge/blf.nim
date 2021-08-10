@@ -1,10 +1,10 @@
 ## * https://upbge.org/api/blf.html
 import nimpy
 
-template X(simbol; a, b, c)             = discard nimpy.pyImport("blf").simbol(a, b, c)
-template X(simbol; a, b, c, d)          = discard nimpy.pyImport("blf").simbol(a, b, c, d)
-template X(simbol; a, b, c, d, e)       = discard nimpy.pyImport("blf").simbol(a, b, c, d, e)
-template X(simbol; a, b, c, d, e, f)    = discard nimpy.pyImport("blf").simbol(a, b, c, d, e, f)
+template X(simbol; a, b, c)          = discard nimpy.pyImport("blf").simbol(a, b, c)
+template X(simbol; a, b, c, d)       = discard nimpy.pyImport("blf").simbol(a, b, c, d)
+template X(simbol; a, b, c, d, e)    = discard nimpy.pyImport("blf").simbol(a, b, c, d, e)
+template X(simbol; a, b, c, d, e, f) = discard nimpy.pyImport("blf").simbol(a, b, c, d, e, f)
 template X(simbol; a): auto =
   when declared result: nimpy.pyImport("blf").simbol(a).to(type(result)) else: discard nimpy.pyImport("blf").simbol(a)
 template X(simbol; a, b): auto =
