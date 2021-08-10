@@ -1,6 +1,7 @@
 ## * https://docs.python.org/3.10/library/turtle.html
 ##
-## .. image:: https://docs.python.org/3.10/_images/turtle-star.png
+## .. raw:: html
+##    <video src="https://github.com/juancarlospaco/cpython/blob/nim/docs/turtle.mp4?raw=true" controls loop muted ></video>
 ##
 ## .. code-block:: nim
 ##   import cpython/turtle
@@ -20,6 +21,8 @@
 ##
 ##   endFill()
 ##   mainLoop()
+##
+## .. image:: https://docs.python.org/3.10/_images/turtle-star.png
 import nimpy
 
 template X(simbol): auto =
