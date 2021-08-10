@@ -1,14 +1,15 @@
 ## * OpenGL 4.5+ https://upbge.org/api/bgl.html
 import nimpy
 
-template X(simbol; a)                      = discard nimpy.pyImport("bgl").simbol(a)
-template X(simbol; a, b)                   = discard nimpy.pyImport("bgl").simbol(a, b)
-template X(simbol; a, b, c)                = discard nimpy.pyImport("bgl").simbol(a, b, c)
-template X(simbol; a, b, c, d)             = discard nimpy.pyImport("bgl").simbol(a, b, c, d)
-template X(simbol; a, b, c, d, e)          = discard nimpy.pyImport("bgl").simbol(a, b, c, d, e)
-template X(simbol; a, b, c, d, e, f)       = discard nimpy.pyImport("bgl").simbol(a, b, c, d, e, f)
-template X(simbol; a, b, c, d, e, f, g)    = discard nimpy.pyImport("bgl").simbol(a, b, c, d, e, f, g)
-template X(simbol; a, b, c, d, e, f, g, h) = discard nimpy.pyImport("bgl").simbol(a, b, c, d, e, f, g, h)
+template X(simbol; a)                            = discard nimpy.pyImport("bgl").simbol(a)
+template X(simbol; a, b)                         = discard nimpy.pyImport("bgl").simbol(a, b)
+template X(simbol; a, b, c)                      = discard nimpy.pyImport("bgl").simbol(a, b, c)
+template X(simbol; a, b, c, d)                   = discard nimpy.pyImport("bgl").simbol(a, b, c, d)
+template X(simbol; a, b, c, d, e)                = discard nimpy.pyImport("bgl").simbol(a, b, c, d, e)
+template X(simbol; a, b, c, d, e, f)             = discard nimpy.pyImport("bgl").simbol(a, b, c, d, e, f)
+template X(simbol; a, b, c, d, e, f, g)          = discard nimpy.pyImport("bgl").simbol(a, b, c, d, e, f, g)
+template X(simbol; a, b, c, d, e, f, g, h)       = discard nimpy.pyImport("bgl").simbol(a, b, c, d, e, f, g, h)
+template X(simbol; a, b, c, d, e, f, g, h, i, j) = discard nimpy.pyImport("bgl").simbol(a, b, c, d, e, f, g, h, i, j)
 template X(simbol): auto =
   when declared result: nimpy.pyImport("bgl").simbol().to(type(result)) else: discard nimpy.pyImport("bgl").simbol()
 
@@ -54,23 +55,51 @@ proc glLightModel*(pname: int; param: auto) = X glLightModel, pname, param
 proc glLineWidth*(width: float) = X glLineWidth, width
 proc glLoadMatrix*(m: auto) = X glLoadMatrix, m
 proc glLogicOp*(opcode: int) = X glLogicOp, opcode
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+proc glMap1*(target, u1, u2, stride, order: int; points: auto) = X glMap1, target, u1, u2, stride, order, points
+proc glMap2*(target, u1, u2, ustride, uorder, v1, v2, vstride, vorder: int; points: auto) = X glMap2, target, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points
+proc glMapGrid*(un, u1,u2 ,vn, v1, v2: int) = X glMapGrid, un, u1,u2 ,vn, v1, v2
+proc glMaterial*(face, pname, params: int) = X glMaterial, face, pname, params
+proc glMultMatrix*(m: auto) = X glMultMatrix, m
+proc glNormal3*(nx, ny, nz: int; v: auto) = X glNormal3, nx, ny, nz, v
+proc glPixelMap*(map, mapsize: int; values: auto) = X glPixelMap, map, mapsize, values
+proc glPixelStore*(pname: int; param: auto) = X glPixelStore, pname, param
+proc glPixelTransfer*(pname: int; param: auto) = X glPixelTransfer, pname, param
+proc glPointSize*(size: int) = X glPointSize, size
+proc glPolygonMode*(face, mode: int) = X glPolygonMode, face, mode
+proc glPolygonOffset*(factor, units: float) = X glPolygonOffset, factor, units
+proc glRasterPos*(x, y, z, w: int or float) = X glRasterPos, x, y, z, w
+proc glReadBuffer*(mode: int) = X glReadBuffer, mode
+proc glReadPixels*(x, y, width, height, format, tipe: int; pixels: auto) = X glReadPixels, x, y, width, height, format, tipe, pixels
+proc glRect*(x1, y1, x2, y2, v1, v2: float or int) = X glRect, x1, y1, x2, y2, v1, v2
+proc glRotate*(angle: auto; x, y, z: float or int) = X glRotate, angle, x, y, z
+proc glScale*(x, y, z: float or int) = X glScale, x, y, z
+proc glScissor*(x, y, width, height: float or int) = X glScissor, x, y, width, height
+proc glStencilFunc*(fun, refe: int; mask: uint) = X glStencilFunc, fun, refe, mask
+proc glStencilMask*(mask: uint) = X glStencilMask, mask
+proc glStencilOp*(fail, zfail, zpass: int) = X glStencilOp, fail, zfail, zpass
+proc glTexCoord*(s, t, r, q: int; v: auto) = X glTexCoord, s, t, r, q, v
+proc glTexEnv*(target, pname: int; param: auto) = X glTexEnv, target, pname, param
+proc glTexGen*(coord, pname: int; param: auto) = X glTexGen, coord, pname, param
+proc glTexImage1D*(target, level, internalformat, width, border, format, tipe: int; pixels: auto) = X glTexImage1D, target, level, internalformat, width, border, format, tipe, pixels
+proc glTexImage2D*(target, level, internalformat, width, height, border, format, tipe: int; pixels: auto) = X glTexImage2D, target, level, internalformat, width, height, border, format, tipe, pixels
+proc glTexParameter*(target, pname: int; param: auto) = X glTexParameter, target, pname, param
+proc glTranslate*(x, y, z: int or float) = X glTranslate, x, y, z
+proc glViewport*(x, y, width, height: int or float) = X glViewport, x, y, width, height
+proc glUseProgram*(program: int) = X glUseProgram, program
+proc glLinkProgram*(program: int) = X glLinkProgram, program
+proc glActiveTexture*(texture: int) = X glActiveTexture, texture
+proc glAttachShader*(program, shader: int) = X glAttachShader, program, shader
+proc glCompileShader*(shader: int) = X glCompileShader, shader
+proc glCreateProgram*(): int = X glCreateProgram
+proc glCreateShader*(shaderType: int): int = X glCreateShader, shaderType
+proc glDeleteProgram*(program: int) = X glDeleteProgram, program
+proc glDeleteShader*(shader: int) = X glDeleteShader, shader
+proc glDetachShader*(program, shader: int) = X glDetachShader, program, shader
+proc glGetAttachedShaders*(program, maxCount: int; count, shaders: auto) = X glGetAttachedShaders, program, maxCount, count, shaders
+proc glGetProgramInfoLog*(program, maxLength: int; length, infoLog: auto) = X glGetProgramInfoLog, program, maxLength, length, infoLog
+proc glGetShaderInfoLog*(program, maxLength: int; length, infoLog: auto) = X glGetShaderInfoLog, program, maxLength, length, infoLog
+proc glGetProgramiv*(program, pname: int; params: auto) = X glGetProgramiv, program, pname, params
+proc glIsShader*(shader: int) = X glIsShader, shader
+proc glIsProgram*(program: int) = X glIsProgram, program
+proc glGetShaderSource*(shader, bufSize: int; length, source: auto) = X glGetShaderSource, shader, bufSize, length, source
+proc glShaderSource*(shader: int; shader_string: string) = X glShaderSource, shader, shader_string
