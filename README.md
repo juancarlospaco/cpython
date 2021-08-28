@@ -117,7 +117,8 @@
 - [Arbitrary precision big Decimals with all the operators for Nim.](https://juancarlospaco.github.io/cpython/decimal.html)
 - Compatible with ARC and ORC deterministic memory nanagement.
 - Enforces real strong inferred static typing with UFCS for Python.
-- Same API as Python StdLib, same function names, same argument names.
+- Same API as Python StdLib, same function names, same argument names
+  (Names starting and ending with double underscore are not legal in Nim).
 - Use the vanilla official Python StdLib that you already know by memory.
 - Same module filenames as Python StdLib, same imports as Python StdLib.
 - Documentation online, but also any Python documentation should work too.
