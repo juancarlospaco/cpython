@@ -121,12 +121,14 @@
 - Use the vanilla official Python StdLib that you already know by memory.
 - Same module filenames as Python StdLib, same imports as Python StdLib.
 - Documentation online, but also any Python documentation should work too.
-- It does not use anything from Nim standard library, very future-proof.
 - Simple code using template, easy to hack for new users, [KISS](https://en.wikipedia.org/wiki/KISS_principle) & [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
 - Stuff deprecated/removed in Python before year 2020 will not be supported.
 - We do not deprecate stuff, even if Python deprecate/remove it, it will keep working for Nim.
 - Each file is completely self-contained standalone, you can copy just 1 file on your project and use it.
 - If Python removes a module from StdLib you must obtain the `.py` file somehow, but the `.nim` remains.
+- It does not use anything from Nim standard library, very future-proof
+  (uses [Nimpy](https://github.com/yglukhov/nimpy) for Python-Nim interop,
+  but other than that they are thin wrappers, with minimal dependency on StdLib).
 - Package version == Python version.
 - [Pet the turtle.](https://juancarlospaco.github.io/cpython/turtle.html)
 
