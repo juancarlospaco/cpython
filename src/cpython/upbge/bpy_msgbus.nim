@@ -1,4 +1,4 @@
-## * https://upbge.org/api/bpy.msgbus.html
+## * https://upbge.org/#/documentation/docs/latest/api/bpy.msgbus.html
 import nimpy
 
 template X(simbol; a)             = discard nimpy.pyImport("bpy.msgbus").simbol(a)
