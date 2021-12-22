@@ -1,4 +1,5 @@
 ## * https://docs.python.org/3.10/library/builtins.html
+## * https://docs.python.org/3/library/stdtypes.html
 import nimpy
 
 template X(simbol; a, b, c):    auto = nimpy.pyImport("builtins").simbol(a, b, c).to(type(result))
@@ -46,6 +47,11 @@ proc sorted*(iterable: seq[float]):     seq[float]  = X sorted, iterable
 proc sorted*(iterable: seq[string]):    seq[string] = X sorted, iterable
 proc sum*(iterable: seq[int]):                  int = X sorted, iterable
 proc sum*(iterable: seq[float]):              float = X sorted, iterable
+proc bit_length*(x: int):                       int = X bit_length, x
+proc bit_count*(x: int):                        int = X bit_count, x
+proc as_integer_ratio*(x: int or float):   seq[int] = X as_integer_ratio, x
+proc is_integer*(x: float):                    bool = X is_integer, x
+proc to_bytes*(x: int; length: int; byteorder: string): string = X to_bytes, x, length, byteorder
 proc format*(value: auto; format_spec: string ): string = X format, value, format_spec
 proc divmod*(a, b: int):   tuple[quotient, remainder: int]   = X divmod, a, b
 proc divmod*(a, b: float): tuple[quotient, remainder: float] = X divmod, a, b
