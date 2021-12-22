@@ -119,6 +119,8 @@
 
 ![](upbge.gif)
 
+*Are you Gamedev?, Pull Requests welcome!.*
+
 
 # Design
 
