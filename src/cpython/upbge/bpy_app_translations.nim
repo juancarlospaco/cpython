@@ -1,4 +1,4 @@
-## * https://upbge.org/api/bpy.app.translations.html
+## * https://upbge.org/#/documentation/docs/latest/api/bpy.app.translations.html
 import nimpy
 
 template X(simbol; a, b): auto = nimpy.pyImport("bpy.app.translations").simbol(a, b).to(type(result))
