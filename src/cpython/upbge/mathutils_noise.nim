@@ -1,4 +1,4 @@
-## * https://upbge.org/api/mathutils.noise.html
+## * https://upbge.org/#/documentation/docs/latest/api/mathutils.noise.html
 import nimpy
 
 template X(simbol):                      auto = nimpy.pyImport("mathutils.noise").simbol().to(type(result))
