@@ -1,4 +1,4 @@
-## * https://upbge.org/api/bpy.utils.units.html
+## * https://upbge.org/#/documentation/docs/latest/api/bpy.utils.units.html
 import nimpy
 
 template X(simbol; a, b, c):          auto = nimpy.pyImport("bpy.utils.units").simbol(a, b, c).to(type(result))
