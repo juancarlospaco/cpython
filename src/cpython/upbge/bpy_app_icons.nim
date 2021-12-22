@@ -1,4 +1,4 @@
-## * https://upbge.org/api/bpy.app.icons.html
+## * https://upbge.org/#/documentation/docs/latest/api/bpy.app.icons.html
 import nimpy
 
 template X(simbol; a, b, c): auto = nimpy.pyImport("bpy.app.icons").simbol(a, b, c).to(type(result))
