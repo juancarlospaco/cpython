@@ -108,9 +108,14 @@
 - :heavy_check_mark: [zipapp](https://docs.python.org/3.10/library/zipapp) :arrow_right: https://juancarlospaco.github.io/cpython/zipapp
 - :heavy_check_mark: [zlib](https://docs.python.org/3.10/library/zlib) :arrow_right: https://juancarlospaco.github.io/cpython/zlib
 - :trollface: More supported modules soon...
-- :trollface: [Open an issue for more Python libraries that you want wrapped!](https://github.com/juancarlospaco/cpython/issues) (1 issue per 1 lib).
+- [For more documentation, use Python official documentation, works too.](https://docs.python.org/3.10/py-modindex)
 
-[For more documentation, use Python official documentation, works too.](https://docs.python.org/3.10/py-modindex)
+
+# UPBGE
+
+[UPBGE](https://upbge.org) API is supported out of the box, new [UPBGE](https://upbge.org) features will be integrated.
+
+![](upbge.gif)
 
 
 # Design
