@@ -115,6 +115,8 @@
 
 [UPBGE](https://upbge.org) API is supported out of the box, new [UPBGE](https://upbge.org) features will be integrated.
 
+3D Games, GUI with OpenGL and shaders, audio, video, and more...
+
 ![](upbge.gif)
 
 
