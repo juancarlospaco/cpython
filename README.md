@@ -14,99 +14,100 @@
 
 # Documentation
 
-- :heavy_check_mark: [atexit](https://docs.python.org/3.10/library/atexit.html) :arrow_right: https://juancarlospaco.github.io/cpython/atexit.html
-- :heavy_check_mark: [base64](https://docs.python.org/3.10/library/base64.html) :arrow_right: https://juancarlospaco.github.io/cpython/base64.html
-- :heavy_check_mark: [binascii](https://docs.python.org/3.10/library/binascii.html) :arrow_right: https://juancarlospaco.github.io/cpython/binascii.html
-- :heavy_check_mark: [binhex](https://docs.python.org/3.10/library/binhex.html) :arrow_right: https://juancarlospaco.github.io/cpython/binhex.html
-- :heavy_check_mark: [builtins](https://docs.python.org/3.10/library/builtins.html) :arrow_right: https://juancarlospaco.github.io/cpython/builtins.html
-- :heavy_check_mark: [bz2](https://docs.python.org/3.10/library/bz2.html) :arrow_right: https://juancarlospaco.github.io/cpython/bz2.html
-- :heavy_check_mark: [cmath](https://docs.python.org/3.10/library/cmath.html) :arrow_right: https://juancarlospaco.github.io/cpython/cmath.html
-- :heavy_check_mark: [codecs](https://docs.python.org/3.10/library/codecs.html) :arrow_right: https://juancarlospaco.github.io/cpython/codecs.html
-- :heavy_check_mark: [codeop](https://docs.python.org/3.10/library/codeop.html) :arrow_right: https://juancarlospaco.github.io/cpython/codeop.html
-- :heavy_check_mark: [colorsys](https://docs.python.org/3.10/library/colorsys.html) :arrow_right: https://juancarlospaco.github.io/cpython/colorsys.html
-- :heavy_check_mark: [compileall](https://docs.python.org/3.10/library/compileall.html) :arrow_right: https://juancarlospaco.github.io/cpython/compileall.html
-- :heavy_check_mark: [copy](https://docs.python.org/3.10/library/copy.html) :arrow_right: https://juancarlospaco.github.io/cpython/copy.html
-- :heavy_check_mark: [crypt](https://docs.python.org/3.10/library/crypt.html) :arrow_right: https://juancarlospaco.github.io/cpython/crypt.html
-- :heavy_check_mark: [curses](https://docs.python.org/3.10/library/curses.html) :arrow_right: https://juancarlospaco.github.io/cpython/curses.html
-- :heavy_check_mark: [decimal](https://docs.python.org/3.10/library/decimal.html) :arrow_right: https://juancarlospaco.github.io/cpython/decimal.html
-- :heavy_check_mark: [dbd](https://docs.python.org/3.10/library/dbd.html) :arrow_right: https://juancarlospaco.github.io/cpython/dbd.html
-- :heavy_check_mark: [dis](https://docs.python.org/3.10/library/dis.html) :arrow_right: https://juancarlospaco.github.io/cpython/dis.html
-- :heavy_check_mark: [doctest](https://docs.python.org/3.10/library/doctest.html) :arrow_right: https://juancarlospaco.github.io/cpython/doctest.html
-- :heavy_check_mark: [ensurepip](https://docs.python.org/3.10/library/ensurepip.html) :arrow_right: https://juancarlospaco.github.io/cpython/ensurepip.html
-- :heavy_check_mark: [errno](https://docs.python.org/3.10/library/errno.html) :arrow_right: https://juancarlospaco.github.io/cpython/errno.html
-- :heavy_check_mark: [faulthandler](https://docs.python.org/3.10/library/faulthandler.html) :arrow_right: https://juancarlospaco.github.io/cpython/faulthandler.html
-- :heavy_check_mark: [fcntl](https://docs.python.org/3.10/library/fcntl.html) :arrow_right: https://juancarlospaco.github.io/cpython/fcntl.html
-- :heavy_check_mark: [filecmp](https://docs.python.org/3.10/library/filecmp.html) :arrow_right: https://juancarlospaco.github.io/cpython/filecmp.html
-- :heavy_check_mark: [fnmatch](https://docs.python.org/3.10/library/fnmatch.html) :arrow_right: https://juancarlospaco.github.io/cpython/fnmatch.html
-- :heavy_check_mark: [gc](https://docs.python.org/3.10/library/gc.html) :arrow_right: https://juancarlospaco.github.io/cpython/gc.html
-- :heavy_check_mark: [getopt](https://docs.python.org/3.10/library/getopt.html) :arrow_right: https://juancarlospaco.github.io/cpython/getopt.html
-- :heavy_check_mark: [getpass](https://docs.python.org/3.10/library/getpass.html) :arrow_right: https://juancarlospaco.github.io/cpython/getpass.html
-- :heavy_check_mark: [gettext](https://docs.python.org/3.10/library/gettext.html) :arrow_right: https://juancarlospaco.github.io/cpython/gettext.html
-- :heavy_check_mark: [glob](https://docs.python.org/3.10/library/glob.html) :arrow_right: https://juancarlospaco.github.io/cpython/glob.html
-- :heavy_check_mark: [grp](https://docs.python.org/3.10/library/grp.html) :arrow_right: https://juancarlospaco.github.io/cpython/grp.html
-- :heavy_check_mark: [gzip](https://docs.python.org/3.10/library/gzip.html) :arrow_right: https://juancarlospaco.github.io/cpython/gzip.html
-- :heavy_check_mark: [hashlib](https://docs.python.org/3.10/library/hashlib.html) :arrow_right: https://juancarlospaco.github.io/cpython/hashlib.html
-- :heavy_check_mark: [hmac](https://docs.python.org/3.10/library/hmac.html) :arrow_right: https://juancarlospaco.github.io/cpython/hmac.html
-- :heavy_check_mark: [html.entities](https://docs.python.org/3.10/library/html.entities.html) :arrow_right: https://juancarlospaco.github.io/cpython/html_entities.html
-- :heavy_check_mark: [imghdr](https://docs.python.org/3.10/library/imghdr.html) :arrow_right: https://juancarlospaco.github.io/cpython/imghdr.html
-- :heavy_check_mark: [imp](https://docs.python.org/3.10/library/imp.html) :arrow_right: https://juancarlospaco.github.io/cpython/imp.html
-- :heavy_check_mark: [importlib](https://docs.python.org/3.10/library/importlib.html) :arrow_right: https://juancarlospaco.github.io/cpython/importlib.html
-- :heavy_check_mark: [keyword](https://docs.python.org/3.10/library/keyword.html) :arrow_right: https://juancarlospaco.github.io/cpython/keyword.html
-- :heavy_check_mark: [linecache](https://docs.python.org/3.10/library/linecache.html) :arrow_right: https://juancarlospaco.github.io/cpython/linecache.html
-- :heavy_check_mark: [logging](https://docs.python.org/3.10/library/logging.html) :arrow_right: https://juancarlospaco.github.io/cpython/logging.html
-- :heavy_check_mark: [lzma](https://docs.python.org/3.10/library/lzma.html) :arrow_right: https://juancarlospaco.github.io/cpython/lzma.html
-- :heavy_check_mark: [marshal](https://docs.python.org/3.10/library/marshal.html) :arrow_right: https://juancarlospaco.github.io/cpython/marshal.html
-- :heavy_check_mark: [math](https://docs.python.org/3.10/library/math.html) :arrow_right: https://juancarlospaco.github.io/cpython/math.html
-- :heavy_check_mark: [mimetypes](https://docs.python.org/3.10/library/mimetypes.html) :arrow_right: https://juancarlospaco.github.io/cpython/mimetypes.html
-- :heavy_check_mark: [nis](https://docs.python.org/3.10/library/nis.html) :arrow_right: https://juancarlospaco.github.io/cpython/nis.html
-- :heavy_check_mark: [operator](https://docs.python.org/3.10/library/operator.html) :arrow_right: https://juancarlospaco.github.io/cpython/operator.html
-- :heavy_check_mark: [os](https://docs.python.org/3.10/library/os.html) :arrow_right: https://juancarlospaco.github.io/cpython/os.html
-- :heavy_check_mark: [pickle](https://docs.python.org/3.10/library/pickle.html) :arrow_right: https://juancarlospaco.github.io/cpython/pickle.html
-- :heavy_check_mark: [pickletools](https://docs.python.org/3.10/library/pickletools.html) :arrow_right: https://juancarlospaco.github.io/cpython/pickletools.html
-- :heavy_check_mark: [pkgutil](https://docs.python.org/3.10/library/pkgutil.html) :arrow_right: https://juancarlospaco.github.io/cpython/pkgutil.html
-- :heavy_check_mark: [pprint](https://docs.python.org/3.10/library/pprint.html) :arrow_right: https://juancarlospaco.github.io/cpython/pprint.html
-- :heavy_check_mark: [pwd](https://docs.python.org/3.10/library/pwd.html) :arrow_right: https://juancarlospaco.github.io/cpython/pwd.html
-- :heavy_check_mark: [py_compile](https://docs.python.org/3.10/library/py_compile.html) :arrow_right: https://juancarlospaco.github.io/cpython/py_compile.html
-- :heavy_check_mark: [quopri](https://docs.python.org/3.10/library/quopri.html) :arrow_right: https://juancarlospaco.github.io/cpython/quopri.html
-- :heavy_check_mark: [random](https://docs.python.org/3.10/library/random.html) :arrow_right: https://juancarlospaco.github.io/cpython/random.html
-- :heavy_check_mark: [re](https://docs.python.org/3.10/library/re.html) :arrow_right: https://juancarlospaco.github.io/cpython/re.html
-- :heavy_check_mark: [readline](https://docs.python.org/3.10/library/readline.html) :arrow_right: https://juancarlospaco.github.io/cpython/readline.html
-- :heavy_check_mark: [reprlib](https://docs.python.org/3.10/library/reprlib.html) :arrow_right: https://juancarlospaco.github.io/cpython/reprlib.html
-- :heavy_check_mark: [resource](https://docs.python.org/3.10/library/resource.html) :arrow_right: https://juancarlospaco.github.io/cpython/resource.html
-- :heavy_check_mark: [runpy](https://docs.python.org/3.10/library/runpy.html) :arrow_right: https://juancarlospaco.github.io/cpython/runpy.html
-- :heavy_check_mark: [secrets](https://docs.python.org/3.10/library/secrets.html) :arrow_right: https://juancarlospaco.github.io/cpython/secrets.html
-- :heavy_check_mark: [shutil](https://docs.python.org/3.10/library/shutil.html) :arrow_right: https://juancarlospaco.github.io/cpython/shutil.html
-- :heavy_check_mark: [signal](https://docs.python.org/3.10/library/signal.html) :arrow_right: https://juancarlospaco.github.io/cpython/signal.html
-- :heavy_check_mark: [site](https://docs.python.org/3.10/library/site.html) :arrow_right: https://juancarlospaco.github.io/cpython/site.html
-- :heavy_check_mark: [sndhdr](https://docs.python.org/3.10/library/sndhdr.html) :arrow_right: https://juancarlospaco.github.io/cpython/sndhdr.html
-- :heavy_check_mark: [spwd](https://docs.python.org/3.10/library/spwd.html) :arrow_right: https://juancarlospaco.github.io/cpython/spwd.html
-- :heavy_check_mark: [statistics](https://docs.python.org/3.10/library/statistics.html) :arrow_right: https://juancarlospaco.github.io/cpython/statistics.html
-- :heavy_check_mark: [struct](https://docs.python.org/3.10/library/struct.html) :arrow_right: https://juancarlospaco.github.io/cpython/struct.html
-- :heavy_check_mark: [subprocess](https://docs.python.org/3.10/library/subprocess.html) :arrow_right: https://juancarlospaco.github.io/cpython/subprocess.html
-- :heavy_check_mark: [sys](https://docs.python.org/3.10/library/sys.html) :arrow_right: https://juancarlospaco.github.io/cpython/sys.html
-- :heavy_check_mark: [sysconfig](https://docs.python.org/3.10/library/sysconfig.html) :arrow_right: https://juancarlospaco.github.io/cpython/sysconfig.html
-- :heavy_check_mark: [syslog](https://docs.python.org/3.10/library/syslog.html) :arrow_right: https://juancarlospaco.github.io/cpython/syslog.html
-- :heavy_check_mark: [tabnanny](https://docs.python.org/3.10/library/tabnanny.html) :arrow_right: https://juancarlospaco.github.io/cpython/tabnanny.html
-- :heavy_check_mark: [tempfile](https://docs.python.org/3.10/library/tempfile.html) :arrow_right: https://juancarlospaco.github.io/cpython/tempfile.html
-- :heavy_check_mark: [termios](https://docs.python.org/3.10/library/termios.html) :arrow_right: https://juancarlospaco.github.io/cpython/termios.html
-- :heavy_check_mark: [textwrap](https://docs.python.org/3.10/library/textwrap.html) :arrow_right: https://juancarlospaco.github.io/cpython/textwrap.html
-- :heavy_check_mark: [timeit](https://docs.python.org/3.10/library/timeit.html) :arrow_right: https://juancarlospaco.github.io/cpython/timeit.html
-- :heavy_check_mark: [token](https://docs.python.org/3.10/library/token.html) :arrow_right: https://juancarlospaco.github.io/cpython/token.html
-- :heavy_check_mark: [tty](https://docs.python.org/3.10/library/tty.html) :arrow_right: https://juancarlospaco.github.io/cpython/tty.html
-- :heavy_check_mark: [turtle](https://docs.python.org/3.10/library/turtle.html) :arrow_right: https://juancarlospaco.github.io/cpython/turtle.html
-- :heavy_check_mark: [unicodedata](https://docs.python.org/3.10/library/unicodedata.html) :arrow_right: https://juancarlospaco.github.io/cpython/unicodedata.html
-- :heavy_check_mark: [uu](https://docs.python.org/3.10/library/uu.html) :arrow_right: https://juancarlospaco.github.io/cpython/uu.html
-- :heavy_check_mark: [uuid](https://docs.python.org/3.10/library/uuid.html) :arrow_right: https://juancarlospaco.github.io/cpython/uuid.html
-- :heavy_check_mark: [venv](https://docs.python.org/3.10/library/venv.html) :arrow_right: https://juancarlospaco.github.io/cpython/venv.html
-- :heavy_check_mark: [warnings](https://docs.python.org/3.10/library/warnings.html) :arrow_right: https://juancarlospaco.github.io/cpython/warnings.html
-- :heavy_check_mark: [webbrowser](https://docs.python.org/3.10/library/webbrowser.html) :arrow_right: https://juancarlospaco.github.io/cpython/webbrowser.html
-- :heavy_check_mark: [winsound](https://docs.python.org/3.10/library/winsound.html) :arrow_right: https://juancarlospaco.github.io/cpython/winsound.html
-- :heavy_check_mark: [zipapp](https://docs.python.org/3.10/library/zipapp.html) :arrow_right: https://juancarlospaco.github.io/cpython/zipapp.html
-- :heavy_check_mark: [zlib](https://docs.python.org/3.10/library/zlib.html) :arrow_right: https://juancarlospaco.github.io/cpython/zlib.html
+- :heavy_check_mark: [atexit](https://docs.python.org/3.10/library/atexit) :arrow_right: https://juancarlospaco.github.io/cpython/atexit
+- :heavy_check_mark: [base64](https://docs.python.org/3.10/library/base64) :arrow_right: https://juancarlospaco.github.io/cpython/base64
+- :heavy_check_mark: [binascii](https://docs.python.org/3.10/library/binascii) :arrow_right: https://juancarlospaco.github.io/cpython/binascii
+- :heavy_check_mark: [binhex](https://docs.python.org/3.10/library/binhex) :arrow_right: https://juancarlospaco.github.io/cpython/binhex
+- :heavy_check_mark: [builtins](https://docs.python.org/3.10/library/builtins) :arrow_right: https://juancarlospaco.github.io/cpython/builtins
+- :heavy_check_mark: [bz2](https://docs.python.org/3.10/library/bz2) :arrow_right: https://juancarlospaco.github.io/cpython/bz2
+- :heavy_check_mark: [cmath](https://docs.python.org/3.10/library/cmath) :arrow_right: https://juancarlospaco.github.io/cpython/cmath
+- :heavy_check_mark: [codecs](https://docs.python.org/3.10/library/codecs) :arrow_right: https://juancarlospaco.github.io/cpython/codecs
+- :heavy_check_mark: [codeop](https://docs.python.org/3.10/library/codeop) :arrow_right: https://juancarlospaco.github.io/cpython/codeop
+- :heavy_check_mark: [colorsys](https://docs.python.org/3.10/library/colorsys) :arrow_right: https://juancarlospaco.github.io/cpython/colorsys
+- :heavy_check_mark: [compileall](https://docs.python.org/3.10/library/compileall) :arrow_right: https://juancarlospaco.github.io/cpython/compileall
+- :heavy_check_mark: [copy](https://docs.python.org/3.10/library/copy) :arrow_right: https://juancarlospaco.github.io/cpython/copy
+- :heavy_check_mark: [crypt](https://docs.python.org/3.10/library/crypt) :arrow_right: https://juancarlospaco.github.io/cpython/crypt
+- :heavy_check_mark: [curses](https://docs.python.org/3.10/library/curses) :arrow_right: https://juancarlospaco.github.io/cpython/curses
+- :heavy_check_mark: [decimal](https://docs.python.org/3.10/library/decimal) :arrow_right: https://juancarlospaco.github.io/cpython/decimal
+- :heavy_check_mark: [dbd](https://docs.python.org/3.10/library/dbd) :arrow_right: https://juancarlospaco.github.io/cpython/dbd
+- :heavy_check_mark: [dis](https://docs.python.org/3.10/library/dis) :arrow_right: https://juancarlospaco.github.io/cpython/dis
+- :heavy_check_mark: [doctest](https://docs.python.org/3.10/library/doctest) :arrow_right: https://juancarlospaco.github.io/cpython/doctest
+- :heavy_check_mark: [ensurepip](https://docs.python.org/3.10/library/ensurepip) :arrow_right: https://juancarlospaco.github.io/cpython/ensurepip
+- :heavy_check_mark: [errno](https://docs.python.org/3.10/library/errno) :arrow_right: https://juancarlospaco.github.io/cpython/errno
+- :heavy_check_mark: [faulthandler](https://docs.python.org/3.10/library/faulthandler) :arrow_right: https://juancarlospaco.github.io/cpython/faulthandler
+- :heavy_check_mark: [fcntl](https://docs.python.org/3.10/library/fcntl) :arrow_right: https://juancarlospaco.github.io/cpython/fcntl
+- :heavy_check_mark: [filecmp](https://docs.python.org/3.10/library/filecmp) :arrow_right: https://juancarlospaco.github.io/cpython/filecmp
+- :heavy_check_mark: [fnmatch](https://docs.python.org/3.10/library/fnmatch) :arrow_right: https://juancarlospaco.github.io/cpython/fnmatch
+- :heavy_check_mark: [gc](https://docs.python.org/3.10/library/gc) :arrow_right: https://juancarlospaco.github.io/cpython/gc
+- :heavy_check_mark: [getopt](https://docs.python.org/3.10/library/getopt) :arrow_right: https://juancarlospaco.github.io/cpython/getopt
+- :heavy_check_mark: [getpass](https://docs.python.org/3.10/library/getpass) :arrow_right: https://juancarlospaco.github.io/cpython/getpass
+- :heavy_check_mark: [gettext](https://docs.python.org/3.10/library/gettext) :arrow_right: https://juancarlospaco.github.io/cpython/gettext
+- :heavy_check_mark: [glob](https://docs.python.org/3.10/library/glob) :arrow_right: https://juancarlospaco.github.io/cpython/glob
+- :heavy_check_mark: [grp](https://docs.python.org/3.10/library/grp) :arrow_right: https://juancarlospaco.github.io/cpython/grp
+- :heavy_check_mark: [gzip](https://docs.python.org/3.10/library/gzip) :arrow_right: https://juancarlospaco.github.io/cpython/gzip
+- :heavy_check_mark: [hashlib](https://docs.python.org/3.10/library/hashlib) :arrow_right: https://juancarlospaco.github.io/cpython/hashlib
+- :heavy_check_mark: [hmac](https://docs.python.org/3.10/library/hmac) :arrow_right: https://juancarlospaco.github.io/cpython/hmac
+- :heavy_check_mark: [html.entities](https://docs.python.org/3.10/library/html.entities) :arrow_right: https://juancarlospaco.github.io/cpython/html_entities
+- :heavy_check_mark: [imghdr](https://docs.python.org/3.10/library/imghdr) :arrow_right: https://juancarlospaco.github.io/cpython/imghdr
+- :heavy_check_mark: [imp](https://docs.python.org/3.10/library/imp) :arrow_right: https://juancarlospaco.github.io/cpython/imp
+- :heavy_check_mark: [importlib](https://docs.python.org/3.10/library/importlib) :arrow_right: https://juancarlospaco.github.io/cpython/importlib
+- :heavy_check_mark: [keyword](https://docs.python.org/3.10/library/keyword) :arrow_right: https://juancarlospaco.github.io/cpython/keyword
+- :heavy_check_mark: [linecache](https://docs.python.org/3.10/library/linecache) :arrow_right: https://juancarlospaco.github.io/cpython/linecache
+- :heavy_check_mark: [logging](https://docs.python.org/3.10/library/logging) :arrow_right: https://juancarlospaco.github.io/cpython/logging
+- :heavy_check_mark: [lzma](https://docs.python.org/3.10/library/lzma) :arrow_right: https://juancarlospaco.github.io/cpython/lzma
+- :heavy_check_mark: [marshal](https://docs.python.org/3.10/library/marshal) :arrow_right: https://juancarlospaco.github.io/cpython/marshal
+- :heavy_check_mark: [math](https://docs.python.org/3.10/library/math) :arrow_right: https://juancarlospaco.github.io/cpython/math
+- :heavy_check_mark: [mimetypes](https://docs.python.org/3.10/library/mimetypes) :arrow_right: https://juancarlospaco.github.io/cpython/mimetypes
+- :heavy_check_mark: [nis](https://docs.python.org/3.10/library/nis) :arrow_right: https://juancarlospaco.github.io/cpython/nis
+- :heavy_check_mark: [operator](https://docs.python.org/3.10/library/operator) :arrow_right: https://juancarlospaco.github.io/cpython/operator
+- :heavy_check_mark: [os](https://docs.python.org/3.10/library/os) :arrow_right: https://juancarlospaco.github.io/cpython/os
+- :heavy_check_mark: [pickle](https://docs.python.org/3.10/library/pickle) :arrow_right: https://juancarlospaco.github.io/cpython/pickle
+- :heavy_check_mark: [pickletools](https://docs.python.org/3.10/library/pickletools) :arrow_right: https://juancarlospaco.github.io/cpython/pickletools
+- :heavy_check_mark: [pkgutil](https://docs.python.org/3.10/library/pkgutil) :arrow_right: https://juancarlospaco.github.io/cpython/pkgutil
+- :heavy_check_mark: [pprint](https://docs.python.org/3.10/library/pprint) :arrow_right: https://juancarlospaco.github.io/cpython/pprint
+- :heavy_check_mark: [pwd](https://docs.python.org/3.10/library/pwd) :arrow_right: https://juancarlospaco.github.io/cpython/pwd
+- :heavy_check_mark: [py_compile](https://docs.python.org/3.10/library/py_compile) :arrow_right: https://juancarlospaco.github.io/cpython/py_compile
+- :heavy_check_mark: [quopri](https://docs.python.org/3.10/library/quopri) :arrow_right: https://juancarlospaco.github.io/cpython/quopri
+- :heavy_check_mark: [random](https://docs.python.org/3.10/library/random) :arrow_right: https://juancarlospaco.github.io/cpython/random
+- :heavy_check_mark: [re](https://docs.python.org/3.10/library/re) :arrow_right: https://juancarlospaco.github.io/cpython/re
+- :heavy_check_mark: [readline](https://docs.python.org/3.10/library/readline) :arrow_right: https://juancarlospaco.github.io/cpython/readline
+- :heavy_check_mark: [reprlib](https://docs.python.org/3.10/library/reprlib) :arrow_right: https://juancarlospaco.github.io/cpython/reprlib
+- :heavy_check_mark: [resource](https://docs.python.org/3.10/library/resource) :arrow_right: https://juancarlospaco.github.io/cpython/resource
+- :heavy_check_mark: [runpy](https://docs.python.org/3.10/library/runpy) :arrow_right: https://juancarlospaco.github.io/cpython/runpy
+- :heavy_check_mark: [secrets](https://docs.python.org/3.10/library/secrets) :arrow_right: https://juancarlospaco.github.io/cpython/secrets
+- :heavy_check_mark: [shutil](https://docs.python.org/3.10/library/shutil) :arrow_right: https://juancarlospaco.github.io/cpython/shutil
+- :heavy_check_mark: [signal](https://docs.python.org/3.10/library/signal) :arrow_right: https://juancarlospaco.github.io/cpython/signal
+- :heavy_check_mark: [site](https://docs.python.org/3.10/library/site) :arrow_right: https://juancarlospaco.github.io/cpython/site
+- :heavy_check_mark: [sndhdr](https://docs.python.org/3.10/library/sndhdr) :arrow_right: https://juancarlospaco.github.io/cpython/sndhdr
+- :heavy_check_mark: [spwd](https://docs.python.org/3.10/library/spwd) :arrow_right: https://juancarlospaco.github.io/cpython/spwd
+- :heavy_check_mark: [statistics](https://docs.python.org/3.10/library/statistics) :arrow_right: https://juancarlospaco.github.io/cpython/statistics
+- :heavy_check_mark: [struct](https://docs.python.org/3.10/library/struct) :arrow_right: https://juancarlospaco.github.io/cpython/struct
+- :heavy_check_mark: [subprocess](https://docs.python.org/3.10/library/subprocess) :arrow_right: https://juancarlospaco.github.io/cpython/subprocess
+- :heavy_check_mark: [sys](https://docs.python.org/3.10/library/sys) :arrow_right: https://juancarlospaco.github.io/cpython/sys
+- :heavy_check_mark: [sysconfig](https://docs.python.org/3.10/library/sysconfig) :arrow_right: https://juancarlospaco.github.io/cpython/sysconfig
+- :heavy_check_mark: [syslog](https://docs.python.org/3.10/library/syslog) :arrow_right: https://juancarlospaco.github.io/cpython/syslog
+- :heavy_check_mark: [tabnanny](https://docs.python.org/3.10/library/tabnanny) :arrow_right: https://juancarlospaco.github.io/cpython/tabnanny
+- :heavy_check_mark: [tempfile](https://docs.python.org/3.10/library/tempfile) :arrow_right: https://juancarlospaco.github.io/cpython/tempfile
+- :heavy_check_mark: [termios](https://docs.python.org/3.10/library/termios) :arrow_right: https://juancarlospaco.github.io/cpython/termios
+- :heavy_check_mark: [textwrap](https://docs.python.org/3.10/library/textwrap) :arrow_right: https://juancarlospaco.github.io/cpython/textwrap
+- :heavy_check_mark: [timeit](https://docs.python.org/3.10/library/timeit) :arrow_right: https://juancarlospaco.github.io/cpython/timeit
+- :heavy_check_mark: [token](https://docs.python.org/3.10/library/token) :arrow_right: https://juancarlospaco.github.io/cpython/token
+- :heavy_check_mark: [tty](https://docs.python.org/3.10/library/tty) :arrow_right: https://juancarlospaco.github.io/cpython/tty
+- :heavy_check_mark: [turtle](https://docs.python.org/3.10/library/turtle) :arrow_right: https://juancarlospaco.github.io/cpython/turtle
+- :heavy_check_mark: [typing](https://docs.python.org/3.10/library/typing) :arrow_right: https://juancarlospaco.github.io/cpython/typing
+- :heavy_check_mark: [unicodedata](https://docs.python.org/3.10/library/unicodedata) :arrow_right: https://juancarlospaco.github.io/cpython/unicodedata
+- :heavy_check_mark: [uu](https://docs.python.org/3.10/library/uu) :arrow_right: https://juancarlospaco.github.io/cpython/uu
+- :heavy_check_mark: [uuid](https://docs.python.org/3.10/library/uuid) :arrow_right: https://juancarlospaco.github.io/cpython/uuid
+- :heavy_check_mark: [venv](https://docs.python.org/3.10/library/venv) :arrow_right: https://juancarlospaco.github.io/cpython/venv
+- :heavy_check_mark: [warnings](https://docs.python.org/3.10/library/warnings) :arrow_right: https://juancarlospaco.github.io/cpython/warnings
+- :heavy_check_mark: [webbrowser](https://docs.python.org/3.10/library/webbrowser) :arrow_right: https://juancarlospaco.github.io/cpython/webbrowser
+- :heavy_check_mark: [winsound](https://docs.python.org/3.10/library/winsound) :arrow_right: https://juancarlospaco.github.io/cpython/winsound
+- :heavy_check_mark: [zipapp](https://docs.python.org/3.10/library/zipapp) :arrow_right: https://juancarlospaco.github.io/cpython/zipapp
+- :heavy_check_mark: [zlib](https://docs.python.org/3.10/library/zlib) :arrow_right: https://juancarlospaco.github.io/cpython/zlib
 - :trollface: More supported modules soon...
 - :trollface: [Open an issue for more Python libraries that you want wrapped!](https://github.com/juancarlospaco/cpython/issues) (1 issue per 1 lib).
 
-[For more documentation, use Python official documentation, works too.](https://docs.python.org/3.10/py-modindex.html)
+[For more documentation, use Python official documentation, works too.](https://docs.python.org/3.10/py-modindex)
 
 
 # Design
@@ -114,7 +115,7 @@
 - 1 Dependency only.
 - 1 Nim module per 1 Python module.
 - Module files are <200 lines each of pure Nim code.
-- [Arbitrary precision big Decimals with all the operators for Nim.](https://juancarlospaco.github.io/cpython/decimal.html)
+- [Arbitrary precision big Decimals with all the operators for Nim.](https://juancarlospaco.github.io/cpython/decimal)
 - Compatible with ARC and ORC deterministic memory nanagement.
 - Enforces real strong inferred static typing with UFCS for Python.
 - Same API as Python StdLib, same function names, same argument names
@@ -131,7 +132,7 @@
   (uses [Nimpy](https://github.com/yglukhov/nimpy) for Python-Nim interop,
   but other than that they are thin wrappers, with minimal dependency on StdLib).
 - Package version == Python version.
-- [Pet the turtle.](https://juancarlospaco.github.io/cpython/turtle.html)
+- [Pet the turtle.](https://juancarlospaco.github.io/cpython/turtle)
 
 
 # Requisites
@@ -172,7 +173,7 @@ Also...
 
 - Whole new StdLib becomes usable for Nim, without Nim having to spend resources.
 - Showcase easy interoperability of Nim (CTypes is harder, Python is verbose, etc).
-- [Arbitrary precision big Decimals for Nim.](https://juancarlospaco.github.io/cpython/decimal.html)
+- [Arbitrary precision big Decimals for Nim.](https://juancarlospaco.github.io/cpython/decimal)
 - Others do it too (Scala/Kotlin uses Java StbLib, Swift uses Objective-C StdLib, etc).
 - Python does it too, Python is written in C therefore using C StdLib.
 - Make others work improving libs that you can use in Nim.
