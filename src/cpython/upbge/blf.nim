@@ -1,4 +1,4 @@
-## * https://upbge.org/api/blf.html
+## * https://upbge.org/#/documentation/docs/latest/api/blf.html
 import nimpy
 
 template X(simbol; a, b, c)          = discard nimpy.pyImport("blf").simbol(a, b, c)
