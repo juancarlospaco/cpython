@@ -1,4 +1,4 @@
-## * https://upbge.org/api/bpy.path.html (These are "optimized" for Blender/UPBGE workflows)
+## * https://upbge.org/#/documentation/docs/latest/api/bpy.path.html (These are "optimized" for Blender/UPBGE)
 import nimpy
 
 template X(simbol; a):       auto = nimpy.pyImport("bpy.path").simbol(a).to(type(result))
