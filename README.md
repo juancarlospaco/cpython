@@ -64,6 +64,7 @@
 - :heavy_check_mark: [pickle](https://docs.python.org/3.10/library/pickle) :arrow_right: https://juancarlospaco.github.io/cpython/pickle
 - :heavy_check_mark: [pickletools](https://docs.python.org/3.10/library/pickletools) :arrow_right: https://juancarlospaco.github.io/cpython/pickletools
 - :heavy_check_mark: [pkgutil](https://docs.python.org/3.10/library/pkgutil) :arrow_right: https://juancarlospaco.github.io/cpython/pkgutil
+- :heavy_check_mark: [posixpath](https://docs.python.org/3.10/library/posixpath) :arrow_right: https://juancarlospaco.github.io/cpython/posixpath
 - :heavy_check_mark: [pprint](https://docs.python.org/3.10/library/pprint) :arrow_right: https://juancarlospaco.github.io/cpython/pprint
 - :heavy_check_mark: [pwd](https://docs.python.org/3.10/library/pwd) :arrow_right: https://juancarlospaco.github.io/cpython/pwd
 - :heavy_check_mark: [py_compile](https://docs.python.org/3.10/library/py_compile) :arrow_right: https://juancarlospaco.github.io/cpython/py_compile
