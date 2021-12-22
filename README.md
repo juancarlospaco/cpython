@@ -58,6 +58,7 @@
 - :heavy_check_mark: [marshal](https://docs.python.org/3.10/library/marshal) :arrow_right: https://juancarlospaco.github.io/cpython/marshal
 - :heavy_check_mark: [math](https://docs.python.org/3.10/library/math) :arrow_right: https://juancarlospaco.github.io/cpython/math
 - :heavy_check_mark: [mimetypes](https://docs.python.org/3.10/library/mimetypes) :arrow_right: https://juancarlospaco.github.io/cpython/mimetypes
+- :heavy_check_mark: [ntpath](https://docs.python.org/3.10/library/ntpath) :arrow_right: https://juancarlospaco.github.io/cpython/ntpath
 - :heavy_check_mark: [nis](https://docs.python.org/3.10/library/nis) :arrow_right: https://juancarlospaco.github.io/cpython/nis
 - :heavy_check_mark: [operator](https://docs.python.org/3.10/library/operator) :arrow_right: https://juancarlospaco.github.io/cpython/operator
 - :heavy_check_mark: [os](https://docs.python.org/3.10/library/os) :arrow_right: https://juancarlospaco.github.io/cpython/os
