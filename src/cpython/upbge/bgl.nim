@@ -1,4 +1,4 @@
-## * OpenGL 4.5+ https://upbge.org/api/bgl.html
+## * OpenGL 4.5+ https://upbge.org/#/documentation/docs/latest/api/bgl.html
 import nimpy
 
 template X(simbol; a)                            = discard nimpy.pyImport("bgl").simbol(a)
