@@ -1,4 +1,4 @@
-## * https://upbge.org/api/bl_math.html
+## * https://upbge.org/#/documentation/docs/latest/api/bl_math.html
 import nimpy
 
 template X(simbol; a, b, c): auto = nimpy.pyImport("bl_math").simbol(a, b, c).to(type(result))
