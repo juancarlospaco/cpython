@@ -51,6 +51,9 @@ proc bit_length*(x: int):                       int = X bit_length, x
 proc bit_count*(x: int):                        int = X bit_count, x
 proc as_integer_ratio*(x: int or float):   seq[int] = X as_integer_ratio, x
 proc is_integer*(x: float):                    bool = X is_integer, x
+proc complex*(re: int or float; im: int = 0):  auto = X complex, re, im
+proc format_map*(s: string; mapping: auto):  string = X format_map, s, mapping
+proc isidentifier*(x: string):                 bool = X isidentifier, x
 proc to_bytes*(x: int; length: int; byteorder: string): string = X to_bytes, x, length, byteorder
 proc format*(value: auto; format_spec: string ): string = X format, value, format_spec
 proc divmod*(a, b: int):   tuple[quotient, remainder: int]   = X divmod, a, b
