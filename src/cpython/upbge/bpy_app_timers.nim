@@ -1,4 +1,4 @@
-## * https://upbge.org/api/bpy.app.timers.html
+## * https://upbge.org/#/documentation/docs/latest/api/bpy.app.timers.html
 import nimpy
 
 template X(simbol; a, b, c) = discard nimpy.pyImport("bpy.app.timers").simbol(a, b, c)
