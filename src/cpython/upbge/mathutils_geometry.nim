@@ -1,4 +1,4 @@
-## * https://upbge.org/api/mathutils.geometry.html
+## * https://upbge.org/#/documentation/docs/latest/api/mathutils.geometry.html
 import nimpy
 
 template Y(simbol):                      auto = nimpy.pyImport("mathutils.geometry").simbol().to(type(result))
