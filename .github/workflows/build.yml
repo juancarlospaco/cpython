@@ -14,12 +14,17 @@ jobs:
     runs-on: ${{ matrix.platform }}
     steps:
     - uses: actions/checkout@v2
+
     - uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Set Environment Variables
-      uses: allenevans/set-env@v2.0.0
+    - uses: jiro4989/setup-nim-action@v1.0.2
       with:
-        ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-        # GITHUB_PATH: "$HOME/.nimble/bin"
+        nim-version: "stable"
+
+    - name: Nimble Refresh
+      run: |
+        export PATH=$HOME/.nimble/bin:$PATH
+        nimble -y refresh
+        nimble -y install nimpy
