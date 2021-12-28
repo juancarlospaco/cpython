@@ -24,14 +24,24 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
+    - uses: pre-commit/action@v2.0.3
+      if: runner.os == 'Linux'
+
     - uses: jiro4989/setup-nim-action@v1.0.2
       with:
         nim-version: "stable"
 
-    - name: Nimble
+    - name: Nimble setup
       run: |
         nimble -y refresh
         nimble -y install nimpy
 
-    - uses: pre-commit/action@v2.0.3
-      if: runner.os == 'Linux'
+    - name: Build docs
+      run: |
+        nim doc --index:on --project --experimental:strictFuncs --styleCheck:hint --outdir:docs src/atexit.nim
+
+    - name: Clean out
+      run: |
+        rm --verbose --force --recursive docs/*.idx
+        rm --verbose --force --recursive docs/nimcache/*.*
+        rm --verbose --force --recursive docs/nimcache/runnableExamples/*.*
