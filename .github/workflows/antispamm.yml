@@ -8,7 +8,7 @@ jobs:
 
       # AntiSpamm for Pull Requests: Stops single-commit PR automatically, like Hacktoberfests, Bots, Trolls, etc.
       - name: Must be >= 3 commits
-        if: ${{ github.event.pull_request.commits > 2 }}
+        if: ${{ github.event.pull_request.commits < 3 }}
         uses: actions/github-script@v5
         with:
           script: core.setFailed('AntiSpamm\tMust be >= 3 commits, make more commits to unlock.')
