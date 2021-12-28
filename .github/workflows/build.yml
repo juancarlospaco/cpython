@@ -8,7 +8,7 @@ jobs:
       fail-fast: false
       matrix:
         platform: [ubuntu-latest, windows-latest]
-        python-version: ["3.6", "3.7", "3.8", "3.9", "3.10", "pypy3"]
+        python-version: ["3.6", "3.7", "3.8", "3.9", "3.10"]
         architecture: ["x64", "x86"]
     name: ${{ matrix.platform }}-${{ matrix.architecture }}-${{ matrix.python-version }}
     runs-on: ${{ matrix.platform }}
@@ -107,6 +107,33 @@ jobs:
         $CMD shutil
         $CMD signal
         $CMD site
+        $CMD sndhdr
+        $CMD spwd
+        $CMD ssl
+        $CMD statistics
+        $CMD struct
+        $CMD subprocess
+        $CMD sys
+        $CMD sysconfig
+        $CMD syslog
+        $CMD tabnanny
+        $CMD tempfile
+        $CMD termios
+        $CMD textwrap
+        $CMD timeit
+        $CMD token
+        $CMD tty
+        $CMD turtle
+        $CMD typing
+        $CMD unicodedata
+        $CMD uu
+        $CMD uuid
+        $CMD venv
+        $CMD warnings
+        $CMD webbrowsers
+        $CMD winsound
+        $CMD zipapp
+        $CMD zlib
 
     - name: Clean out
       shell: bash
