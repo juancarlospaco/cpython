@@ -38,7 +38,7 @@ jobs:
 
     - name: Build docs
       run: |
-        nim doc --index:on --project --experimental:strictFuncs --styleCheck:hint --outdir:docs src/atexit.nim
+        nim doc --index:on --project --experimental:strictFuncs --styleCheck:hint --outdir:docs src/cpython/atexit.nim
 
     - name: Clean out
       run: |
