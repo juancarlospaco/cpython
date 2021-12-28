@@ -41,17 +41,7 @@ jobs:
       shell: bash
       run: |
         cd src/cpython/
-        $CMD atexit
-        $CMD base64
-        $CMD binascii
-        $CMD binhex
-        $CMD builtins
-        $CMD bz2
-        $CMD cmath
-        $CMD codecs
-        $CMD codeop
-        $CMD colorsys
-        $CMD compileall
+        $CMD atexit base64 binascii binhex builtins bz2 cmath codecs codeop colorsys compileall
 
     - name: Clean out
       shell: bash
