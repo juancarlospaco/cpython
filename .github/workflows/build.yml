@@ -130,7 +130,7 @@ jobs:
         $CMD uuid
         $CMD venv
         $CMD warnings
-        $CMD webbrowsers
+        $CMD webbrowser
         $CMD winsound
         $CMD zipapp
         $CMD zlib
