@@ -19,7 +19,7 @@ jobs:
       uses: allenevans/set-env@v2.0.0
       with:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-        CMD: "nim doc -d:nimStrictDelete -d:nimPreviewFloatRoundtrip -d:nimPreviewDotLikeOps --gc:orc --index:on --project --experimental:strictEffects --experimental:strictFuncs --styleCheck:usages --styleCheck:hint --outdir:docs"
+        CMD: "nim doc -d:nimStrictDelete -d:nimPreviewFloatRoundtrip -d:nimPreviewDotLikeOps --gc:orc --index:on --project --experimental:strictEffects --experimental:strictFuncs --styleCheck:usages --styleCheck:hint --outdir:../../docs"
 
     - uses: actions/setup-python@v2
       with:
@@ -40,8 +40,18 @@ jobs:
     - name: Build docs
       shell: bash
       run: |
-        $CMD src/cpython/atexit.nim
-        $CMD src/cpython/base64.nim
+        cd src/cpython/
+        $CMD atexit
+        $CMD base64
+        $CMD binascii
+        $CMD binhex
+        $CMD builtins
+        $CMD bz2
+        $CMD cmath
+        $CMD codecs
+        $CMD codeop
+        $CMD colorsys
+        $CMD compileall
 
     - name: Clean out
       shell: bash
