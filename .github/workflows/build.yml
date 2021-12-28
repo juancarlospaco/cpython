@@ -32,3 +32,6 @@ jobs:
       run: |
         nimble -y refresh
         nimble -y install nimpy
+
+    - uses: pre-commit/action@v2.0.3
+      if: runner.os == 'Linux'
