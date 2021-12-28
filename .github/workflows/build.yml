@@ -41,6 +41,7 @@ jobs:
         nim doc --index:on --project --experimental:strictFuncs --styleCheck:hint --outdir:docs src/cpython/atexit.nim
 
     - name: Clean out
+      shell: bash
       run: |
         rm --verbose --force --recursive docs/*.idx
         rm --verbose --force --recursive docs/nimcache/*.*
