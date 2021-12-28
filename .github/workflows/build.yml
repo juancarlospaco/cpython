@@ -19,6 +19,7 @@ jobs:
       uses: allenevans/set-env@v2.0.0
       with:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+        CMD: "nim doc --index:on --project --experimental:strictFuncs --styleCheck:hint --outdir:docs"
 
     - uses: actions/setup-python@v2
       with:
@@ -38,7 +39,8 @@ jobs:
 
     - name: Build docs
       run: |
-        nim doc --index:on --project --experimental:strictFuncs --styleCheck:hint --outdir:docs src/cpython/atexit.nim
+        ${{ CMD }} src/cpython/atexit.nim
+        ${{ CMD }} src/cpython/base64.nim
 
     - name: Clean out
       shell: bash
