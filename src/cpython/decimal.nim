@@ -12,7 +12,7 @@ proc newDecimal*(value: SomeNumber or string): PyDecimal = nimpy.pyImport("decim
 proc prec*(value: int) = nimpy.pyImport("decimal").getcontext().prec = value
 proc toFloat*(self: PyDecimal):   BiggestFloat = X `float`
 proc toInt*(self: PyDecimal):     BiggestInt   = X `int`
-proc toUint*(self: PyDecimal):    BiggestUint  = X `int`
+proc toUint*(self: PyDecimal):    BiggestUInt  = X `int`
 proc toString*(self: PyDecimal):  string       = X `str`
 proc `-`*(a: PyDecimal): PyDecimal = Z neg
 proc `+`*(a: PyDecimal): PyDecimal = Z pos
@@ -51,5 +51,5 @@ runnableExamples:
   import nimpy
   let x: PyDecimal = newDecimal"999999999999999999999999999999999999999.999999999999999999999999999999999999999"
   let y: PyDecimal = -999999999999999999999999999999999999999.999999999999999999999999999999999999999'PyD
-  let z: PyDecimal = newDecimal BiggestUint.high
+  let z: PyDecimal = newDecimal BiggestUInt.high
   echo toString(x * y + z - z)
