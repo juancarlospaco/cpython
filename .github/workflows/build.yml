@@ -23,8 +23,7 @@ jobs:
       with:
         nim-version: "stable"
 
-    - name: Nimble Refresh
+    - name: Nimble
       run: |
-        export PATH=$HOME/.nimble/bin:$PATH
         nimble -y refresh
         nimble -y install nimpy
