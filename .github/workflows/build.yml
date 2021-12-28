@@ -82,7 +82,7 @@ jobs:
         $CMD linecache
         $CMD logging
         $CMD lzma
-        $CMD marshal
+        # $CMD marshal
         $CMD math
         $CMD mimetypes
         $CMD nis
