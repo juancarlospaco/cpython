@@ -38,6 +38,7 @@ jobs:
         nimble -y install nimpy
 
     - name: Build docs
+      shell: bash
       run: |
         $CMD src/cpython/atexit.nim
         $CMD src/cpython/base64.nim
