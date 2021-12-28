@@ -39,8 +39,8 @@ jobs:
 
     - name: Build docs
       run: |
-        ${{ CMD }} src/cpython/atexit.nim
-        ${{ CMD }} src/cpython/base64.nim
+        $CMD src/cpython/atexit.nim
+        $CMD src/cpython/base64.nim
 
     - name: Clean out
       shell: bash
