@@ -9,7 +9,7 @@
 ![](https://img.shields.io/github/issues-raw/juancarlospaco/cpython?style=for-the-badge "Bugs")
 ![](https://img.shields.io/github/issues-pr-raw/juancarlospaco/cpython?style=for-the-badge "PRs")
 ![](https://img.shields.io/github/last-commit/juancarlospaco/cpython?style=for-the-badge "Commits")
-![](https://github.com/juancarlospaco/cpython/workflows/Build/badge.svg?branch=main)
+![](https://github.com/juancarlospaco/cpython/workflows/Build/badge.svg?branch=nim)
 
 
 # Documentation
