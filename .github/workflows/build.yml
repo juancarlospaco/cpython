@@ -20,7 +20,7 @@ jobs:
       uses: allenevans/set-env@v2.0.0
       with:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-        CMD: "nim doc -d:nimStrictDelete -d:nimPreviewFloatRoundtrip -d:nimPreviewDotLikeOps --gc:orc --index:on --project --experimental:strictEffects --experimental:strictFuncs --styleCheck:usages --styleCheck:error --outdir:../../docs"
+        CMD: "nim doc -d:nimStrictDelete -d:nimPreviewFloatRoundtrip -d:nimPreviewDotLikeOps --gc:orc --index:on --project --experimental:strictEffects --experimental:strictFuncs --styleCheck:usages --styleCheck:hint --outdir:../../docs"
 
     - uses: actions/setup-python@v2
       with:
