@@ -8,7 +8,7 @@ jobs:
       fail-fast: false
       matrix:
         platform: [ubuntu-latest, windows-latest]
-        python-version: ["3.5", "3.6", "3.7", "3.8", "3.9", "3.10", "3.11"]
+        python-version: ["3.5", "3.6", "3.7", "3.8", "3.9", "3.10"]
         architecture: ["x64", "x86"]
     name: ${{ matrix.platform }}-${{ matrix.architecture }}-${{ matrix.python-version }}
     runs-on: ${{ matrix.platform }}
@@ -82,7 +82,7 @@ jobs:
         $CMD linecache
         $CMD logging
         $CMD lzma
-        # $CMD marshal
+        $CMD marshal
         $CMD math
         $CMD mimetypes
         $CMD nis
