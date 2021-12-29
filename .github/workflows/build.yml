@@ -26,7 +26,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - uses: pre-commit/action@v2.0.3
-      if: matrix.python-version == "3.10"
+      if: ${{ matrix.platform == "3.10" }}
 
     - uses: jiro4989/setup-nim-action@v1.0.2
       with:
