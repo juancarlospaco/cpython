@@ -25,8 +25,8 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - uses: pre-commit/action@v2.0.3
-      if: ${{ matrix.platform == "3.10" }}
+    # - uses: pre-commit/action@v2.0.3
+    #   if: runner.os == 'Linux'
 
     - uses: jiro4989/setup-nim-action@v1.0.2
       with:
