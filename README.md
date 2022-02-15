@@ -196,3 +196,4 @@ Also...
 # Stars
 
 ![](https://starchart.cc/juancarlospaco/cpython.svg)
+:star: [@juancarlospaco](https://github.com/juancarlospaco '2022-02-15')	
