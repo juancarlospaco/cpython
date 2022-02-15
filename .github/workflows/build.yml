@@ -9,9 +9,8 @@ jobs:
       matrix:
         platform:       [ubuntu-latest, windows-latest]
         python-version: ["3.5", "3.6", "3.7", "3.8", "3.9", "3.10"]
-        architecture:   ["x64", "x86"]
         nim-channel:    [stable, devel]
-    name: ${{ matrix.platform }}-${{ matrix.architecture }}-${{ matrix.python-version }}-${{ matrix.nim-channel }}
+    name: ${{ matrix.platform }}-${{ matrix.python-version }}-${{ matrix.nim-channel }}
     runs-on: ${{ matrix.platform }}
     steps:
     - uses: actions/checkout@v2
