@@ -164,11 +164,6 @@ nimble install https://github.com/juancarlospaco/cpython.git
 ```
 
 
-# Stars
-
-![](https://starchart.cc/juancarlospaco/cpython.svg)
-
-
 # Doing JavaScript or Web Dev ?
 
 - [Alternative StdLib for Nim for NodeJS/JavaScript targets, hijacks NodeJS StdLib for Nim.](https://github.com/juancarlospaco/nodejs#alternative-stdlib-for-nim-for-nodejsjavascript-targets)
@@ -196,3 +191,8 @@ Also...
 - [**For Python Programmers**](https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers#table-of-contents)
 - [Nim integration for Python PIP](https://github.com/juancarlospaco/choosenim_install#nim-integration-for-python-pip)
 - [Python modules Deprecated from Python StdLib for download](https://github.com/tiran/legacylib) ([PEP594](https://www.python.org/dev/peps/pep-0594))
+
+
+# Stars
+
+![](https://starchart.cc/juancarlospaco/cpython.svg)
