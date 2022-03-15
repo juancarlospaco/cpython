@@ -199,3 +199,4 @@ Also...
 :star: [@juancarlospaco](https://github.com/juancarlospaco '2022-02-15')	
 :star: [@aguspiza](https://github.com/aguspiza '2022-02-20')	
 :star: [@AndrielFR](https://github.com/AndrielFR '2022-02-27')	
+:star: [@S0Sbrigade8](https://github.com/S0Sbrigade8 '2022-03-15')	
