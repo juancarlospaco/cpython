@@ -195,7 +195,7 @@ Also...
 
 # 💰➡️🍕
 
-<details> 
+<details>
 <summary title="Send Bitcoin"><kbd> Bitcoin BTC </kbd></summary>
 
 **BEP20 Binance Smart Chain Network BSC**
@@ -209,10 +209,10 @@ Also...
 **Lightning Network**
 ```
 juancarlospaco@bitrefill.me
-```  
+```
 </details>
 
-<details> 
+<details>
 <summary title="Send Ethereum and DAI"><kbd> Ethereum ETH </kbd> <kbd> Dai DAI </kbd> <kbd> Uniswap UNI </kbd> <kbd> Axie Infinity AXS </kbd> <kbd> Smooth Love Potion SLP </kbd> <kbd> Uniswap UNI </kbd> <kbd> USDC </kbd> </summary>
 
 **BEP20 Binance Smart Chain Network BSC**
@@ -224,7 +224,7 @@ juancarlospaco@bitrefill.me
 0xb78c4cf63274bb22f83481986157d234105ac17e
 ```
 </details>
-<details> 
+<details>
 <summary title="Send Tether"><kbd> Tether USDT </kbd></summary>
 
 **BEP20 Binance Smart Chain Network BSC**
@@ -240,29 +240,7 @@ juancarlospaco@bitrefill.me
 TWGft53WgWvH2mnqR8ZUXq1GD8M4gZ4Yfu
 ```
 </details>
-<details> 
-<summary title="Send Terra"><kbd> Terra UST </kbd></summary>
-
-**BEP20 Binance Smart Chain Network BSC**
-```
-0xb78c4cf63274bb22f83481986157d234105ac17e
-```
-**Terra Network**
-```
-terra1ncjg4a59x2pgvqy9qjyqprlj8lrwshm0wleht5
-```
-- Memo ` 108340023 `
-</details>
-<details> 
-<summary title="Send Luna"><kbd> LUNA </kbd></summary>
-
-**Terra Network**
-```
-terra1ncjg4a59x2pgvqy9qjyqprlj8lrwshm0wleht5
-```
-- Memo ` 108340023 `
-</details>
-<details> 
+<details>
 <summary title="Send Solana"><kbd> Solana SOL </kbd></summary>
 
 **BEP20 Binance Smart Chain Network BSC**
@@ -274,7 +252,7 @@ terra1ncjg4a59x2pgvqy9qjyqprlj8lrwshm0wleht5
 FKaPSd8kTUpH7Q76d77toy1jjPGpZSxR4xbhQHyCMSGq
 ```
 </details>
-<details> 
+<details>
 <summary title="Send Cardano"><kbd> Cardano ADA </kbd></summary>
 
 **BEP20 Binance Smart Chain Network BSC**
@@ -286,7 +264,7 @@ FKaPSd8kTUpH7Q76d77toy1jjPGpZSxR4xbhQHyCMSGq
 DdzFFzCqrht9Y1r4Yx7ouqG9yJNWeXFt69xavLdaeXdu4cQi2yXgNWagzh52o9k9YRh3ussHnBnDrg7v7W2hSXWXfBhbo2ooUKRFMieM
 ```
 </details>
-<details> 
+<details>
 <summary title="Send Sandbox"><kbd> Sandbox SAND </kbd> <kbd> Decentraland MANA </kbd></summary>
 
 **ERC20 Ethereum Network**
@@ -294,7 +272,7 @@ DdzFFzCqrht9Y1r4Yx7ouqG9yJNWeXFt69xavLdaeXdu4cQi2yXgNWagzh52o9k9YRh3ussHnBnDrg7v
 0xb78c4cf63274bb22f83481986157d234105ac17e
 ```
 </details>
-<details> 
+<details>
 <summary title="Send Algorand"><kbd> Algorand ALGO </kbd></summary>
 
 **ALGO Algorand Network**
@@ -302,7 +280,7 @@ DdzFFzCqrht9Y1r4Yx7ouqG9yJNWeXFt69xavLdaeXdu4cQi2yXgNWagzh52o9k9YRh3ussHnBnDrg7v
 WM54DHVZQIQDVTHMPOH6FEZ4U2AU3OBPGAFTHSCYWMFE7ETKCUUOYAW24Q
 ```
 </details>
-<details> 
+<details>
 <summary title="Send Polkadot"><kbd> Polkadot DOT </kbd></summary>
 
 **DOT Network**
@@ -312,11 +290,11 @@ WM54DHVZQIQDVTHMPOH6FEZ4U2AU3OBPGAFTHSCYWMFE7ETKCUUOYAW24Q
 **BEP20 Binance Smart Chain Network BSC**
 ```
 0xb78c4cf63274bb22f83481986157d234105ac17e
-```  
+```
 </details>
-<details> 
+<details>
 <summary title="Send via Binance Pay"> Binance </summary>
-  
+
 [https://pay.binance.com/en/checkout/e92e536210fd4f62b426ea7ee65b49c3](https://pay.binance.com/en/checkout/e92e536210fd4f62b426ea7ee65b49c3 "Send via Binance Pay")
 </details>
 
@@ -324,12 +302,12 @@ WM54DHVZQIQDVTHMPOH6FEZ4U2AU3OBPGAFTHSCYWMFE7ETKCUUOYAW24Q
 # Stars
 
 ![](https://starchart.cc/juancarlospaco/cpython.svg)
-:star: [@juancarlospaco](https://github.com/juancarlospaco '2022-02-15')	
-:star: [@aguspiza](https://github.com/aguspiza '2022-02-20')	
-:star: [@AndrielFR](https://github.com/AndrielFR '2022-02-27')	
-:star: [@S0Sbrigade8](https://github.com/S0Sbrigade8 '2022-03-15')	
-:star: [@aphkyle](https://github.com/aphkyle '2022-03-15')	
-:star: [@jhgalino](https://github.com/jhgalino '2022-04-02')	
-:star: [@YanMu2020](https://github.com/YanMu2020 '2022-04-04')	
-:star: [@matkuki](https://github.com/matkuki '2022-04-14')	
-:star: [@Traumatism](https://github.com/Traumatism '2022-04-21')	
+:star: [@juancarlospaco](https://github.com/juancarlospaco '2022-02-15')
+:star: [@aguspiza](https://github.com/aguspiza '2022-02-20')
+:star: [@AndrielFR](https://github.com/AndrielFR '2022-02-27')
+:star: [@S0Sbrigade8](https://github.com/S0Sbrigade8 '2022-03-15')
+:star: [@aphkyle](https://github.com/aphkyle '2022-03-15')
+:star: [@jhgalino](https://github.com/jhgalino '2022-04-02')
+:star: [@YanMu2020](https://github.com/YanMu2020 '2022-04-04')
+:star: [@matkuki](https://github.com/matkuki '2022-04-14')
+:star: [@Traumatism](https://github.com/Traumatism '2022-04-21')
