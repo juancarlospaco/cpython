@@ -15,10 +15,11 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           days-before-pr-stale: 90
           days-before-pr-close: 10
-          days-before-issue-close: 3
+          days-before-issue-stale: 60
+          days-before-issue-close: 7
           stale-issue-message: >
             This issue is Stale because it has been open for 60 days with no activity.
-            Contribute a fix or comment on the issue, or it will be closed in 3 days.
+            Contribute a fix or comment on the issue, or it will be closed in 7 days.
           stale-pr-message: >
             This pull request is Stale because it has been open for 90 days with no activity.
             Contribute more commits on the pull request, or it will be closed in 10 days.
