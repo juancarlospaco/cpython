@@ -137,8 +137,8 @@ body:
     label: AntiVirus
     description: Do you use an Anti-Virus?
     options:
-      - Yes
-      - No
+      - "Yes"
+      - "No"
   validations:
     required: true
 
