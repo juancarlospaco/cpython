@@ -2,4 +2,5 @@ blank_issues_enabled: false
 contact_links:
   - name: Sponsor this Project
     url: https://gist.github.com/juancarlospaco/37da34ed13a609663f55f4466c4dbc3e
-    about: **Toss a coin** to your witcher...
+    about: |
+      **Toss a coin** to your witcher...
