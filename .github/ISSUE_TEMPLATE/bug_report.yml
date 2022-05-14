@@ -120,7 +120,8 @@ body:
 - type: dropdown
   id: browser
   attributes:
-    label: What is your web browser?
+    label: Web browser
+    description: What is your web browser?
     options:
       - Chrome/Chromium
       - Firefox/Firefox Fork
@@ -404,4 +405,3 @@ body:
       - Alpine Linux support is Experimental.
       - Termux support is Experimental.
       - Check if Git main branch already have a fix for your problem.
-
