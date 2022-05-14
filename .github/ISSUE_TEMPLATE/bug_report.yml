@@ -18,7 +18,7 @@ body:
   id: architecture
   attributes:
     label: Architecture
-    description: What is your Hardware Architecture?.
+    description: What is your Hardware Architecture?
     options:
       - x86_64 (Default)
       - x86_32 (32Bit)
@@ -34,7 +34,7 @@ body:
   id: os
   attributes:
     label: Operating System
-    description: What is your Operating System?.
+    description: What is your Operating System?
     options:
       - Linux
       - Windows
@@ -51,7 +51,7 @@ body:
   id: disk
   attributes:
     label: Disk
-    description: What is your main Disk Storage?.
+    description: What is your main Disk Storage?
     options:
       - SSD (Solid)
       - HDD (SATA, IDE, Mechanical)
@@ -64,7 +64,7 @@ body:
   id: ram
   attributes:
     label: Memory
-    description: What is your total RAM Memory capacity?.
+    description: What is your total RAM Memory capacity?
     options:
       - 1 Gigabytes
       - 2 Gigabytes
@@ -84,7 +84,7 @@ body:
   id: cores
   attributes:
     label: CPU Cores
-    description: What is your total CPU Cores count?.
+    description: What is your total CPU Cores count?
     options:
       - 1 CPU Cores
       - 2 CPU Cores
@@ -104,7 +104,7 @@ body:
   id: internet
   attributes:
     label: Internet Connection
-    description: What is your Internet connection?.
+    description: What is your Internet connection?
     options:
       - Optical Fiber (very fast)
       - DSL (aDSL, DSL, etc)
@@ -132,10 +132,21 @@ body:
     required: true
 
 - type: dropdown
+  id: antivirus
+  attributes:
+    label: AntiVirus
+    description: Do you use an Anti-Virus?
+    options:
+      - Yes
+      - No
+  validations:
+    required: true
+
+- type: dropdown
   id: device
   attributes:
     label: Device
-    description: What kind of computer is it?.
+    description: What kind of computer is it?
     options:
       - Desktop PC
       - Server PC
@@ -392,4 +403,4 @@ body:
       - Alpine Linux support is Experimental.
       - Termux support is Experimental.
       - Check if Git main branch already have a fix for your problem.
-      
+
