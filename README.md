@@ -312,3 +312,4 @@ WM54DHVZQIQDVTHMPOH6FEZ4U2AU3OBPGAFTHSCYWMFE7ETKCUUOYAW24Q
 :star: [@matkuki](https://github.com/matkuki '2022-04-14')
 :star: [@Traumatism](https://github.com/Traumatism '2022-04-21')
 :star: [@foxoman](https://github.com/foxoman '2022-05-19')	
+:star: [@whee](https://github.com/whee '2022-05-21')	
