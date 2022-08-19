@@ -4,6 +4,11 @@ import nimpy
 template X(simbol; a, b): auto = nimpy.pyImport("bpy.app.translations").simbol(a, b).to(type(result))
 template X(simbol; a):    auto =
   when declared result: nimpy.pyImport("bpy.app.translations").simbol(a).to(type(result)) else: discard nimpy.pyImport("bpy.app.translations").simbol(a)
+template `:=`(simbol; tipe: typedesc) =
+  let simbol* {.inject.}: tipe = nimpy.pyImport("bpy.app.translations").simbol.to(tipe)
+
+locale  := string
+locales := seq[string]
 
 proc pgettext*(msgid, msgctxt: string):       string = X pgettext, msgid, msgctxt
 proc pgettext*(msgid: string):                string = X pgettext, msgid
