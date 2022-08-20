@@ -45,6 +45,14 @@ jobs:
           $CMD $i
         done
 
+    - name: Build UPBGE docs
+      shell: bash
+      run: |
+        cd src/cpython/upbge/
+        for i in *.nim; do
+          $CMD $i
+        done
+
     - name: Clean out
       shell: bash
       run: |
