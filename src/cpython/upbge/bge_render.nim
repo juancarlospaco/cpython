@@ -4,11 +4,11 @@ import nimpy
 template X(simbol; a): auto = nimpy.pyImport("bge.render").simbol(a).to(type(result))
 template X(simbol; a, b, c) = discard nimpy.pyImport("bge.render").simbol(a, b, c)
 template X(simbol): auto =
-  when declared result: nimpy.pyImport("bge.render").simbol().to(type(result)) else: discard nimpy.pyImport("bpy.app.translations").simbol()
+  when declared result: nimpy.pyImport("bge.render").simbol().to(type(result)) else: discard nimpy.pyImport("bge.render").simbol()
 template X(simbol; a, b): auto =
-  when declared result: nimpy.pyImport("bge.render").simbol(a, b).to(type(result)) else: discard nimpy.pyImport("bpy.app.translations").simbol(a, b)
+  when declared result: nimpy.pyImport("bge.render").simbol(a, b).to(type(result)) else: discard nimpy.pyImport("bge.render").simbol(a, b)
 template X(simbol; a): auto =
-  when declared result: nimpy.pyImport("bge.render").simbol(a).to(type(result)) else: discard nimpy.pyImport("bpy.app.translations").simbol(a)
+  when declared result: nimpy.pyImport("bge.render").simbol(a).to(type(result)) else: discard nimpy.pyImport("bge.render").simbol(a)
 template `:=`(simbol; tipe: typedesc) =
   let simbol* {.inject.}: tipe = nimpy.pyImport("bge.render").simbol.to(tipe)
 
