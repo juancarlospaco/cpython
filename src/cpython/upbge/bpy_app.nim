@@ -48,4 +48,4 @@ version_char                   := string
 version_cycle                  := string
 version_string                 := string
 
-proc is_job_running*(job_type: string): bool = nimpy.pyImport("bpy.app").is_job_running(job_type).to(type(result))
+proc is_job_running*(job_type: string): bool = nimpy.pyImport("bpy.app").is_job_running(job_type).to(bool)
