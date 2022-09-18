@@ -14,5 +14,3 @@ proc indent*(text: string):         string = X indent, text
 proc shorten*(text: string; width: int): string = X shorten, text, width
 
 proc newTextWrapper*(): TextWrapper = nimpy.pyImport("textwrap").TextWrapper()
-proc wrap*(self: TextWrapper; text: string; width = 70): string = self.wrap(text, width)
-proc fill*(self: TextWrapper; text: string; width = 70): string = self.fill(text, width)
