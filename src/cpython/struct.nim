@@ -3,9 +3,9 @@ import nimpy
 
 template X(simbol; a):             auto = nimpy.pyImport("struct").simbol(a).to(type(result))
 template X(simbol; a, b):          auto = nimpy.pyImport("struct").simbol(a, b).to(type(result))
-template X(simbol; a, b, c):       auto = discard nimpy.pyImport("struct").simbol(a, b, c)
-template X(simbol; a, b, c, d):    auto = discard nimpy.pyImport("struct").simbol(a, b, c, d)
-template X(simbol; a, b, c, d, e): auto = discard nimpy.pyImport("struct").simbol(a, b, c, d, e)
+template X(simbol; a, b, c)             = discard nimpy.pyImport("struct").simbol(a, b, c)
+template X(simbol; a, b, c, d):    auto = nimpy.pyImport("struct").simbol(a, b, c, d).to(type(result))
+template X(simbol; a, b, c, d, e): auto = nimpy.pyImport("struct").simbol(a, b, c, d, e).to(type(result))
 
 proc calcsize*(format: string):                 int = X calcsize, format
 proc unpack*(format, buffer: string):        string = X unpack, format, buffer
