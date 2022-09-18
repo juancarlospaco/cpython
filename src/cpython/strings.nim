@@ -17,6 +17,7 @@ printable       := string
 whitespace      := string
 
 proc newTemplate*(s: string): Template = nimpy.pyImport("string").Template(s)
+proc capwords*(s: string): string = nimpy.pyImport("string").capwords.to(type(result))
 
 
 runnableExamples:
