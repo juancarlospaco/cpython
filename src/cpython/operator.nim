@@ -85,3 +85,4 @@ proc setitem*(a: seq[char];   b: int; c: char):   int = X setitem, a, b, c
 proc setitem*(a: seq[bool];   b: int; c: bool):   int = X setitem, a, b, c
 proc setitem*(a: seq[float];  b: int; c: float):  int = X setitem, a, b, c
 proc setitem*(a: seq[string]; b: int; c: string): int = X setitem, a, b, c
+proc call*[T](obj: T; args: auto) = X call, obj, args  # https://docs.python.org/3.12/library/operator.html#operator.call
