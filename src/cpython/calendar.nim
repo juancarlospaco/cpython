@@ -9,7 +9,7 @@ template X(simbol; a, b): auto =
   when declared result: nimpy.pyImport("calendar").simbol(a, b).to(type(result)) else: discard nimpy.pyImport("calendar").simbol(a, b)
 template X(simbol; a, b, c): auto =
   when declared result: nimpy.pyImport("calendar").simbol(a, b, c).to(type(result)) else: discard nimpy.pyImport("calendar").simbol(a, b, c)
-template X(simbol; a, b, c, d):    auto =
+template X(simbol; a, b, c, d): auto =
   when declared result: nimpy.pyImport("calendar").simbol(a, b, c, d).to(type(result)) else: discard nimpy.pyImport("calendar").simbol(a, b, c, d)
 template X(simbol; a, b, c, d, e): auto =
   when declared result: nimpy.pyImport("calendar").simbol(a, b, c, d, e).to(type(result)) else: discard nimpy.pyImport("calendar").simbol(a, b, c, d, e)
