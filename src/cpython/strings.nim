@@ -20,7 +20,7 @@ proc newTemplate*(s: string): Template = nimpy.pyImport("string").Template(s)
 proc capwords*(s: string): string = nimpy.pyImport("string").capwords.to(type(result))
 
 
-runnableExamples"-r:off":
-  let s = newTemplate("$who likes $what")
-  echo s.substitute(who = "Everybody", what = "cats")       # "Everybody likes cats"
-  echo s.safe_substitute(who = "Everybody", what = "cats")  # "Everybody likes cats"
+# runnableExamples"-r:off":
+#   let s = newTemplate("$who likes $what")
+#   echo s.substitute(who = "Everybody", what = "cats")       # "Everybody likes cats"
+#   echo s.safe_substitute(who = "Everybody", what = "cats")  # "Everybody likes cats"
