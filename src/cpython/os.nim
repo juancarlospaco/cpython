@@ -170,6 +170,8 @@ RTLD_NOLOAD           := int
 RTLD_DEEPBIND         := int
 GRND_NONBLOCK         := int
 GRND_RANDOM           := int
+PIDFD_NONBLOCK        := int  # https://docs.python.org/3.12/library/os.html#os.PIDFD_NONBLOCK
+
 
 proc getcwd*(): string = X getcwd
 proc getpgid*(pid: int): int = X getpgid, pid
