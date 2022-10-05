@@ -322,3 +322,4 @@ WM54DHVZQIQDVTHMPOH6FEZ4U2AU3OBPGAFTHSCYWMFE7ETKCUUOYAW24Q
 :star: [@vovavili](https://github.com/vovavili '2022-09-09')	
 :star: [@xujin8](https://github.com/xujin8 '2022-09-18')	
 :star: [@Geksan](https://github.com/Geksan '2022-09-24')	
+:star: [@shxdow](https://github.com/shxdow '2022-10-05')	
