@@ -1,5 +1,6 @@
+# Wiki automated monitoring/antispam/changelog.
 name: Wiki On Edit
-on:   gollum  # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#gollum
+on: gollum  # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#gollum
 jobs:
   wiki_on_edit:
     runs-on: ubuntu-latest
