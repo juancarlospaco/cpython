@@ -11,6 +11,8 @@ jobs:
 
     - name: Commit changes
       uses: elstudio/actions-js-build/commit@v2
+      with:
+        commitMessage: Update wiki changelog [skip ci]
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PUSH_BRANCH: 'nim'
