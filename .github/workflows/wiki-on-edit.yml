@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Add Wiki Editors to Wiki Changelog
+    - name: Update Wiki Changelog
       run: |
         echo -e "- <code>${{github.event.repository.updated_at}}</code>\t<kbd title='${{github.event.pages[0].sha}}'>SHA</kbd>\t<img src='${{github.event.sender.avatar_url}}' width=20 height=20 /> [@${{github.actor}}](https://github.com/${{github.actor}} '${{github.event.sender.login}}') ${{github.event.pages[0].action}} [${{github.event.pages[0].page_name}}](${{github.event.pages[0].html_url}} '${{github.event.pages[0].title}}')." >> wiki_changelog.md
 
