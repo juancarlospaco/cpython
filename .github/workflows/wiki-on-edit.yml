@@ -1,0 +1,16 @@
+name: Wiki On Edit
+on:   gollum  # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#gollum
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Add Wiki Editors to Wiki Changelog
+      run: |
+        echo -e "- [@${{github.actor}}](https://github.com/${{github.actor}} '') edited the Wiki on `date --iso-8601`\n" >> wiki_changelog.md
+
+    - name: Commit changes
+      uses: elstudio/actions-js-build/commit@v2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PUSH_BRANCH: 'nim'
