@@ -1,7 +1,7 @@
 name: Wiki On Edit
 on:   gollum  # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#gollum
 jobs:
-  build:
+  wiki_on_edit:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
