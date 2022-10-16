@@ -11,7 +11,7 @@ jobs:
         echo -e "- <code>${{github.event.repository.updated_at}}</code>\t<kbd title='${{github.event.pages[0].sha}}'>SHA</kbd>\t<img src='${{github.event.sender.avatar_url}}' width=20 height=20 /> [@${{github.actor}}](https://github.com/${{github.actor}} '${{github.event.sender.login}}') ${{github.event.pages[0].action}} [${{github.event.pages[0].page_name}}](${{github.event.pages[0].html_url}} '${{github.event.pages[0].title}}')." >> wiki_changelog_`date +%Y`.md
         git clone -q https://github.com/juancarlospaco/cpython.wiki.git
         cd cpython.wiki
-        git checkout ${{github.event.pages[0].sha}}
+        git checkout -q ${{github.event.pages[0].sha}}
         curl -X GET https://legend.lnbits.com/api/v1/payments/`git log -1 --pretty=format:%s` -H "X-Api-Key: bba1c61b32164f5990560849e1f8dc24" -H "Content-type: application/json"
         cd ..
         rm --force --recursive cpython.wiki
