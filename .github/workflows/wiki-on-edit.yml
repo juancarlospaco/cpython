@@ -12,7 +12,7 @@ jobs:
         git clone -q https://github.com/juancarlospaco/cpython.wiki.git
         cd cpython.wiki
         git checkout -q ${{github.event.pages[0].sha}}
-        curl -X GET https://legend.lnbits.com/api/v1/payments/`git log -1 --pretty=format:%s` -H "X-Api-Key: bba1c61b32164f5990560849e1f8dc24" -H "Content-type: application/json"
+        curl -X GET https://legend.lnbits.com/api/v1/payments/$(git log -1 --pretty=format:%s) -H "X-Api-Key: bba1c61b32164f5990560849e1f8dc24" -H "Content-type: application/json"
         cd ..
         rm --force --recursive cpython.wiki
 
