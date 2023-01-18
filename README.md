@@ -346,3 +346,4 @@ WM54DHVZQIQDVTHMPOH6FEZ4U2AU3OBPGAFTHSCYWMFE7ETKCUUOYAW24Q
 :star: [@yuchunzhou](https://github.com/yuchunzhou '2022-12-27')	
 :star: [@lf-araujo](https://github.com/lf-araujo '2023-01-01')	
 :star: [@pietroppeter](https://github.com/pietroppeter '2023-01-11')	
+:star: [@arkanoid87](https://github.com/arkanoid87 '2023-01-18')	
