@@ -361,3 +361,4 @@ WM54DHVZQIQDVTHMPOH6FEZ4U2AU3OBPGAFTHSCYWMFE7ETKCUUOYAW24Q
 :star: [@maleyva1](https://github.com/maleyva1 '2023-05-18')	
 :star: [@all-an](https://github.com/all-an '2023-05-24')	
 :star: [@janflyborg](https://github.com/janflyborg '2023-06-03')	
+:star: [@smeggingsmegger](https://github.com/smeggingsmegger '2023-06-10')	
