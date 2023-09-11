@@ -365,3 +365,4 @@ WM54DHVZQIQDVTHMPOH6FEZ4U2AU3OBPGAFTHSCYWMFE7ETKCUUOYAW24Q
 :star: [@ArikRahman](https://github.com/ArikRahman '2023-06-27')	
 :star: [@KolyaRS](https://github.com/KolyaRS '2023-07-18')	
 :star: [@jinczing](https://github.com/jinczing '2023-08-15')	
+:star: [@jason-chandler](https://github.com/jason-chandler '2023-09-11')	
