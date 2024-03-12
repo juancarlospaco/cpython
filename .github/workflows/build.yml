@@ -21,14 +21,14 @@ jobs:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: true
         CMD: "nim doc -d:nimStrictDelete -d:nimPreviewFloatRoundtrip -d:nimPreviewDotLikeOps --gc:orc --index:on --project --experimental:strictEffects --experimental:strictFuncs --styleCheck:usages --styleCheck:hint --outdir:../../docs"
 
-    - uses: actions/setup-python@v2
+    - uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
 
     # - uses: pre-commit/action@v2.0.3
     #   if: runner.os == 'Linux'
 
-    - uses: jiro4989/setup-nim-action@v1.0.2
+    - uses: jiro4989/setup-nim-action@v1
       with:
         nim-version: ${{ matrix.nim-channel }}
 
