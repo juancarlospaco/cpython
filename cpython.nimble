@@ -1,4 +1,4 @@
-version     = "3.10.0"
+version     = "3.12.0"
 author      = "Juan_Carlos.nim"
 description = "Alternative StdLib for Nim for Python targets"
 license     = "MIT"
