@@ -8,7 +8,7 @@ jobs:
       fail-fast: false
       matrix:
         platform:       [ubuntu-latest, windows-latest]
-        python-version: ["3.5", "3.6", "3.7", "3.8", "3.9", "3.10"]
+        python-version: ["3.7", "3.8", "3.9", "3.10", "3.12"]
         nim-channel:    [stable, devel]
     name: ${{ matrix.platform }}-${{ matrix.python-version }}-${{ matrix.nim-channel }}
     runs-on: ${{ matrix.platform }}
