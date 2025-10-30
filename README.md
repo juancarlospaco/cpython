@@ -400,3 +400,4 @@ WM54DHVZQIQDVTHMPOH6FEZ4U2AU3OBPGAFTHSCYWMFE7ETKCUUOYAW24Q
 :star: [@jtonsing](https://github.com/jtonsing '2025-05-24')	
 :star: [@kalaverin](https://github.com/kalaverin '2025-07-03')	
 :star: [@svaite](https://github.com/svaite '2025-10-21')	
+:star: [@hasansezertasan](https://github.com/hasansezertasan '2025-10-30')	
